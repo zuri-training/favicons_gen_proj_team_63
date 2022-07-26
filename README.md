@@ -45,7 +45,7 @@ Then create the feature branch (the branch you will be pushing you work to) by r
 
 `git checkout -b active`
 
-NB: For consistency, I would recommend we all use the above naming scheme and make sure to create any new branch from the dev branch and not main/master. Ensure your local dev branch is up to date with upstream remote dev branch before creating new branch.
+NB: For consistency, I would recommend we all use the above naming scheme and make sure to create any new branch from the dev branch and not main branch. Ensure your local dev branch is up to date with upstream remote dev branch before creating new branch.
 
 ### Set up Development Environment
 
