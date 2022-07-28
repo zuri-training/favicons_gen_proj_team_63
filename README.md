@@ -25,9 +25,9 @@ Fork this repository to get a personal copy on your github account
 
 ### Clone the Repo to your local machine using
 
-To clone the forked repository to your local machine, open command prompt and run:
+To clone the forked repository to your local machine, copy the URL for the forked repo, open command prompt and run:
 
-`git clone https://github.com/<your-github-username>/favicons_gen_proj_team_63`
+`git clone <url-for-your-forked-repo>`
 
 ### Set Upstream Remote
 
@@ -37,13 +37,17 @@ Set your upstream remote so you can pull changes from upstream to update your re
 
 ### Creating Feature Branch
 
-First switch to the dev branch by running:
+First create a dev branch by running:
+
+`git checkout -b dev`
+
+Then make sure you're in the dev branch by running:
 
 `git checkout dev`
 
 Then create the feature branch (the branch you will be pushing you work to) by running:
 
-`git checkout -b active`
+`git checkout -b feature`
 
 NB: For consistency, I would recommend we all use the above naming scheme and make sure to create any new branch from the dev branch and not main branch. Ensure your local dev branch is up to date with upstream remote dev branch before creating new branch.
 
@@ -103,14 +107,21 @@ Setup Postgres:
 12. Create a `.env` file at the project root.
 13. Populate your `.env` with the following:
 
-```python
-    DB_NAME=ZuriconDB
-    USER=postgres
-    PASSWORD=your postgres password
-    HOST=localhost
-    PORT=5432
-    SECRET_KEY=your django secret key
-    DEBUG=True
-```
+    ```python
+        DB_NAME=ZuriconDB
+        USER=postgres
+        PASSWORD=your postgres password
+        HOST=localhost
+        PORT=5432
+        SECRET_KEY=your django secret key
+        DEBUG=True
+    ```
 
-NB: Team members should please ask questions if anything is not clear!
+14. Now you can go to your code editor and run `python manage.py makemigrations`
+15. Then after that run `python manage.py migrate`
+16. You should not get any errors when you run `python manage.py runserver`. If you do, pls ask any of the other devs
+
+NB:
+
+- It is highly advisable to use Git Bash as your terminal app as it easily shows the current branch you're working in
+- Team members should please ask questions if anything is not clear!
