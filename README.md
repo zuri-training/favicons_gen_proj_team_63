@@ -79,6 +79,10 @@ NB: Add a proper description of the changes made when making a Pull Request for 
 
 Setup virtual environment:
 
+- python -m pip install virtualenv
+
+- python -m virtualenv venv
+
 1. Go to your project folder in your code editor (you should have cloned the project by now from the steps above)
 2. Make sure in your terminal that you are in the root folder of the project
 3. Create a virtual environment with `virtualenv venv`
