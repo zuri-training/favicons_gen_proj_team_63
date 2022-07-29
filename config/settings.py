@@ -43,9 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Created apps
-    'main.apps.MainConfig',
+    'favigen.apps.FavigenConfig',
 
     # Third party
+    'django_rename_app',
     'django_extensions'
 ]
 
@@ -130,6 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = [BASE_DIR/'main']
 
 # Default primary key field type
