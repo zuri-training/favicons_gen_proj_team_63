@@ -1,4 +1,4 @@
-# Zuricon Project
+# Favigen Project
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
