@@ -47,7 +47,9 @@ INSTALLED_APPS = [
 
     # Third party
     'django_rename_app',
-    'django_extensions'
+    'django_extensions',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
