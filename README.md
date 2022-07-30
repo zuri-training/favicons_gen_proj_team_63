@@ -4,12 +4,12 @@
 ## About The Project
 
 The Favicon Generator project is a website that allows users to upload an image or icon and it generates Favicons of different dimensions which the user can download.
-[Here](https://docs.google.com/document/d/1oZM_O1LnQczyQJWQ9631_ASo68Cuy4ay4cE3YXDq7qY/edit) is the link to the designers' documentation.
+Click [here](https://docs.google.com/document/d/1oZM_O1LnQczyQJWQ9631_ASo68Cuy4ay4cE3YXDq7qY/edit) for the designers' documentation.
 This repository contains the codebase and project files of Project Favicon by Team 63 of the Zuri project phase.
 
 ## Prototype & Deployment
 
-The Figma design can be seen [here](https://www.figma.com/file/hF8y8PKgZGtnNGnyYK1P4x/Proj_team_63-MAIN?node-id=3%3A2)
+The Figma design can be seen [here](https://www.figma.com/file/hF8y8PKgZGtnNGnyYK1P4x/Proj_team_63-MAIN?node-id=3%3A2) and the user flow [here](https://www.figma.com/file/piIe93PYcLQJoXUNm7OVGv/User-story-and-user-flow).
 
 ### Technologies Used
 
