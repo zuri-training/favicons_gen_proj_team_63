@@ -115,19 +115,37 @@
 @media screen and (max-width: 768px) {
  
   .container__wrapper__one {
-    flex: .1;
+    flex: .5;
     background-color:#2D1D90;
     display: grid;
     place-items: center;
   }
 
   .container__wrapper__two {
-    flex: .9;
+    flex: .5;
   }
 
 
 }
 
 @media screen and (max-width: 500px) {
- 
+
+.display{
+  opacity: 0.3;
+   position: relative;
+   right: 120px;
+}
+  .container {
+    height:100vh;
+    width:100vw;
+    display: grid;
+    
+  }
+
+  .container__wrapper__two {
+    flex: .5;
+    margin: 0 auto;
+  
+  }
+
 }
