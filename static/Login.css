@@ -349,6 +349,15 @@ line-height: 48px;
     flex: .5;
   }
 
+  .hr_text{
+    position: absolute;
+    top:-10px;
+    background-color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    left: 33%;
+    color: #2D1D90;
+}
 
 }
 
@@ -368,6 +377,8 @@ line-height: 48px;
   .login_container > form {
     width: 90vw;
 }
+
+
 
 
 }
