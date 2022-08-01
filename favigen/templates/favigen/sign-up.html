@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -47,16 +48,39 @@
                                 <img src="../../static/icon-error.svg" alt="error-icon" class="error-icon">
                                 <p class="error-text">Password cannot be empty</p>
                             </div>
+=======
+{% extends 'favigen/base.html' %} 
 
-                            <div class="details">
-                                <input type="checkbox" id="remember" name="remember" value="Remember">
-                                <label class="remember">Remember me</label>
-                            </div>
+{% load static %} 
+>>>>>>> 9bc547ad0919000785bb657bbac23d6268128a5d
 
-                            <div class="details">
-                                <hr><label class="remember">Or sign up with</label><hr>
-                            </div>
+{% block content %}
 
+<main>
+    <div class="container">
+        <div class="left">
+            <div class="logo"></div>
+            <p class="v8_79">
+                FaviGen <br />
+                <span class="v8_80">A powerful yet easy to use Favicons generator for your Favicons</span>
+            </p>
+            <p class="v8_81">Version 1.0</p>
+        </div>
+        <div class="right">
+            <div>
+                <div class="right">
+                    {% comment %} <form action={%url 'accounts: signup'%} method="POST"> {% endcomment %}
+                    <form action="{#}" method="POST">
+                        {% csrf_token %}
+                        <span class="v8_53">Already have an accout? Log in </span>
+                        <span class="v8_54">Sign up</span>
+                        <div class="details">
+                            <input type="text" id="firstName" name="firstName" placeholder="First Name" />
+                            <img src="assets/images/icon-error.svg" alt="error-icon" class="error-icon" />
+                            <p class="error-text">First Name cannot be empty</p>
+                        </div>
+
+<<<<<<< HEAD
                             <button type="submit">Get Started</button>
                             <div class="social-icon">
                                 <span>
@@ -79,3 +103,70 @@
 </body>
 <script src="../../static/sign-up.js"></script>
 </html>
+=======
+                        <div class="details">
+                            <input type="email" id="email" name="email" placeholder="Email Address" />
+                            <img src="assets/images/icon-error.svg" alt="error-icon" class="error-icon" />
+                            <p class="error-text">Looks like this is not an email</p>
+                        </div>
+
+                        <div class="details">
+                            <input type="password" id="password" name="password" placeholder="Password" />
+                            <img src="assets/images/icon-error.svg" alt="error-icon" class="error-icon" />
+                            <p class="error-text">Password cannot be empty</p>
+                        </div>
+
+                        <div class="details">
+                            <input type="checkbox" id="remember" name="remember" value="Remember" />
+                            <label class="remember">Remember me</label>
+                        </div>
+
+                        <div class="details">
+                            <hr />
+                            <label class="remember">Or sign up with</label>
+                            <hr />
+                        </div>
+
+                        <button type="submit">Get Started</button>
+                        <div class="social-icon">
+                            <span>
+                                <a
+                                    class="facebook"
+                                    href="#"
+                                    title="Link to FaviGen on Facebook"
+                                    target="_blank"
+                                >
+                                    <i class="fa fa-facebook fa-2x"></i>
+                                </a>
+                            </span>
+                            <span>
+                                <a
+                                    class="Google_Account"
+                                    href="#"
+                                    title="Link to FaviGen Google Account "
+                                    target="_blank"
+                                >
+                                    <i class="fa fa-google fa-2x"></i>
+                                </a>
+                            </span>
+                            <span>
+                                <a
+                                    class="twitter"
+                                    href="#"
+                                    title="Link to FaviGen on Twitter"
+                                    target="_blank"
+                                >
+                                    <i class="fa fa-twitter fa-2x"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+>>>>>>> 9bc547ad0919000785bb657bbac23d6268128a5d
