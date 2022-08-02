@@ -1,0 +1,133 @@
+{% load static %}
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="sign-up.css" rel="stylesheet" type="text/css" />
+</head>
+<body>-->
+
+
+    <!-- main body start-->
+    <main>
+        <!-- container-->
+        <div class="container">
+
+            <!--left division-->
+            <div class="left">
+
+                <!-- logo -->
+                <a href="#">
+                    <div class="logo">
+                    
+                    </div>
+                </a>
+
+
+                <p class="v8_79">
+                    FaviGen <br> 
+                    <span class="v8_80" >A powerful yet easy to use Favicons generator for your Favicons</span>
+                </p>
+
+                <!--base image-->
+                <img class="logo4" src="{% static 'logo 4.png' %}"/>
+                <p class="v8_81">Version 1.0</p>
+
+                <!--left division end-->
+            </div>
+                
+            <!--right division-->
+            <div class="right">
+
+                <!--form begin-->
+                <form action={%url 'accounts: signup'%} method="POST">
+                                        {% csrf_token %}
+                    <span class="v8_53">Already have an accout? Log in </span>
+                    <span class="v8_54">Sign up</span>
+
+
+                    <div class="details">
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                        <img src="{% static '/favigen/img/icon-error.svg' %}" alt="error-icon" class="error-icon">
+                        <p class="error-text">First Name cannot be empty</p>
+                    </div>
+
+                    <div class="details">
+                        <input type="email" id="email" name="email" placeholder="Email Address">
+                        <img src="{% static '/favigen/img/icon-error.svg' %}" alt="error-icon" class="error-icon">
+                        <p class="error-text">Looks like this is not an email</p>
+                    </div>
+
+                    <div class="details">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <img src="{% static '/favigen/img/icon-error.svg' %}" alt="error-icon" class="error-icon">
+                        <p class="error-text">Password cannot be empty</p>
+                    </div>
+
+                    <div class="details">
+                        <input type="checkbox" id="remember" name="remember" value="Remember">
+                        <label class="remember">Remember me</label>
+                    </div>
+
+                    <div class="details">
+                        <hr><label class="remember">Or sign up with</label><hr>
+                    </div>
+
+                    <!--submit button-->
+                    <button type="submit">Get Started</button>
+
+                    <!--social media icons-->
+                    <div class="social-icon">
+                        <span>
+                            <img src="{% static 'facebook.svg' %}" alt="facebook"/>
+                        </span>
+                        <span>
+                            <img src="{% static 'twitter.svg' %}" alt="twitter"/>
+                        </span>
+                        <span>
+                            <img src="{% static 'google.svg' %}" alt="google"/> 
+                        </span>
+                    </div>
+
+
+                    <!--<span>
+                        <a class="facebook" href="#" title="Link to FaviGen on Facebook" target="_blank">
+                            <i class="fa fa-facebook fa-2x"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="Google_Account" href="#" title="Link to FaviGen Google Account " target="_blank">
+                            <i class="fa fa-google fa-2x"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="twitter" href="#" title="Link to FaviGen on Twitter" target="_blank">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </span>-->
+
+                    <!--form end-->
+                </form>
+
+                <!--right division end-->
+            </div>
+                
+            <!--container end-->
+        </div>
+
+        
+        <!--main body end-->
+    </main>
+
+
+<!--
+</body>
+<script src="{% static '/favigen/js/sign-up.js' %}"></script>
+</html>-->

@@ -1,6 +1,58 @@
+<<<<<<< HEAD
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../../static/sign-up.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="left">
+                <a href="#" alt="logo"><div class="logo">
+                    
+                </div></a>
+                <p class="v8_79">FaviGen <br> <span class="v8_80" >A powerful yet easy to use Favicons generator for your Favicons</span></p>
+                <img class="logo4" src="../../static/logo 4.png"/><p class="v8_81">Version 1.0</p>
+                
+            
+            </div>
+            <div class="right">
+                <div>
+                    <div class="right">
+                        <form action={%url 'accounts: sign-up'%} method="POST">
+                                                    {% csrf_token %}
+                            <span class="v8_53">Already have an accout? Log in </span>
+                            <span class="v8_54">Sign up</span>
+                            <div class="details">
+                                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                                <img src="../../static/icon-error.svg" alt="error-icon" class="error-icon">
+                                <p class="error-text">First Name cannot be empty</p>
+                            </div>
+
+                            <div class="details">
+                                <input type="email" id="email" name="email" placeholder="Email Address">
+                                <img src="../../static/icon-error.svg" alt="error-icon" class="error-icon">
+                                <p class="error-text">Looks like this is not an email</p>
+                            </div>
+    
+                            <div class="details">
+                                <input type="password" id="password" name="password" placeholder="Password">
+                                <img src="../../static/icon-error.svg" alt="error-icon" class="error-icon">
+                                <p class="error-text">Password cannot be empty</p>
+                            </div>
+=======
 {% extends 'favigen/base.html' %} 
 
 {% load static %} 
+>>>>>>> 9bc547ad0919000785bb657bbac23d6268128a5d
 
 {% block content %}
 
@@ -28,6 +80,30 @@
                             <p class="error-text">First Name cannot be empty</p>
                         </div>
 
+<<<<<<< HEAD
+                            <button type="submit">Get Started</button>
+                            <div class="social-icon">
+                                <span>
+                                    <img src="../../static/facebook.svg" alt="facebook"/>
+                                  </span>
+                                     <span>
+                                        <img src="../../static/twitter.svg" alt="twitter"/>
+                                     </span>
+                                     <span>
+                                        <img src="../../static/google.svg" alt="google"/> 
+                                     </span>
+                                   </div>
+                            </div>
+						</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="../../static/sign-up.js"></script>
+</html>
+=======
                         <div class="details">
                             <input type="email" id="email" name="email" placeholder="Email Address" />
                             <img src="assets/images/icon-error.svg" alt="error-icon" class="error-icon" />
@@ -93,3 +169,4 @@
 
 {% endblock %}
 
+>>>>>>> 9bc547ad0919000785bb657bbac23d6268128a5d
