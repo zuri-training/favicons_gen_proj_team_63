@@ -7,3 +7,7 @@ def home_page(request):
 
 def signup(request):
     return render(request, "favigen/sign-up.html")
+
+
+def login(request):
+    return render(request, "favigen/login.html")
