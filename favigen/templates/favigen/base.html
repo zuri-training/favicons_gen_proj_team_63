@@ -27,17 +27,26 @@
             rel="stylesheet"
             type="text/css"
         />
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
         <link href="{% static '/favigen/css/base.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static '/favigen/css/sign-up.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static '/favigen/css/login.css' %}" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        {% include 'favigen/components/navbar.html' %} 
+        {% comment %} {% include 'favigen/components/navbar.html' %} {% endcomment %}
         
         {% block content %} 
         
         {% endblock %} 
         
-        {% include 'favigen/components/footer.html' %}
+        {% comment %} {% include 'favigen/components/footer.html' %} {% endcomment %}
     </body>
     <!-- JavaScript Bundle with Popper -->
     <script
@@ -46,4 +55,5 @@
         crossorigin="anonymous"
     ></script>
     <script src="{% static '/favigen/js/sign-up.js' %}"></script>
+    <script src="{% static '/favigen/js/login.js' %}"></script>
 </html>
