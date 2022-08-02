@@ -23,3 +23,10 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class Favicons(models.Model):
+    url = models.URLField()
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
