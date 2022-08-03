@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
   }
   body {
     font-size: 14px;
   }
   .container{
+    width: 100%;
+    margin-left: -5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +20,6 @@
   .left{
     background: #2D1D90;
     padding-top: 100px;
-    cursor: pointer;
 }
 
 .left > p, span.v8_80{
@@ -80,7 +81,7 @@ hr {
 .logo {
     width: 214px;
     height: 214px;
-    background: url("faviGen_Logo.png") #fff;
+    background: url("../../../static/favigen/img/faviGen_Logo.png") #fff;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: fit-content;
@@ -88,6 +89,7 @@ hr {
     top: 100px;
     border-radius: 50%;
     margin: 0 auto;
+    cursor: pointer;
   }
   .logo4{
     display: inline;
@@ -99,6 +101,7 @@ hr {
     cursor: pointer;
   }
   .v8_79 {
+    margin-top: 50px;
     color: rgba(0,0,0,1);
     font-family: Inter;
     font-weight: Regular;
@@ -125,13 +128,17 @@ hr {
   .v8_53 {
     color: rgba(0,0,0,1);
     position: absolute;
-    top: 64px;
+    top: 10%;
     right: 20px;
     font-family: Inter;
     font-weight: Light;
     font-size: 20px;
     opacity: 0.4000000059604645;
     text-align: left;
+  }
+  a{
+    text-decoration: none;
+    color: rgba(0,0,0,5);
   }
   .v8_54 {
     text-align: center;
@@ -214,7 +221,7 @@ span{
       }
     
     .v8_53 {
-        top: 115%;
+        top: 110%;
         right: 0.25%;
         font-size: 16px;
     }
@@ -234,7 +241,7 @@ span{
     }
 
     .right{
-        padding: 0px 10px;
+        padding: 0px 70px;
     }
 
     .right input::placeholder{
@@ -245,10 +252,68 @@ span{
         padding-top: 50px;
         display: block;
     }
+    .social-icon>span{
+        margin-right: 10%;
+    }
     #remember{
         margin-left: -30%;
     }
     hr {
         width: 90px;
+    }
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    ::-webkit-scrollbar:vertical {
+        width: 12px;
+    }
+    
+    ::-webkit-scrollbar:horizontal {
+        height: 12px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        border: 2px solid #ffffff;
+    }
+    
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 765px){
+    .v8_53 {
+        top: 105%;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .v8_53 {
+        top: 95%;
+    }
+}
+
+@media screen and (max-width: 614px){
+    .social-icon{
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    span>img{
+        margin-bottom: 20%;
+    }
+    .social-icon>span{
+        padding: 0px;
+        box-shadow: 0px 0px 0px hsl(246, 25%, 77%);
+    }
+}
+
+@media screen and (max-width: 470px){
+    .v8_53 {
+        top: 90%;
     }
 }
