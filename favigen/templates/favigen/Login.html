@@ -1,106 +1,111 @@
-{% extends 'favigen/base.html' %}
+{% extends 'favigen/base.html' %} 
 
-{% load static %}
+{% load static %} 
 
 {% block content %}
 
-<main>
- <div class="container">
-    <div class="container__wrapper__one">
-        <div class="parent">
-            <div class="display">
-               <div class="child">
-                  <img src="{% static '/favigen/img/faviGen_Logo.png' %}" alt="logo"  />
-               </div>
-            </div>
-               <div class="child1">
-                  <p>FaviGen</p>
-               </div>
-            </div>
-            <div class="balance">
-               <div class="child2">
-                  A powerful yet easy to use 
-                  Favicons generator for your Favicons
-               </div>
-            </div>
-            <div class="show">
-               <img src="{% static '/favigen/img/show.png' %}" alt="show" width="180px" height="150px" />
-            </div>
-         </div>
-    </div>
-    <div class="container__wrapper__two parent2">
-       <h5>Don't have an account? Sign up</h5>
-       <div class="login_container">
-       <form>
-        <!--   con = Container  for items in the form-->
-        <div class="con">
-        <!--     Start  header Content  -->
-        
-           <h2 class="log">Log In</h2>
-           <!--     A welcome message or an explanation of the login form -->
-        
-        <!--     End  header Content  -->
-        <br>
-        <div class="field-set">
-          
-           <!--   user name -->
-           <div class="wrap">
-              <span class="input-item">
-                <!-- <i class="fa fa-user-circle"></i> -->
-              </span>
-             <!--   user name Input-->
-              <input class="form-input" id="txt-input" type="text" placeholder="Email" required>
-            </div>
-           <br>
-   
-                <!--   Password -->
-                <div class="wrap">
-                  <span class="input-item">
-                    <!-- <i class="fa fa-key"></i> -->
-                  </span>
-                         <!--   Password Input-->
-      
-                  <input class="form-input" id="txt-input" type="password" id="pwd" placeholder="password" required>
-                   
-                <!--show/hide password  -->
-                  <span class="input-item">
-                     <!-- <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i> -->
-                  </span>
-                </div>
-                <p class="text">Forget password?</p>
-    
-          
-           <br>
-         <!--        buttons -->
-         <!--      button LogIn -->
-           <button class="log-in"> Log In </button>
-        </div>
-         <!--   other items -->
-        <div class="other">
-         <!--      Forgot Password -->
-          <hr/>
-          <span class="hr_text">Or login with</span>
-          <div class="icons">
-          <span class="shadow">
-           <img src="{% static '/favigen/img/facebook.svg' %}" alt="facebook"/>
-         </span>
-            <span class="shadow">
-               <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter"/>
-            </span>
-            <span class="shadow">
-               <img src="{% static '/favigen/img/google.svg' %}" alt="google"/> 
-            </span>
-          </div>
-         <!--      End Other the Division -->
-        </div>
-          
-         <!--   End Conrainer  -->
-       </div>
-       
-       <!-- End Form -->
-     </form>
-   </div>
+    <!-- main body start-->
+    <main>
+        <!-- container-->
+        <div class="container">
 
-</main>
+            <!--left division-->
+            <div class="left">
+
+                <!-- logo -->
+                <a href="#">
+                    <div class="logo">
+                        <img src="{% static '/favigen/img/logo.svg' %}" width="30" class="d-inline-block align-top" alt="logo" />
+                    </div>
+                </a>
+
+
+                <p class="v8_79">
+                    FaviGen <br> 
+                    <span class="v8_80" >A powerful yet easy to use Favicons generator for your Favicons</span>
+                </p>
+
+                <!--base image-->
+                <img class="logo4" src="{% static '/favigen/img/logo 4.png' %}"/>
+                <p class="v8_81">Version 1.0</p>
+
+                <!--left division end-->
+            </div>
+                
+            <!--right division-->
+            <div class="right">
+
+                <!--form begin-->
+                <form action="{#}" method="POST">
+                    {% csrf_token %}
+                    <span class="v8_53">Dont have an account? sign up </span>
+                    <span class="v8_54">Log in</span>
+
+
+                    <div class="details">
+                        <input type="email" id="email" name="email" placeholder="Email Address">
+                        <img src="{% static '/favigen/img/icon-error.svg' %}" alt="error-icon" class="error-icon">
+                        <p class="error-text">Looks like this is not an email</p>
+                    </div>
+                    <div class="details">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <img src="{% static '/favigen/img/icon-error.svg' %}" alt="error-icon" class="error-icon">
+                        <p class="error-text">Password cannot be empty</p>
+                    </div>
+
+                    <div class="details">
+                        
+                        <label class="remember">Forget password</label>
+                    </div>
+
+                    <div class="details">
+                        <hr><label class="remember">Or sign up with</label><hr>
+                    </div>
+
+                    <!--submit button-->
+                    <button type="submit">Log in</button>
+
+                    <!--social media icons-->
+                    <div class="social-icon">
+                        <span>
+                            <img src="{% static '/favigen/img/facebook.svg' %}" alt="facebook"/>
+                        </span>
+                        <span>
+                            <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter"/>
+                        </span>
+                        <span>
+                            <img src="{% static '/favigen/img/google.svg' %}" alt="google"/> 
+                        </span>
+                    </div>
+
+
+                    <!--<span>
+                        <a class="facebook" href="#" title="Link to FaviGen on Facebook" target="_blank">
+                            <i class="fa fa-facebook fa-2x"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="Google_Account" href="#" title="Link to FaviGen Google Account " target="_blank">
+                            <i class="fa fa-google fa-2x"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="twitter" href="#" title="Link to FaviGen on Twitter" target="_blank">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </span>-->
+
+                    <!--form end-->
+                </form>
+
+                <!--right division end-->
+            </div>
+                
+            <!--container end-->
+        </div>
+
+        
+        <!--main body end-->
+    </main>
 
 {% endblock %}
