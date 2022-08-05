@@ -1,3 +1,5 @@
+
+
 const form = document.querySelector('.right form');
 const inputs = document.querySelectorAll('.right form input');
 
@@ -14,6 +16,7 @@ form.addEventListener('submit', (e)=>{
               } else{
                 input.parentElement.classList.add('error');
               }
+            form.submit()
             }
         }
     });
