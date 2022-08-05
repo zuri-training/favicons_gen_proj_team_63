@@ -102,11 +102,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
+        'NAME': 'df0rgj8b0d5aji',
+        'USER': 'dxczbhzwpyecad',
+        'PASSWORD': 'aad997ca33c9ae0db636b4573ffcf0c47cb3036efeef10e4b3f7624fbd82117b',
+        'HOST': 'ec2-3-223-242-224.compute-1.amazonaws.com',
+        'PORT': 5432,
     }
 }
 
@@ -147,7 +147,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'favigen/static')]
-STATIC_ROOT = [os.path.join(BASE_DIR, 'staticfiles')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type
