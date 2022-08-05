@@ -1,0 +1,7 @@
+.hero {
+    background-image: url("../../../static/favigen/img/bg_header.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80vh;
+    position: relative;
+  }
