@@ -16,7 +16,7 @@ class UsersManagersTests(TestCase):
             self.assertIsNone(user.username)
         with self.assertRaises(TypeError):
             User.objects.create_user()
-        with self.assertRaises(TypeError):
+        with self.assertRaises(ValueError):
             User.objects.create_user(email="")
         with self.assertRaises(ValueError):
             User.objects.create_user(email="", password="asdfg12345")

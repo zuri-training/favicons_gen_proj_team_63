@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def home_page(request):
-    return render(request, "favigen/base.html")
+    return render(request, "favigen/home.html")
 
 
 def signup(request):

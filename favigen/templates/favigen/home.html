@@ -1,3 +1,5 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,18 +12,18 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../static/favigen/css/index.css">
+    <link rel="stylesheet" href="{% static '/favigen/css/home.css' %}">
 </head>
 
 <body>
     <div class="hero position-relative">
-        <img class="img-fluid position-absolute hero_img_2 " src="../../../static/favigen/img/bg_hero_2.svg" alt="">
-        <img class="img-fluid position-absolute hero_img_3" src="../../../static/favigen/img/bg_hero_3.svg" alt="">
-        <img class="img-fluid position-absolute hero_img_4" src="../../../static/favigen/img/bg_hero_4.svg" alt="">
+        <img class="img-fluid position-absolute hero_img_2 " src="{% static '/favigen/img/bg_hero_2.svg' %}" alt="">
+        <img class="img-fluid position-absolute hero_img_3" src="{% static '/favigen/img/bg_hero_3.svg' %}" alt="">
+        <img class="img-fluid position-absolute hero_img_4" src="{% static '/favigen/img/bg_hero_4.svg' %}" alt="">
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid px-5">
                 <a class="navbar-brand" href="#">
-                    <img src="../../../static/favigen/img/logo.svg" width="30" class="d-inline-block align-top" alt="logo">
+                    <img src="{% static '/favigen/img/logo.svg' %}" width="30" class="d-inline-block align-top" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,24 +65,24 @@
     </div>
     <section class="container mx-auto row text-center">
         <div class="col-12 col-lg-4">
-            <img class="img-fluid my-3" src="../../../static/favigen/img/free_icon.svg" alt="">
+            <img class="img-fluid my-3" src="{% static '/favigen/img/free_icon.svg' %}" alt="">
             <h5 class="purple py-1">COMPLETELY FREE</h5>
             <p class="py-2">You can create and use favicons with FaviGen completely free of charge.</p>
         </div>
         <div class="col-12 col-lg-4">
-            <img class="img-fluid my-3" src="../../../static/favigen/img/fast_icon.svg" alt="">
+            <img class="img-fluid my-3" src="{% static '/favigen/img/fast_icon.svg' %}" alt="">
             <h5 class="purple py-1">SUPER FAST</h5>
             <p class="py-2">With its straightfoward interface, you can create your own favicon in seconds.</p>
         </div>
         <div class="col-12 col-lg-4">
-            <img class="img-fluid my-3" src="../../../static/favigen/img/easy_icon.svg" alt="">
+            <img class="img-fluid my-3" src="{% static '/favigen/img/easy_icon.svg' %}" alt="">
             <h5 class="purple py-1">EASY TO USE</h5>
             <p class="py-2">Simply upload your file and click download. It’s never been easier to create favicons.</p>
         </div>
 
     </section>
     <section class="container row mx-auto pt-3">
-        <div class="col-12 col-md-6"><img class="img-fluid" src="../../../static/favigen/img/favicon_icon.svg" alt="Favicon Icon" /></div>
+        <div class="col-12 col-md-6"><img class="img-fluid" src="{% static '/favigen/img/favicon_icon.svg' %}" alt="Favicon Icon" /></div>
         <div class="container col-12 py-5 text-center text-md-start col-md-6 px-5">
             <div class=>
                 <h5 class="purple py-1">1</h5>
@@ -108,7 +110,7 @@
 
             </div>
             <div class="col-12 col-md-6 text-center">
-                <img class="img-fluid" src="../../../static/favigen/img/gif.gif" alt="Animated Gif">
+                <img class="img-fluid" src="{% static '/favigen/img/gif.gif' %}" alt="Animated Gif">
             </div>
         </div>
     </section>
@@ -129,7 +131,7 @@
             <p>Copyright 2022</p>
         </div>
         <div>
-            <img src="../../../static/favigen/img/zuri.svg" alt="Zuri Logo" class="img-fluid">
+            <img src="{% static '/favigen/img/zuri.svg' %}" alt="Zuri Logo" class="img-fluid">
         </div>
     </footer>
 
