@@ -6,29 +6,32 @@
 body {
     font-size: 14px;
 }
-.container {
+.container1 {
     width: 100%;
-    margin-left: -5px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-.container > div {
-    width: 50%;
+.container1 > .left1 {
+    /* height: 100vh; */
+    width: 40%;
 }
-.left {
+.container1 > .right {
+    width: 60%;
+}
+.left1 {
     background: #2d1d90;
     padding-top: 100px;
 }
 
-.left > p,
+.left1 > p,
 span.v8_80 {
     color: #ffffff;
 }
 
 .right {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .right .form {
     padding: 50px;
@@ -38,8 +41,9 @@ span.v8_80 {
 #firstName,
 #email,
 #password {
-    width: 60%;
+    width: 70%;
     height: 50px;
+    margin: 15px 5px;
     border-radius: 8px;
     border: 1px solid hsl(246, 25%, 77%);
     padding-left: 20px;
@@ -51,7 +55,9 @@ span.v8_80 {
     font-size: 16px;
 }
 #remember {
-    margin-left: -33%;
+    margin-left: -45%;
+    margin-top: 5px;
+    margin-bottom: 10px;
     border-radius: 8px;
     border: 1px solid hsl(246, 25%, 77%);
     outline: none;
@@ -65,7 +71,7 @@ label {
     font-size: 16px;
 }
 hr {
-    width: 100px;
+    width: 200px;
     display: inline-block;
     margin: 8px;
 }
@@ -79,6 +85,7 @@ hr {
 }
 .details {
     position: relative;
+    margin-top: 15px;
     margin-bottom: 15px;
 }
 .logo {
@@ -104,7 +111,7 @@ hr {
     cursor: pointer;
 }
 .v8_79 {
-    margin-top: 50px;
+    margin-top: 30px;
     color: rgba(0, 0, 0, 1);
     font-family: Inter;
     font-weight: Regular;
@@ -117,22 +124,25 @@ hr {
 .v8_80 {
     font-family: Inter;
     font-weight: Light;
-    font-size: 24px;
+    font-size: 22px;
     opacity: 1;
     text-align: center;
+}
+.FaviGenContent {
+    margin: 0 75px;
 }
 .v8_81 {
     padding-left: 20px;
     padding-top: 180px;
     font-family: Inter;
     font-weight: Light;
-    font-size: 24px;
+    font-size: 20px;
     text-align: left;
 }
 .v8_53 {
     color: rgba(0, 0, 0, 1);
     position: absolute;
-    top: 10%;
+    top: 2%;
     right: 20px;
     font-family: Inter;
     font-weight: Light;
@@ -147,15 +157,16 @@ a {
 .v8_54 {
     text-align: center;
     position: relative;
-    top: -10px;
     color: rgba(0, 0, 0, 1);
     font-family: Inter;
     font-weight: Regular;
     font-size: 35px;
 }
 .right button[type="submit"] {
-    width: 60%;
+    width: 70%;
     height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     border-radius: 8px;
     border: 1px solid #2d1d90;
     padding-left: 20px;
@@ -176,7 +187,7 @@ span {
     margin: 20px;
 }
 .social-icon {
-    margin: 30px;
+    margin: 45px 30px;
     padding-top: 15px;
     display: block;
 }
@@ -215,16 +226,28 @@ span {
     color: hsl(0, 100%, 74%);
 }
 
+@media screen and (max-width: 1100px) {
+    .FaviGenContent {
+        margin: 0px 5px;
+    }
+}
+
 @media screen and (max-width: 900px) {
-    .container {
+    .FaviGenContent {
+        margin: 0px 150px;
+    }
+    .container1 {
         flex-direction: column;
     }
-    .container > div {
+    .container1 > .left1 {
+        width: 100%;
+    }
+    .container1 > .right {
         width: 100%;
     }
 
     .v8_53 {
-        top: 110%;
+        top: 130%;
         right: 0.25%;
         font-size: 16px;
     }
@@ -238,15 +261,6 @@ span {
         position: relative;
         top: 100px;
     }
-
-    .left {
-        padding-right: 70px;
-    }
-
-    .right {
-        padding: 0px 70px;
-    }
-
     .right input::placeholder {
         font-size: 14px;
     }
@@ -288,18 +302,6 @@ span {
     }
 }
 
-@media screen and (max-width: 765px) {
-    .v8_53 {
-        top: 105%;
-    }
-}
-
-@media screen and (max-width: 660px) {
-    .v8_53 {
-        top: 95%;
-    }
-}
-
 @media screen and (max-width: 614px) {
     .social-icon {
         width: 50%;
@@ -315,8 +317,18 @@ span {
     }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 510px) {
     .v8_53 {
-        top: 90%;
+        top: 135%;
+    }
+}
+@media screen and (max-width: 475px) {
+    .v8_53 {
+        top: 150%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .v8_53 {
+        top: 170%;
     }
 }
