@@ -14,7 +14,6 @@ body {
     text-align: center;
 }
 .container1 > .left1 {
-    /* height: 100vh; */
     width: 40%;
 }
 .container1 > .right {
@@ -331,4 +330,13 @@ span {
     .v8_53 {
         top: 170%;
     }
+}
+@media screen and (min-width: 1100.5px) {
+    .logo4 {
+        margin-top: 1700px;
+    }
+    .v8_81 {
+        margin-top: 1750px;
+    }
+    
 }
