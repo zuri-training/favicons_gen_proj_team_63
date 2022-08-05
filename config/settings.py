@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv(key='SECRET_KEY', default="django-insecure-_#rb-u4cjj-0kt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['favicon-gen-proj.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['favicon-gen-proj.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
