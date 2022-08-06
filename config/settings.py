@@ -14,7 +14,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,7 +30,7 @@ SECRET_KEY = os.getenv(key='SECRET_KEY', default="django-insecure-_#rb-u4cjj-0kt
 DEBUG = True
 
 ALLOWED_HOSTS = ['favicon-gen-proj.herokuapp.com', '127.0.0.1', 'localhost']
- 
+
 
 # Application definition
 

@@ -5,6 +5,8 @@ from django.conf.urls.static import static
 
 app_name = "favigen"
 
+app_name = "favigen"
+
 urlpatterns = [
     path("", views.home_page, name='home'),
 <<<<<<< HEAD
