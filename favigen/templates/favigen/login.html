@@ -48,13 +48,14 @@
                                 <!-- <i class="fa fa-user-circle"></i> -->
                             </span>
                             <!--   user name Input-->
-                            <input
+                            {{ login_form.email }}
+                            {% comment %} <input
                                 class="form-input"
                                 id="txt-input"
                                 type="text"
                                 placeholder="Email"
                                 required
-                            />
+                            /> {% endcomment %}
                         </div>
                         <br />
 
@@ -63,16 +64,16 @@
                             <span class="input-item">
                                 <!-- <i class="fa fa-key"></i> -->
                             </span>
-                            <!--   Password Input-->
 
-                            <input
+                            <!--   Password Input-->
+                            {{ login_form.password }}
+                            {% comment %} <input
                                 class="form-input"
-                                id="txt-input"
+                                id="txt-input2"
                                 type="password"
-                                id="pwd"
                                 placeholder="Password"
                                 required
-                            />
+                            /> {% endcomment %}
 
                             <!--show/hide password  -->
                             <span class="input-item">
