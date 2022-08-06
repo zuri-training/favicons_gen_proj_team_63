@@ -28,9 +28,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv(key='SECRET_KEY', default="django-insecure-_#rb-u4cjj-0ktkv4!4ae_xx87a5j_l61lqc-ny8xoi4ffnt=_")
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
 DEBUG =  os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['*']
+=======
+DEBUG = True
+
+ALLOWED_HOSTS = ['favicon-gen-proj.herokuapp.com', '127.0.0.1', 'localhost']
+>>>>>>> 0fb436d51a861efdb8fa5c00db68af6f5e1be7f2
 
 
 # Application definition
@@ -68,6 +74,7 @@ AUTH_USER_MODEL = 'favigen.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -109,6 +116,14 @@ DATABASES = {
         'HOST': os.getenv('HOST'),
         'PORT': os.getenv('PORT'),
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'df0rgj8b0d5aji',
+    #     'USER': 'dxczbhzwpyecad',
+    #     'PASSWORD': 'aad997ca33c9ae0db636b4573ffcf0c47cb3036efeef10e4b3f7624fbd82117b',
+    #     'HOST': 'ec2-3-223-242-224.compute-1.amazonaws.com',
+    #     'PORT': 5432,
+    # }
 }
 
 
@@ -147,7 +162,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'favigen/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -20,5 +20,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('', include('favigen.urls')),
+=======
+    path('', include('favigen.urls', namespace='fav')),
+>>>>>>> 0fb436d51a861efdb8fa5c00db68af6f5e1be7f2
 ]
