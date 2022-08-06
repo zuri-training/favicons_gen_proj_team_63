@@ -14,7 +14,6 @@ body {
     text-align: center;
 }
 .container1 > .left1 {
-    /* height: 100vh; */
     width: 40%;
 }
 .container1 > .right {
