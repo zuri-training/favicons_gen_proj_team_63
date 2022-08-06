@@ -1,4 +1,8 @@
-{% extends 'favigen/base.html' %} {% load static %} {% block content %}
+{% extends 'favigen/base.html' %} 
+
+{% load static %} 
+
+{% block content %}
 
 <main>
     <div class="container">
@@ -24,7 +28,10 @@
     <div class="container__wrapper__two parent2">
         <h5>Don't have an account? Sign up</h5>
         <div class="login_container">
-            <form>
+            <form action="{% url 'fav:login' %}" method="POST" name="login" id="signin">
+
+                {% csrf_token %}
+
                 <!--   con = Container  for items in the form-->
                 <div class="con">
                     <!--     Start  header Content  -->
@@ -63,7 +70,7 @@
                                 id="txt-input"
                                 type="password"
                                 id="pwd"
-                                placeholder="password"
+                                placeholder="Password"
                                 required
                             />
 
@@ -77,7 +84,7 @@
                         <br />
                         <!--        buttons -->
                         <!--      button LogIn -->
-                        <button class="log-in">Log In</button>
+                        <button class="log-in" type="submit">Log In</button>
                     </div>
                     <!--   other items -->
                     <div class="other">

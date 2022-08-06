@@ -43,7 +43,7 @@
                     {{field}}
                 {% endfor %} {% endcomment %}
                 
-                <span class="v8_53"><a href="/login">Already have an accout? Log in</a> </span>
+                <span class="v8_53"><a href="{% url 'fav:login' %}">Already have an accout? Log in</a> </span>
                 <span class="v8_54">Sign up</span>
 
                 <div class="details">
@@ -94,6 +94,8 @@
                     <input type="checkbox" id="remember" name="remember" value="Remember" />
                     <label class="remember">Remember me</label>
                 </div>
+
+                {{signup_form.errors}}
 
                 <!--submit button-->
                 <button type="submit">Get Started</button>

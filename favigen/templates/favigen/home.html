@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-5">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'fav:home' %}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contact-us">Contact Us</a>
@@ -43,7 +43,7 @@
                             <a class="nav-link" href="/saved-icons">Saved Icons</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/signup">Sign Up</a>
+                            <a class="nav-link" href="{% url 'fav:signup' %}">Sign Up</a>
                         </li>
                     </ul>
                 </div>
@@ -55,6 +55,11 @@
                 <p class="">Powerful yet easy to use favicon generator for everyone
                     and for every task</p>
                 <button type="button" class="btn btn-purple my-3">CREATE YOUR FAVICON</button>
+
+                {% comment %} {% for message in messages %}
+                    <p id="messages">{{messages}}</p>
+                {% endfor %} {% endcomment %}
+                
             </div>
             <div class="d-lg-none mx-auto my-5 py-5 text-center">
                 <h2 class="py-3 gray">Generate your own favicon easily in seconds </h2>
