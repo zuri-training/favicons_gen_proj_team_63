@@ -331,11 +331,27 @@ span {
         top: 170%;
     }
 }
-/* @media screen and (min-width: 1100.5px) {
+@media screen and (min-width: 1100.5px) {
     .logo4 {
-        margin-top: 1700px;
+        margin-top: 100px;
     }
     .v8_81 {
-        margin-top: 1750px;
+        margin-top: 150px;
     }
-} */
+}
+@media screen and (min-width: 1350.5px) {
+    .logo4 {
+        margin-top: 250px;
+    }
+    .v8_81 {
+        margin-top: 250px;
+    }
+}
+@media screen and (min-width: 900.5px) and (max-width: 1100px) {
+    .logo4 {
+        margin-top: 200px;
+    }
+    .v8_81 {
+        margin-top: 200px;
+    }
+}
