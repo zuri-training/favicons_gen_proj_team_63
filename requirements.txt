@@ -32,3 +32,4 @@ typer==0.6.1
 tzdata==2022.1
 uritemplate==4.1.1
 webencodings==0.5.1
+whitenoise==6.2.0
