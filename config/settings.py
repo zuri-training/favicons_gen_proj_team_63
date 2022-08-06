@@ -28,16 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv(key='SECRET_KEY', default="django-insecure-_#rb-u4cjj-0ktkv4!4ae_xx87a5j_l61lqc-ny8xoi4ffnt=_")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
-DEBUG =  os.getenv('DEBUG')
-
-ALLOWED_HOSTS = ['*']
-=======
 DEBUG = True
 
 ALLOWED_HOSTS = ['favicon-gen-proj.herokuapp.com', '127.0.0.1', 'localhost']
->>>>>>> 0fb436d51a861efdb8fa5c00db68af6f5e1be7f2
-
+ 
 
 # Application definition
 
@@ -165,6 +159,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'favigen/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
