@@ -328,8 +328,14 @@ span {
 }
 @media screen and (max-width: 400px) {
     .v8_53 {
-        top: 170%;
+        top: 10%;
     }
+    /* Mobile view - Only works for Microsoft Edge */
+    div.left1 {
+        display: none !important;
+    }
+    
+
 }
 @media screen and (min-width: 1100.5px) {
     .logo4 {
