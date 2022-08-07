@@ -4,16 +4,16 @@
 
 {% block content %}
 
+<!-- main body start-->
 <main>
-    <div class="container1">
-        <!--left1 division-->
-        <div class="left1">
-            <!-- logo -->
-            <a href="#">
-                <div class="logo">
-                    <!--<img src="{% static '/favigen/img/logo.svg' %}" width="30" class="d-inline-block align-top" alt="logo" />-->
-                </div>
-            </a>
+
+        <!--right division-->
+        <div class="right">
+            <!--form begin-->
+            <a href="{% url 'fav:signup' %}"><h5>Don't have an account? Sign up</h5></a>
+        <div class="login_container">
+            <form action="{% url 'fav:login' %}" method="POST" name="login" id="signin">
+
 
             <p class="v8_79">FaviGen</p>
             <br />
@@ -31,16 +31,7 @@
         <!--right division-->
         <div class="right">
             <!--form begin-->
-            <a href="{% url 'fav:signup' %}"><h5>Don't have an account? Sign up</h5></a>
-        <div class="login_container">
-            <form action="{% url 'fav:login' %}" method="POST" name="login" id="signin">
-
-                {% csrf_token %}
-
-                <!--   con = Container  for items in the form-->
-                <div class="con">
-                    <!--     Start  header Content  -->
-
+           
                     <h2 class="log">Log In</h2>
                     <!--     A welcome message or an explanation of the login form -->
 
@@ -113,10 +104,7 @@
                     </div>
 
                     <!--   End Conrainer  -->
-                </div>
 
-                <!-- End Form -->
-            </form>
 </main>
 
 {% endblock %}
