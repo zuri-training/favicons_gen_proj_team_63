@@ -1,6 +1,3 @@
-from multiprocessing import context
-from django.views.generic import TemplateView
-from unicodedata import name
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 
@@ -8,7 +5,6 @@ from django.shortcuts import render, redirect
 from favigen.forms import CustomUserCreationForm, CustomAuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
-from .models import CustomUser
 
 # Create your views here.
 def home_page(request):
@@ -16,6 +12,13 @@ def home_page(request):
 
 
 def signup_page(request):
+    """
+    This view renders the signup page and then takes in user data 
+    (First Name, Email and Password) from the HTML form as a POST request.
+    It then extracts the user's first name from the form and uses it in a 
+    custom message if the registration is successful, after which it 
+    redirects the user to the home page.
+    """
     # if not request.user.is_anonymous:
     #     return redirect("favigen:home")
 
