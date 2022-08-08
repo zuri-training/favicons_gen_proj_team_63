@@ -81,3 +81,7 @@ def upload(request):
 
 def contact_page(request):
     return render(request, "favigen/contact.html")
+
+
+def saved_icons(request):
+    return render(request, "favigen/saved-icons.html")
