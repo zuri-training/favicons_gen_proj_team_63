@@ -77,3 +77,7 @@ def upload(request):
         url = fs.url(name)
         context["url"] = fs.url(name)
     return render(request, "favigen/upload.html", context)
+
+
+def contact_page(request):
+    return render(request, "favigen/contact.html")
