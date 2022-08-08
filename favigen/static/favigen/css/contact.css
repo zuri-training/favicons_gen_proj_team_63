@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: white;
+    font-family: "Manrope", sans-serif;
+  }
+  li,
+  a {
+    text-decoration: none;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10%;
+  }
+  
+  .nav-logo {
+    cursor: pointer;
+  }
+  .nav-links {
+    list-style: none;
+  }
+  .nav-links li {
+    display: inline-block;
+    padding: 20px 20px;
+    margin-top: 35px;
+  }
+  
+  .container {
+    display: flex;
+    padding: 20px 7%;
+    width: 100%;
+  }
+  .container-left {
+    background-color: #2d1d90;
+    flex-basis: 50%;
+    color: #ffffff;
+    padding: 5% 0px 0px 5%;
+    margin-right: 15px;
+    border-radius: 5px;
+  }
+  .container-left h2 {
+    margin-bottom: 20px;
+  }
+  .container-left p {
+    line-height: 25px;
+    padding-right: 20px;
+  }
+  .second {
+    text-align: center;
+    margin-right: 20%;
+    margin-top: 20px;
+  }
+  .second p {
+    margin: 20px 20px;
+  }
+  .socials {
+    width: 90%;
+  }
+  .container-right {
+      margin-left: 7%;
+      margin-top: 3%;
+      color: #666666;
+      flex-basis: 50%;
+  }
+  textarea {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    border-style: groove;
+    font-size: large;
+  }
+  
+  input {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-style: groove;
+    font-size: large;
+  }
+  .option {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    height: 30px;
+    border-radius: 5px;
+    border-style: groove;
+  }
+  button {
+    width: 25%;
+    float: inline-end;
+    background-color: #2d1d90;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  label {
+    display: block;
+  }
+  .logo {
+    float: inline-end;
+    margin-right: -5%;
+    margin-top: 10%;
+    width: 40%;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-right: 40px;
+  }
+  
+  @media (max-width: 1000px) {
+    button {
+      width: 35%;
+    }
+    .socials {
+      width: 70%;
+    }
+  }
+  @media (max-width: 900px) {
+    .second {
+      margin-right: 5%;
+    }
+  }
+  @media (max-width: 740px) {
+    .container {
+      flex-direction: column;
+    }
+    .container-left {
+      width: 100%;
+    }
+    .container-right {
+      margin-left: 0%;
+    }
+  }
+  
