@@ -11,6 +11,7 @@ urlpatterns = [
     path("login/", views.login_page, name="login"),
     path("upload/", views.upload, name="upload"),
     path("contact/", views.contact_page, name="contact"),
+    path("saved-icons/", views.saved_icons, name="saved"),
 ]
 
 if settings.DEBUG:
