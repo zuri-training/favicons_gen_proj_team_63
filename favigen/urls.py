@@ -10,6 +10,7 @@ urlpatterns = [
     path("signup/", views.signup_page, name="signup"),
     path("login/", views.login_page, name="login"),
     path("upload/", views.upload, name="upload"),
+    path("contact/", views.contact_page, name="contact"),
 ]
 
 if settings.DEBUG:
