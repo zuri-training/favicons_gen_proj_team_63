@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <img class="nav-logo" src="images\smalllogo.svg" alt="" />
+    <nav>
+      <ul class="nav-links">
+        <li><a href="">home</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="container-left">
+      <div>
+        <h2>Contact Us</h2>
+        <p>
+          Any questions or remarks? just send us a message fill up the form
+          and our team will get back to you within 24 hours
+        </p>
+      </div>
+      <div class="second">
+        <h3>OR</h3>
+        <p>Contact us via our socials</p>
+      </div>
+      <div class="icons">
+        <span>
+          <img class="socials" src="images\twittercontact.svg" alt="twitter" />
+        </span>
+        <span>
+          <img class="socials" src="images\phonecontact.svg" alt="twitter" />
+        </span>
+        <span>
+          <img class="socials" src="images\facebookcontact.svg" alt="twitter" />
+        </span>
+        <span>
+          <img class="socials" src="images\instagramcontact.svg" alt="twitter" />
+        </span>
+      </div>
+      <img src="images\biglogo.png" alt="" class="logo" />
+    </div>
+    <div class="container-right">
+      <form id="form">
+        <div>
+          <label for="">Subject</label>
+          <input type="text" id="Subject" required />
+        </div>
+        <div>
+          <label for="">Message</label>
+          <textarea rows="6" id="Message" required></textarea>
+        </div>
+        <div>
+          <label for="">Priority</label>
+          <select class="option" name="priority">
+            <option value="">
+              --select urgency of issue
+            </option>
+            <option value="critical">Critical</option>
+            <option value="Major">Major</option>
+            <option value="Medium">Medium</option>
+            <option value="Minor">Minor</option>
+          </select>
+        </div>
+        <button type="submit" >Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="contact.js"></script>
+</body>
+
+
+</html>
