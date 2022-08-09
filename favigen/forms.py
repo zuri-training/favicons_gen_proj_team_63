@@ -72,7 +72,7 @@ class CustomAuthenticationForm(forms.ModelForm):
         })
         self.fields["password"].widget.attrs.update({
             'class':'form-input',
-            'id': 'txt-input2',
+            'id': 'txt-input',
             'type': 'password',
             'placeholder': 'Password'
         })

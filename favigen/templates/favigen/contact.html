@@ -30,7 +30,11 @@
                 <ul class="nav-links">
                     <li><a href="{% url 'fav:home' %}">Home</a></li>
                     <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'fav:signup' %}">Log Out</a></li>
+                    {% else %}
                     <li><a href="{% url 'fav:login' %}">Sign In</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </header>
