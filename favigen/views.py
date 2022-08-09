@@ -65,7 +65,7 @@ def login_page(request):
 def logout_view(request):
     logout(request)
     messages.success(request, "Logged Out")
-    return redirect("favigen:home")
+    return redirect("favigen:login")
 
 
 def upload(request):
@@ -85,3 +85,7 @@ def contact_page(request):
 
 def saved_icons(request):
     return render(request, "favigen/saved-icons.html")
+
+
+def generated_icon(request):
+    return render(request, "favigen/generated-icon.html")
