@@ -28,9 +28,9 @@
             <img class="nav-logo" src="{% static '/favigen/img/smalllogo.svg' %}" alt="" />
             <nav>
                 <ul class="nav-links">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Sign In</a></li>
+                    <li><a href="{% url 'fav:home' %}">Home</a></li>
+                    <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'fav:login' %}">Sign In</a></li>
                 </ul>
             </nav>
         </header>
