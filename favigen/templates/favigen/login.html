@@ -4,7 +4,9 @@
 
 {% block content %}
 
+<!-- main body start-->
 <main>
+    <!-- container-->
     <div class="container1">
         <!--left1 division-->
         <div class="left1">
@@ -31,92 +33,111 @@
         <!--right division-->
         <div class="right">
             <!--form begin-->
-            <a href="{% url 'fav:signup' %}"><h5>Don't have an account? Sign up</h5></a>
-        <div class="login_container">
-            <form action="{% url 'fav:login' %}" method="POST" name="login" id="signin">
-
+            <form action="{% url 'fav:signup' %}" method="POST" name="Userinfo" id="Userinfo">
+                {% comment %} {{ form.as_p }} {% endcomment %}
                 {% csrf_token %}
+                {% comment %} {{ signup_form }} {% endcomment %}
 
-                <!--   con = Container  for items in the form-->
-                <div class="con">
-                    <!--     Start  header Content  -->
+                {% comment %} {% for field in signup_form %}
+                    {{field.label}}
+                    {{field}}
+                {% endfor %} {% endcomment %}
+                
+                <span class="v8_53"><a href="{% url 'fav:login' %}">Dont have an accout? Sign up</a> </span>
+                <span class="v8_54">Login</span>
 
-                    <h2 class="log">Log In</h2>
-                    <!--     A welcome message or an explanation of the login form -->
-
-                    <!--     End  header Content  -->
-                    <br />
-                    <div class="field-set">
-                        <!--   user name -->
-                        <div class="wrap details">
-                            <span class="input-item">
-                                <!-- <i class="fa fa-user-circle"></i> -->
-                            </span>
-                            <!--   user name Input-->
-                            {{ login_form.email }}
-                            {% comment %} <input
-                                class="form-input"
-                                id="txt-input"
-                                type="text"
-                                placeholder="Email"
-                                required
-                            /> {% endcomment %}
-                        </div>
-                        <br />
-
-                        <!--   Password -->
-                        <div class="wrap">
-                            <span class="input-item">
-                                <!-- <i class="fa fa-key"></i> -->
-                            </span>
-
-                            <!--   Password Input-->
-                            {{ login_form.password }}
-                            {% comment %} <input
-                                class="form-input"
-                                id="txt-input2"
-                                type="password"
-                                placeholder="Password"
-                                required
-                            /> {% endcomment %}
-
-                            <!--show/hide password  -->
-                            <span class="input-item">
-                                <!-- <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i> -->
-                            </span>
-                        </div>
-                        <p class="text">Forget password?</p>
-
-                        <br />
-                        <!--        buttons -->
-                        <!--      button LogIn -->
-                        <button class="log-in" type="submit">Log In</button>
+                <div class="field-set">
+                    <!--   user name -->
+                    <div class="details">
+                       
+                        <!--   user name Input-->
+                        {{ login_form.email }}
+                        {% comment %} <input type="email" id="email" name="email" placeholder="Email Address" /> {% endcomment %}
+                        <img
+                            src="{% static '/favigen/img/icon-error.svg' %}"
+                            alt="error-icon"
+                            class="error-icon"
+                        />
+                        <p class="error-text">Looks like this is not an email</p>
                     </div>
-                    <!--   other items -->
-                    <div class="other">
-                        <!--      Forgot Password -->
-                        <hr />
-                        <span class="hr_text">Or login with</span>
-                        <hr/>
-                        <div class="icons">
-                            <span class="shadow">
-                                <img src="{% static '/favigen/img/facebook.svg' %}" alt="facebook" />
-                            </span>
-                            <span class="shadow">
-                                <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter" />
-                            </span>
-                            <span class="shadow">
-                                <img src="{% static '/favigen/img/google.svg' %}" alt="google" />
-                            </span>
-                        </div>
-                        <!--      End Other the Division -->
+                
+
+                    <!--   Password -->
+                    <div class="details">
+                       
+
+                        <!--   Password Input-->
+                        {{ login_form.password }}
+                        {% comment %} <input type="password" id="password" name="password" placeholder="Password" /> {% endcomment %}
+                        <img
+                            src="{% static '/favigen/img/icon-error.svg' %}"
+                            alt="error-icon"
+                            class="error-icon"
+                        />
+                        <p class="error-text">Password cannot be empty</p>
                     </div>
 
-                    <!--   End Conrainer  -->
+                        <!--show/hide password  -->
+                        <span class="input-item">
+                            <!-- <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i> -->
+                        </span>
+                    </div>
+                    <p class="text">Forget password?</p>
+
+                
+
+                
+
+                {{signup_form.errors}}
+
+                <!--submit button-->
+                <button type="submit">Get Started</button>
+
+                <div class="details">
+                    <hr />
+                    <label class="remember">Or sign up with</label>
+                    <hr />
                 </div>
 
-                <!-- End Form -->
+                <!--social media icons-->
+                <div class="social-icon">
+                    <span>
+                        <img src="{% static '/favigen/img/facebook.svg' %}" alt="facebook" />
+                    </span>
+                    <span>
+                        <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter" />
+                    </span>
+                    <span>
+                        <img src="{% static '/favigen/img/google.svg' %}" alt="google" />
+                    </span>
+                </div>
+
+                <!--<span>
+                        <a class="facebook" href="#" title="Link to FaviGen on Facebook" target="_blank">
+                            <i class="fa fa-facebook fa-2x"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="Google_Account" href="#" title="Link to FaviGen Google Account " target="_blank">
+                            <i class="fa fa-google fa-2x"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a class="twitter" href="#" title="Link to FaviGen on Twitter" target="_blank">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </span>-->
+
+                <!--form end-->
             </form>
+
+            <!--right division end-->
+        </div>
+
+        <!--container end-->
+    </div>
+
+    <!--main body end-->
 </main>
 
 {% endblock %}
