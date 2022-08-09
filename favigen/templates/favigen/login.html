@@ -29,11 +29,12 @@
         </div>
 
         <!--right division-->
-        <div class="right">
+        <!-- <div class="right"> -->
             <!--form begin-->
-            <span class="v8_53"><a href="{% url 'fav:signup' %}">Don't have an account? Sign up</a> </span>
             
-        <div class="login_container">
+            <div class="right"> 
+                 <span class="v8_53"><a href="{% url 'fav:signup' %}">Don't have an account? Sign up</a> </span>
+           
             <form action="{% url 'fav:login' %}" method="POST" name="login" id="signin">
 
                 {% csrf_token %}
@@ -85,8 +86,9 @@
                         <br />
                         <!--        buttons -->
                         <!--      button LogIn -->
-                        <button class="log-in" type="submit">Log In</button>
+                       
                     </div>
+                    <button class="log-in" type="submit">Log In</button>
                     <!--   other items -->
                     <div class="other">
                         <!--      Forgot Password -->
