@@ -1,11 +1,127 @@
 * {
-    box-sizing: border-box;
+    margin: 0;
     padding: 0;
-    margin: 0 auto;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* list-style: none; */
 }
+
 body {
-    font-size: 14px;
+    font-family: montserrat;
 }
+
+/* styling for login page  */
+
+/* .container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+} */
+
+/* .container__wrapper__one {
+    flex: 0.4;
+    background-color: #2d1d90;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.container__wrapper__two {
+    flex: 0.6;
+}
+
+.parent {
+    position: relative;
+    top: 60px;
+}
+
+.child {
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    border: 2px solid #d9d9d9;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+    width: 150px;
+    height: 150px;
+    font-weight: 300;
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.child1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 25px;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.child2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+    color: white;
+    align-items: center;
+    width: 270px;
+    margin: auto;
+    margin-top: -150px;
+} */
+
+h5 {
+    top: -100px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.show {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+
+.parent2 {
+    display: flex;
+
+    justify-content: flex-start;
+    height: 100vh;
+    width: 70%;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 48px;
+}
+
+
+
+
+
+
+
+.text {
+    text-align: end;
+    color: #2d1d90;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
 .container1 {
     width: 100%;
     display: flex;
@@ -39,7 +155,8 @@ span.v8_80 {
     box-shadow: 0 5px hsla(249, 10%, 26%, 0.5);
 }
 
-input{
+
+#txt-input {
     width: 70%;
     height: 50px;
     margin: 15px 5px;
@@ -53,6 +170,22 @@ input{
     font-weight: 600;
     font-size: 16px;
 }
+
+#txt-input2 {
+    width: 70%;
+    height: 50px;
+    margin: 15px 5px;
+    border-radius: 8px;
+    border: 1px solid hsl(246, 25%, 77%);
+    padding-left: 20px;
+    outline: none;
+    background-color: aliceblue;
+    color: hsl(249, 10%, 26%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
 
 label {
     color: hsl(249, 10%, 26%);
@@ -73,15 +206,10 @@ hr {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
-.details {
-    position: relative;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
 
 .text{
     text-align: right;
-    margin-right: 130px;
+    margin-right: 100px;
 }
 .logo {
     width: 214px;
@@ -157,26 +285,6 @@ a {
     font-weight: Regular;
     font-size: 35px;
 }
-.right button[type="submit"] {
-    width: 70%;
-    height: 50px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #2d1d90;
-    padding-left: 20px;
-    outline: none;
-    background-color: #2d1d90;
-    color: #ffffff;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: 0 3px rgba(255, 255, 255, 0.5);
-}
 
 span {
     margin: 20px;
@@ -193,33 +301,6 @@ span {
     cursor: pointer;
 }
 
-.error-text,
-.error-icon {
-    display: none;
-}
-
-.details.error .error-text,
-.details.error .error-icon {
-    display: block;
-}
-
-.details.error input {
-    border: 2px solid hsl(0, 100%, 74%);
-}
-.error-icon {
-    position: absolute;
-    top: 28%;
-    right: 150px;
-}
-
-.error-text {
-    position: relative;
-    left: 130px;
-    font-size: 10px;
-    font-style: italic;
-    font-weight: 500;
-    color: hsl(0, 100%, 74%);
-}
 
 @media screen and (max-width: 1100px) {
     .FaviGenContent {
@@ -241,17 +322,17 @@ span {
         width: 100%;
     }
 
+    
+
     .v8_53 {
-        top: 130%;
+        top: 100%;
         right: 0.25%;
         font-size: 16px;
     }
     .v8_54 {
         top: 90px;
     }
-    .details {
-        top: 100px;
-    }
+    
     .right button[type="submit"] {
         position: relative;
         top: 100px;
@@ -266,12 +347,12 @@ span {
     }
     .social-icon > span {
         margin-right: 10%;
+       
     }
-    #remember {
-        margin-left: -30%;
-    }
+  
     hr {
         width: 90px;
+       
     }
     ::-webkit-scrollbar {
         -webkit-appearance: none;
@@ -297,140 +378,3 @@ span {
     }
 }
 
-@media screen and (max-width: 1100px) {
-    .FaviGenContent {
-        margin: 0px 5px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-
-    
-
-    .FaviGenContent {
-        margin: 0px 150px;
-    }
-    .container1 {
-        flex-direction: column;
-    }
-    .container1 > .left1 {
-        width: 100%;
-    }
-    .container1 > .right {
-        width: 100%;
-    }
-
-    .v8_53 {
-        top: 130%;
-        right: 0.25%;
-        font-size: 16px;
-    }
-    .v8_54 {
-        top: 90px;
-    }
-    .details {
-        top: 100px;
-    }
-    .right button[type="submit"] {
-        position: relative;
-        top: 100px;
-    }
-    .right input::placeholder {
-        font-size: 14px;
-    }
-    .social-icon {
-        margin: 100px;
-        padding-top: 50px;
-        display: block;
-    }
-    .social-icon > span {
-        margin-right: 10%;
-    }
-    #remember {
-        margin-left: -30%;
-    }
-    hr {
-        width: 90px;
-    }
-    ::-webkit-scrollbar {
-        -webkit-appearance: none;
-    }
-
-    ::-webkit-scrollbar:vertical {
-        width: 12px;
-    }
-
-    ::-webkit-scrollbar:horizontal {
-        height: 12px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        border: 2px solid #ffffff;
-    }
-
-    ::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: #ffffff;
-    }
-}
-
-@media screen and (max-width: 614px) {
-    .social-icon {
-        width: 50%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-   
-    .social-icon > span {
-        padding: 0px;
-        box-shadow: 0px 0px 0px hsl(246, 25%, 77%);
-    }
-}
-
-@media screen and (max-width: 510px) {
-    .v8_53 {
-        top: 135%;
-    }
-}
-@media screen and (max-width: 475px) {
-    .v8_53 {
-        top: 150%;
-    }
-}
-@media screen and (max-width: 400px) {
-    .v8_53 {
-        top: 10%;
-    }
-    /* Mobile view - Only works for Microsoft Edge */
-    div.left1 {
-        display: none !important;
-    }
-    
-
-}
-@media screen and (min-width: 1100.5px) {
-    .logo4 {
-        margin-top: 100px;
-    }
-    .v8_81 {
-        margin-top: 150px;
-    }
-}
-@media screen and (min-width: 1350.5px) {
-    .logo4 {
-        margin-top: 250px;
-    }
-    .v8_81 {
-        margin-top: 250px;
-    }
-}
-@media screen and (min-width: 900.5px) and (max-width: 1100px) {
-    .logo4 {
-        margin-top: 200px;
-    }
-    .v8_81 {
-        margin-top: 200px;
-    }
-}
