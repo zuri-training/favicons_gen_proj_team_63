@@ -9,7 +9,7 @@ STUDENT ID: I4G009584AYP
 ### Section 2: Contribution
 
 GITHUB LINK (contributions): https://github.com/zuri-training/favicons_gen_proj_team_63/blob/dev/Team-63-Contribution-List/Emmanuel-FullStack.txt
-Team GitHub ink: https://github.com/EnebeliEmmanuel/favicons_gen_proj_team_63/tree/koko
+Team GitHub ink: https://github.com/zuri-training/favicons_gen_proj_team_63/tree/dev
 
 login page responsivness: https://github.com/zuri-training/favicons_gen_proj_team_63/pull/74/commits/b451d17022bd21ed5ccbfd3704fa0982138724b4
 Resolved Issues: https://github.com/zuri-training/favicons_gen_proj_team_63/pull/78/commits/b41857ba9deff19be8e6601a7bcf4a960c479be3
