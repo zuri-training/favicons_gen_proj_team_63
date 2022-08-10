@@ -5,16 +5,12 @@ TRACK: Full-Stack
 STUDENT ID: I4G010393IJP
 
 
-
 ### Section 2: Contribution
+Resolved Issues: https://github.com/zuri-training/favicons_gen_proj_team_63/issues/16
+Commits: https://github.com/zuri-training/favicons_gen_proj_team_63/commits?author=Cofucan
+
 - Performed code review, handled pull requests and resolved merge conflicts along with my team lead Michael
-  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/a408140996da9c60a29dfd360ef936e2138fa86d
-  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/40bd5ad0085109319b7afb0087f27cd4724b296a
-  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/da27aa6e9e35fa9624ad598a267f757912800609
-  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/fe7bfd2d848b8b2f02889eb0c3dd450f87b81f57
-  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/da057efbf5ce17b3b9db29a3730c589be1fc58be
-  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/ab614cc901efb673fff116cb9d09cd18088dc6be
-  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/23a707b666a88fe0266005333a0bdcbf43b00bf5
+  https://github.com/zuri-training/favicons_gen_proj_team_63/pulls?q=is%3Apr+author%3A%40me+is%3Aclosed
   
 - Set up project documentation which contains contribution guide and instructions to get started on the project
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/a039cba501ada8290ac828fdaddd371735afa138
@@ -37,7 +33,7 @@ STUDENT ID: I4G010393IJP
 - Connected the project to Postgres database and gave guides on how everyone should set it up
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/4ae1bbc04769ff3c31b80ee045faaf9bad4c4b2d
   
-- Deployed the project on Heroku
+- Deployed the project on Heroku and installed WhiteNoise to enable static files to render on Heroku
   https://favicon-gen-proj.herokuapp.com/
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/42e5b5d8ae76e2949f3859a06c45947a121a0593
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/6935464cbb0db88ff1d18d09ca971aa857f5bc4c
