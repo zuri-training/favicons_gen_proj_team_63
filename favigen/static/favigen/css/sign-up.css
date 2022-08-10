@@ -82,6 +82,11 @@ hr {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
+/*  */
+input:focus::placeholder {
+    color: transparent;
+  }
+  /*  */
 .details {
     position: relative;
     margin-top: 15px;
@@ -326,17 +331,60 @@ span {
         top: 150%;
     }
 }
+@media screen and (max-width: 414px) {
+    .v8_53 {
+        top: 107%;
+    }
+    
+}
 @media screen and (max-width: 400px) {
     .v8_53 {
         top: 10%;
     }
-    /* Mobile view - Only works for Microsoft Edge */
+    .v8_54 {
+        top: 40px;
+    }
+    /* Mobile view*/
     div.left1 {
         display: none !important;
     }
+    .v8_53 {
+        top: 105%;
+        max-width: fit-content;
+        right:  12%;
+        left: 12%;
+    }
+    .alt_signup {
+        padding-top: 50px;
+    }
     
-
 }
+@media screen and (max-width: 393px) {
+    .v8_53 {
+        top: 82%;
+    }
+    
+}
+@media screen and (max-width: 390px) {
+    .v8_53 {
+        top: 85%;
+    }
+    
+}
+@media screen and (max-width: 375px) {
+    .v8_53 {
+        top: 107%;
+    }
+    
+}
+@media screen and (max-width: 360px) {
+    .v8_53 {
+        top: 95%;
+        font-size: 14px;
+    }
+    
+}
+
 @media screen and (min-width: 1100.5px) {
     .logo4 {
         margin-top: 100px;
