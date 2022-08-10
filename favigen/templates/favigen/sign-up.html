@@ -42,7 +42,7 @@
                 <div class="details">
 
                     {{signup_form.first_name}}
-
+                    {% comment %} <input type="text" id="firstName" name="first_name" placeholder="Full Name" /> {% endcomment %}
                     <img
                         src="{% static '/favigen/img/icon-error.svg' %}"
                         alt="error-icon"
@@ -99,7 +99,7 @@
 
                 <div class="details">
                     <hr />
-                    <label class="remember">Or sign up with</label>
+                    <label class="alt_signup">Or sign up with</label>
                     <hr />
                 </div>
 
