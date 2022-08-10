@@ -34,19 +34,13 @@
         <div class="right">
             <!--form begin-->
             <form action="{% url 'fav:signup' %}" method="POST" name="Userinfo" id="Userinfo">
-                {% comment %} {{ form.as_p }} {% endcomment %}
                 {% csrf_token %}
-                {% comment %} {{ signup_form }} {% endcomment %}
-
-                {% comment %} {% for field in signup_form %}
-                    {{field.label}}
-                    {{field}}
-                {% endfor %} {% endcomment %}
                 
                 <span class="v8_53"><a href="{% url 'fav:login' %}">Already have an accout? Log in</a> </span>
                 <span class="v8_54">Sign up</span>
 
                 <div class="details">
+
                     {{signup_form.first_name}}
                     {% comment %} <input type="text" id="firstName" name="first_name" placeholder="Full Name" /> {% endcomment %}
                     <img
@@ -58,8 +52,9 @@
                 </div>
 
                 <div class="details">
+
                     {{signup_form.email}}
-                    {% comment %} <input type="email" id="email" name="email" placeholder="Email Address" /> {% endcomment %}
+
                     <img
                         src="{% static '/favigen/img/icon-error.svg' %}"
                         alt="error-icon"
@@ -69,8 +64,9 @@
                 </div>
 
                 <div class="details">
+
                     {{signup_form.password1}}
-                    {% comment %} <input type="password" id="password" name="password" placeholder="Password" /> {% endcomment %}
+
                     <img
                         src="{% static '/favigen/img/icon-error.svg' %}"
                         alt="error-icon"
@@ -80,8 +76,9 @@
                 </div>
 
                 <div class="details">
+                    
                     {{signup_form.password2}}
-                    {% comment %} <input type="password" id="password" name="password" placeholder="Password" /> {% endcomment %}
+
                     <img
                         src="{% static '/favigen/img/icon-error.svg' %}"
                         alt="error-icon"
