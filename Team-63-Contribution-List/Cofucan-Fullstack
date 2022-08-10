@@ -7,7 +7,7 @@ STUDENT ID: I4G010393IJP
 
 
 ### Section 2: Contribution
-- Performed code review, handled pull requests and resolved merge conflicts
+- Performed code review, handled pull requests and resolved merge conflicts along with my team lead Michael
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/a408140996da9c60a29dfd360ef936e2138fa86d
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/40bd5ad0085109319b7afb0087f27cd4724b296a
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/da27aa6e9e35fa9624ad598a267f757912800609
@@ -16,7 +16,7 @@ STUDENT ID: I4G010393IJP
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/ab614cc901efb673fff116cb9d09cd18088dc6be
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/23a707b666a88fe0266005333a0bdcbf43b00bf5
   
-- Set up project documentation
+- Set up project documentation which contains contribution guide and instructions to get started on the project
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/a039cba501ada8290ac828fdaddd371735afa138
   
 - Created project files and folder structure in the beginning of the project phase, from which the team pulled and began to work
@@ -30,7 +30,7 @@ STUDENT ID: I4G010393IJP
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/c1c8b51e98395ec80a56a70a3f9bad461e412aaf
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/8a69524840ebed5117f057d2a79df481de26bd50
   
-- Created views and URL routing for login, signup and logout
+- Created views and URL routing for user login, signup and logout
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/485c8551eea2faae1c69990b97b98e1613df4ec5
   https://github.com/zuri-training/favicons_gen_proj_team_63/commit/823a542629744b2dd24d8d479542bd38f6837c89
 
