@@ -1,0 +1,19 @@
+### Section 1: Personal Information
+
+FULL NAME: Sulaimon Rokiat Ajoke
+TRACK: Full-Stack
+STUDENT ID: I4G000270BLH
+
+
+
+### Section 2: Contribution
+
+GITHUB LINK (contributions): 
+Team GitHub link: https://github.com/Kiki-Kodes/favicons_gen_proj_team_63_1/tree/kiki
+
+ISSUE RESOLVED: https://github.com/zuri-training/favicons_gen_proj_team_63/issues/6
+Deployed Pages: https://kiki-kodes.github.io/Team_63_proj_favicon_gen-Saved-Icons-and-Generated-Icons-Pages/
+Deployed Pages: http://127.0.0.1:8000/saved-icons/
+Deployed Pages:http://127.0.0.1:8000/generated-icon/
+
+I created the saved icons and generated icons pages. I am currently working on implementing changes.
