@@ -1,0 +1,48 @@
+### Section 1: Personal Information
+
+FULL NAME: Uche Ofia
+TRACK: Full-Stack
+STUDENT ID: I4G010393IJP
+
+
+
+### Section 2: Contribution
+- Performed code review, handled pull requests and resolved merge conflicts
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/a408140996da9c60a29dfd360ef936e2138fa86d
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/40bd5ad0085109319b7afb0087f27cd4724b296a
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/da27aa6e9e35fa9624ad598a267f757912800609
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/fe7bfd2d848b8b2f02889eb0c3dd450f87b81f57
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/da057efbf5ce17b3b9db29a3730c589be1fc58be
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/ab614cc901efb673fff116cb9d09cd18088dc6be
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/23a707b666a88fe0266005333a0bdcbf43b00bf5
+  
+- Set up project documentation
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/a039cba501ada8290ac828fdaddd371735afa138
+  
+- Created project files and folder structure in the beginning of the project phase, from which the team pulled and began to work
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/92d1950034fa61910bcb5bea944e8561478fc810
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/58badf7770970678717efcfd92e49401852cf8ae
+
+- Converted static HTML URLs and references from the frontend devs to Django Jinja2 templating format to enable dynamic data on the frontend
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/daa4d4aa473fa417cd3ea508c34ba5deeb7d553f
+
+- Created custom user model and custom forms for authentication and authorization, to enable email address to be the primary identifier on the database
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/c1c8b51e98395ec80a56a70a3f9bad461e412aaf
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/8a69524840ebed5117f057d2a79df481de26bd50
+  
+- Created views and URL routing for login, signup and logout
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/485c8551eea2faae1c69990b97b98e1613df4ec5
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/823a542629744b2dd24d8d479542bd38f6837c89
+
+- Connected the project to Postgres database and gave guides on how everyone should set it up
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/4ae1bbc04769ff3c31b80ee045faaf9bad4c4b2d
+  
+- Deployed the project on Heroku
+  https://favicon-gen-proj.herokuapp.com/
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/42e5b5d8ae76e2949f3859a06c45947a121a0593
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/6935464cbb0db88ff1d18d09ca971aa857f5bc4c
+  https://github.com/zuri-training/favicons_gen_proj_team_63/commit/cc069ba385667756894269a2dc8271508f36476c
+
+
+  
+  
