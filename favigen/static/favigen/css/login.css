@@ -13,6 +13,47 @@ body {
     font-family: montserrat;
 }
 
+.container1 > .login_right {
+    width: 60%;
+}
+.login_right {
+    padding-top: 50px;
+}
+.login_right .form {
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px hsla(249, 10%, 26%, 0.5);
+}
+.login_right input:focus {
+    border: 1.5px solid hsl(249, 10%, 26%);
+}
+.login_right input::placeholder {
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+.login_right button[type="submit"] {
+    width: 70%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #2d1d90;
+    padding-left: 20px;
+    outline: none;
+    background-color: #2d1d90;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 3px rgba(255, 255, 255, 0.5);
+}
+
+
 /* styling for login page  */
 
 /* .container {
@@ -89,20 +130,20 @@ h5 {
         "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.show {
+/* .show {
     position: absolute;
     bottom: 0px;
     right: 10px;
-}
+} */
 
-.parent2 {
+/* .parent2 {
     display: flex;
 
     justify-content: flex-start;
     height: 100vh;
     width: 70%;
     flex-direction: column;
-}
+} */
 
 h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
@@ -117,11 +158,11 @@ h2 {
     place-items: center;
 }
 
-.login_container > form {
+/* .login_container > form {
     width: 35vw;
     margin-top: 100px;
     text-align: center;
-}
+} */
 
 .log {
     color: #2d1d90;
@@ -205,13 +246,13 @@ h2 {
     flex-direction: column;
 } */
 
-h2 {
+/* h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
         "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
     font-size: 30px;
     line-height: 48px;
-}
+} */
 
 /* .login_container {
     display: grid;
@@ -228,14 +269,14 @@ h2 {
     color: #2d1d90;
 }
 
-.form-input {
+/* .form-input {
     width: 100%;
     font-size: 14px;
     padding: 10px 10px;
     border-radius: 4px;
     border: none;
     outline: 0;
-}
+} */
 
 .text {
     text-align: end;
@@ -270,14 +311,14 @@ h2 {
     color: #2d1d90;
 } */
 
-.wrap {
+/* .wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid rgb(110, 110, 246);
     border-radius: 8px;
     padding-left: 10px;
-}
+} */
 
 /* .input-item{
   padding:2px 10px;
