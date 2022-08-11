@@ -19,7 +19,7 @@
                 <div class="container2">
                     <div class="header">
                         <div class="logo">
-                            <img src="img/faviGen_Logo.png" alt="logo" />
+                            <img src="{% static '/favigen/img/faviGen_Logo.png' %}" alt="logo" />
                         </div>
                         <div class="nav-menu">
                             <nav class="nav">
@@ -48,7 +48,7 @@
                     <div class="savedi">
                         <div class="savedi1">
                             <form action="#" method="get">
-                                <button type="submit"><img src="img/search.png" alt="search" /></button>
+                                <button type="submit"><img src="{% static '/favigen/img/search.png' %}" alt="search"/></button>
                                 <input type="text" placeholder="Search your saved icons" name="q" />
                             </form>
                         </div>
@@ -74,9 +74,7 @@
                             <div class="parent1">
                                 <div>
                                     <img class="img2" src="{% static '/favigen/img/icon1.png' %}" alt="" /><img
-                                        class="img2"
-                                        src="img/icon5.png"
-                                        alt=""
+                                        class="img2"  src="{% static '/favigen/img/icon5.png' %}" alt=""
                                     /><img class="img2" src="{% static '/favigen/img/icon10.png' %}" alt="" /><img
                                         class="img2"
                                         src="{% static '/favigen/img/icon13.png' %}"
