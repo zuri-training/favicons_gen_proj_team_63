@@ -1,1 +1,11 @@
-.... 
+### Section 1: Personal Information
+
+FULL NAME: Olasehinde Kolawole Mike
+TRACK: Fullstack
+STUDENT ID: I4G016973E8D
+
+
+### Section 2: Contribution
+
+Link to Issue assigned: https://github.com/zuri-training/favicons_gen_proj_team_63/issues/13#issue-1320757639
+Link to Issue resolved: https://github.com/zuri-training/favicons_gen_proj_team_63/issues/13#issuecomment-1201115538
