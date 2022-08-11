@@ -39,7 +39,10 @@
                             <a class="nav-link" href="{% url 'fav:contact' %}">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'fav:saved' %}">Saved Icons</a>
+                            {% if user.is_authenticated %}
+                                <a class="nav-link" href="{% url 'fav:saved' %}">Saved Icons</a>
+                            {% endif %}
+                            
                         </li>
                         <li class="nav-item">
                             {% if user.is_authenticated %}
@@ -59,9 +62,13 @@
                     and for every task</p>
                 <button type="button" class="btn btn-purple my-3">CREATE YOUR FAVICON</button>
 
-                {% comment %} {% for message in messages %}
-                    <p id="messages">{{messages}}</p>
-                {% endfor %} {% endcomment %}
+                {% comment %} {% if messages %}
+                    {% for message in messages %}
+                        <div class"alert alert-{{ message.tags}}">
+                                {{ messages }}
+                        </div>
+                    {% endfor %}
+                {% endif %} {% endcomment %}
                 
             </div>
             <div class="d-lg-none mx-auto my-5 py-5 text-center">
@@ -135,7 +142,6 @@
         </p>
         <h5>Is FaviGen favicon generator free to use?</h5>
         <p>Yes, - we will never charge you for your icons.</p>
-        <!-- {% comment %} </div> {% endcomment %} -->
     </section>
     <footer class="px-5 py-3 d-flex justify-content-between">
         <div>
