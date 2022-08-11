@@ -10,7 +10,7 @@ body{
   }
 
 .container2{
-  background-image: url(img/bg_header.png);
+  background-image: url("../../../static/favigen/img/bg_header2.png");
   background-position: bottom;
   height: 55vh;
   background-size: cover;
@@ -49,13 +49,13 @@ body{
 .nav a{
   justify-content: space-between;
   text-decoration: none;
-  color: rgb(95,93,93);
+  color: rgb(220,217,236); 
   transition: 0.75s ease;
   padding: 0 20px;
 }
 
 .nav a:hover{
-  color: rgb(45,29,144);
+  color: rgb(31,159,211);
   cursor: pointer;
 }
 
@@ -85,16 +85,16 @@ body{
 .btn_generate{
   margin-right: 12%;
   padding: 12px 40px;
-  border: 2px solid rgb(102,102,102);
+  border: 2px solid rgb(177,171,214);
   font-size: 16px;
-  color: rgb(102,102,102);
+  color: rgb(177,171,214);
   font-weight: 400;
   border-width: 1px;
   background-color: transparent;
 }
 
 .btn_saved{
-  background-color: rgb(45,29,144);
+  background-color: rgb(31,159,211);
   border-radius:  50px 0 0 50px;
   padding: 14px 50px;
   color: white;
@@ -128,7 +128,7 @@ body{
     padding-right: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 1px solid rgb(102,102,102);
+    border: 1px solid rgb(109,98,178);
 }
 form > button img{
   align-items: center;
@@ -153,13 +153,14 @@ form input{
 }
 
 ::placeholder{
-  color: rgb(77,137,171);
+  color: rgb(79,66,162);
   font-size: 16px;
   font-weight: 400;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .p1{
+  color: rgb(209,205,231);
   justify-content: center;
   text-align: center;
   margin-top: auto;
@@ -211,7 +212,7 @@ b{
   margin-right: 100px;
   margin-bottom: 5px;
   padding: 25px;
-  background-image: url(img/footer_bg.svg);
+  background-image: url("../../../static/favigen/img/footer_bg.svg");
   background-size: 100%;
   position: relative;
   border-radius: 8px; 
@@ -223,7 +224,7 @@ b{
   margin-right: 100px;
   margin-bottom: 5px;
   padding: 25px;
-  background-image: url(img/footer_bg.svg);
+  background-image: url("../../../static/favigen/img/footer_bg.svg");
   background-size: 100%;
   position: relative;
   border-radius: 8px; 
@@ -247,7 +248,7 @@ b{
 /* Media Queries */
 @media screen and (max-width: 768px){
   .container2{
-    background-image: url(img/bg_header.png);
+    background-image: url("../../../static/favigen/img/bg_header2.png");
     background-size: cover;
     background-position: bottom;
     position: relative;
