@@ -20,17 +20,21 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
         />
-        <link rel="stylesheet" href="{% static '/favigen/css/contact.css' %}" />
+        <link rel="stylesheet" href="{% static 'favigen/css/contact.css' %}" />
     </head>
     
     <body>
         <header>
-            <img class="nav-logo" src="{% static '/favigen/img/smalllogo.svg' %}" alt="" />
+            <img class="nav-logo" src="{% static 'favigen/img/smalllogo.svg' %}" alt="" />
             <nav>
                 <ul class="nav-links">
                     <li><a href="{% url 'fav:home' %}">Home</a></li>
                     <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'fav:signup' %}">Log Out</a></li>
+                    {% else %}
                     <li><a href="{% url 'fav:login' %}">Sign In</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </header>
@@ -49,25 +53,29 @@
                 </div>
                 <div class="icons">
                     <span>
-                        <img class="socials" src="{% static '/favigen/img/twittercontact.svg' %}" alt="twitter" />
+                        <img class="socials" src="{% static 'favigen/img/twittercontact.svg' %}" alt="twitter" />
                     </span>
                     <span>
-                        <img class="socials" src="{% static '/favigen/img/phonecontact.svg' %}" alt="phone" />
+                        <img class="socials" src="{% static 'favigen/img/phonecontact.svg' %}" alt="phone" />
                     </span>
                     <span>
-                        <img class="socials" src="{% static '/favigen/img/facebookcontact.svg' %}" alt="facebook" />
+                        <img class="socials" src="{% static 'favigen/img/facebookcontact.svg' %}" alt="facebook" />
                     </span>
                     <span>
-                        <img class="socials" src="{% static '/favigen/img/instagramcontact.svg' %}" alt="instagram" />
+                        <img class="socials" src="{% static 'favigen/img/instagramcontact.svg' %}" alt="instagram" />
                     </span>
                 </div>
-                <img src="{% static '/favigen/img/biglogo.png' %}" alt="" class="logo" />
+                <img src="{% static 'favigen/img/biglogo.png' %}" alt="" class="logo" />
             </div>
             <div class="container-right">
                 <form id="form">
                     <div>
                         <label for="">Subject</label>
                         <input type="text" id="Subject" required />
+                    </div>
+                    <div>
+                        <label for="">Email</label>
+                        <input type="email" id="Email" required />
                     </div>
                     <div>
                         <label for="">Message</label>
@@ -88,6 +96,6 @@
             </div>
         </div>
 
-        <script src="{% static '/favigen/js/contact.js' %}"></script>
+        
     </body>
 </html>
