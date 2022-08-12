@@ -93,6 +93,16 @@ body{
   background-color: transparent;
 }
 
+.btn_generate a{
+  text-decoration: none;
+  color: rgb(177,171,214);
+}
+
+.btn_generate a:hover{
+  color: rgb(31,159,211);
+  cursor: pointer;
+}
+
 .btn_saved{
   background-color: rgb(31,159,211);
   border-radius:  50px 0 0 50px;
@@ -103,6 +113,16 @@ body{
   position: absolute;
   left: 120px;
   border: none;
+}
+
+.btn_saved a{
+  text-decoration: none;
+  color: rgb(177,171,214);
+}
+
+.btn_saved a:hover{
+  color: rgb(31,159,211);
+  cursor: pointer;
 }
 
 .savedi{
