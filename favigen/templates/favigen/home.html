@@ -51,20 +51,22 @@
                             {% endif %}
                         </li>
                     </ul>
-                    <div class="me-5 position-relative">
-                        <img src="{% static 'favigen/img/user.svg' %}" width="30" role="button" onclick="user()" class="d-inline-block align-top" alt="user">
-                        <div id="user" class="bg-white d-none py-3 px-1 user-dropdown position-absolute">
-                            <ul>
-                                <li >
-                                    <a  href="{% url 'fav:saved' %}" >Hi {{ user.first_name }} </a> 
-                                </li>
-                                <li>
-                                    <a  href="{% url 'fav:logout' %}" >Log Out</a>
-                                </li>
-                            </ul>
+
+                    {% if user.is_authenticated %}
+                        <div class="me-5 position-relative">
+                            <img src="{% static 'favigen/img/user.svg' %}" width="30" role="button" onclick="user()" class="d-inline-block align-top" alt="user">
+                            <div id="user" class="bg-white d-none py-3 px-1 user-dropdown position-absolute">
+                                <ul>
+                                    <li >
+                                        <a  href="{% url 'fav:saved' %}" >Hi {{ user.first_name }} </a> 
+                                    </li>
+                                    <li>
+                                        <a  href="{% url 'fav:logout' %}" >Log Out</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    
+                    {% endif %}
                 </div>
             </div>
         </nav>
