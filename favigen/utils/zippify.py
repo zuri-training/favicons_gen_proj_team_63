@@ -3,13 +3,13 @@ import os
 from os.path import basename
 
 
-# def zippify(directory):
-#     # create a ZipFile object
-#     with ZipFile("fav.zip", "w") as zipObj:
-#         # Iterate over all the files in directory
-#         for filename in os.listdir(directory):
-#             # Add file to zip
-#             zipObj.write(filename)
+def zippify(directory):
+    # create a ZipFile object
+    with ZipFile("fav.zip", "w") as zipObj:
+        # Iterate over all the files in directory
+        for filename in os.listdir(directory):
+            # Add file to zip
+            zipObj.write(filename)
 
 
 
