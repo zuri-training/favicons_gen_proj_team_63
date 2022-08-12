@@ -1,3 +1,5 @@
+from datetime import datetime
+from email.mime import image
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 
@@ -5,6 +7,13 @@ from django.shortcuts import render, redirect
 from favigen.forms import CustomUserCreationForm, CustomAuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+
+from .utils.zippify import zippify
+from .models import *
+
+from .utils.favigenerator import generate_favicon
+
+import os
 
 # Create your views here.
 def home_page(request):
@@ -68,14 +77,45 @@ def logout_view(request):
     return redirect("favigen:login")
 
 
-def upload(request):
+# @login_required
+def image_upload(request):
     context = {}
     if request.method == "POST":
-        uploaded_file = request.FILES["document"]
+        image_file = request.FILES["document"]
         fs = FileSystemStorage()
-        name = fs.save(uploaded_file.name, uploaded_file)
+        name = fs.save(name=image_file.name, content=image_file)
         url = fs.url(name)
-        context["url"] = fs.url(name)
+
+        favourite = bool(request.POST.get("embedded"))
+
+        # chars_to_remove = [" ", "-", ":", "."]
+        # for char in chars_to_remove:
+        #     new_name = f"FAV{str(datetime.now())}".replace(char, '')
+
+        new_name = f"FAV{str(datetime.now())}"
+        new_name = new_name.replace("-", "")
+        new_name = new_name.replace(":", "")
+        new_name = new_name.replace(".", "")
+        new_name = new_name.replace(" ", "")
+
+        file_path = f"static/media/{image_file.name}"
+        favs_path = "static/media/favs/"
+        f_type = image_file.name.split(".")[-1]
+        f_size = os.path.getsize(file_path)
+
+        embed_link = generate_favicon(file_path, favs_path)
+        zip_file = zippify(favs_path)
+
+        fav = Favicon.objects.create(
+                    original_filename=name, 
+                    new_filename=new_name,
+                    file_type=f_type,
+                    file_byte_size=f_size,
+                    embed_link=embed_link)
+        fav.save()
+
+
+        context["url"] = url
     return render(request, "favigen/upload.html", context)
 
 
