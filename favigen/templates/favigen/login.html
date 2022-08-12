@@ -54,7 +54,6 @@
                        
                             <!--   user name Input-->
                             {{ login_form.email }}
-                            {% comment %} <input type="email" id="email" name="email" placeholder="Email Address" /> {% endcomment %}
                             <img
                                 src="{% static '/favigen/img/icon-error.svg' %}"
                                 alt="error-icon"
@@ -70,7 +69,6 @@
 
                             <!--   Password Input-->
                             {{ login_form.password }}
-                            {% comment %} <input type="password" id="password" name="password" placeholder="Password" /> {% endcomment %}
                             <img
                                 src="{% static '/favigen/img/icon-error.svg' %}"
                                 alt="error-icon"
@@ -115,6 +113,9 @@
 
                 <!-- End Form -->
             </form>
+        </div>
+        </div>
+    </div>
 </main>
 
 {% endblock %}
