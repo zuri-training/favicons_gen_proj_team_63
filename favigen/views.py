@@ -129,3 +129,7 @@ def saved_icons(request):
 
 def generated_icon(request):
     return render(request, "favigen/generated-icon.html")
+
+
+def generate_icon(request):
+    return render(request, "favigen/index.html")

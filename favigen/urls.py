@@ -12,4 +12,5 @@ urlpatterns = [
     path("contact/", views.contact_page, name="contact"),
     path("saved-icons/", views.saved_icons, name="saved"),
     path("generated-icon/", views.generated_icon, name="generated"),
+    path("generate-icon/", views.generate_icon, name="generate"),
 ]
