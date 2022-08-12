@@ -65,14 +65,14 @@ class CustomAuthenticationForm(forms.ModelForm):
         """
         super(CustomAuthenticationForm, self).__init__(*args, **kwargs)
         self.fields["email"].widget.attrs.update({
-            'class':'form-input',
-            'id': 'txt-input',
-            'type': 'text',
+            'class':'form-inpu',
+            'id': 'email',
+            'type': 'email',
             'placeholder': 'Email'
         })
         self.fields["password"].widget.attrs.update({
             'class':'form-input',
-            'id': 'txt-input',
+            'id': 'password',
             'type': 'password',
             'placeholder': 'Password'
         })
