@@ -86,7 +86,7 @@
   }
 
   .btn_generate2 a:hover{
-    color: rgb(31,159,211);
+    color: black;
     cursor: pointer;
   }
   
@@ -155,12 +155,12 @@
   
   .emb_code3{
     background-color: rgb(31,159,211);
-    color: rgb(213,210,233);
+    color: black;
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
     margin-top: 10px;
-    margin-left: 600px;
+    margin-left: 666px;
     font-size: 16px;
     font-weight: 400;
   }
@@ -304,136 +304,141 @@
   .btn_generate2{
     left: 50px;
   }
+
+  .emb_code2{
+      height: auto;
+    }
   }
 
-  /* @media screen and (max-width: 647px){
-    .savedi1 form{
-      margin: auto;
-      padding-right: 40px;
-      margin-bottom: 10px;
-    }
-  
-    .savedi2{
-      margin: auto;
-      padding-left: 120px;
-    }
-  }
-  
-  @media screen and (max-width: 570px){
-    .generate{
-      margin-top: 50px;
-      margin-left: 120px;
-      width: 100%;
-    }
-  
-    .savedi1 form{
-      margin: auto;
-      padding-right: 30px;
-      margin-bottom: 10px;
-    }
-  
-    .savedi2{
-      margin: auto;
-      padding-left: 90px;
-    }
-  }
-  
-  @media screen and (max-width: 525px){
-    .generate{
-      margin-top: 50px;
-      margin-left: 120px;
-      width: 100%;
-    }
-  
-    .savedi1 form{
-      margin: auto;
-      padding-right: 30px;
-      margin-bottom: 10px;
-    }
-  
-    .savedi2{
-      margin: auto;
-      padding-left: 70px;
-    }
-  }
-  
-  @media screen and (max-width: 506px){
-    .generate{
-      margin-top: 50px;
-      margin-left: 102px;
-      width: 100%;
-    }
-  
-    .savedi1 form{
-      margin: auto;
-      padding-right: 50px;
+  @media screen and (min-width: 1030px) and (max-width: 1366px){
+    #fa{
+      color: rgb(252,109,38);
+      width: 50%;
+      font-size: 180px;
+      padding-left: 60px;
     }
     
-    .savedi2{
-      margin: auto;
-      padding-left: 60px;
+    .git1_p{
+      width: 50%;
+      color: rgb(140,146,157);
+      font-size: 80px;
+      font-weight: 400;
+      padding-top: 30px;
     }
-  
-    .h22{
-      padding-left: 205px;
+
+    .emb_code3{
+      margin-left: 650px;
     }
   }
-  
-  @media screen and (max-width: 470px){
-    .savedi2{
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    #fa{
+      color: rgb(252,109,38);
+      width: 50%;
+      font-size: 120px;
+      padding-left: 20px;
       margin: auto;
-      padding-left: 60px;
     }
-  
-    .generate{
-      margin-top: 50px;
-      margin-left: 75px;
-      width: 100%;
-    }
-  
-    .logo {
-      padding-left: 30px;
-      padding-top: 10px;
-   }
-  
-   .h22{
-    padding-left: 205px;
-  }
-  
-  }
-  
-  @media screen and (max-width: 460px){
-    .savedi2{
+    
+    .git1_p{
+      width: 50%;
+      color: rgb(140,146,157);
+      font-size: 60px;
+      font-weight: 400;
       margin: auto;
-      padding-left: 30px;
     }
-  
+
+    .emb_code3{
+      margin-left: 340px;
+    }
+
+    .emb_code2{
+      height: 140px;
+    }
+
+    .generate2{
+      margin-top: 90px;}
   }
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    .container2{
+      background-image: url("../../../static/favigen/img/bg_header2.png");
+      background-size: cover;
+      background-position: bottom;
+      position: relative;
+      height: 80vh;
+      background-repeat: no-repeat; 
+    }
+
+    .generate2{
+      margin-top: 120px;}
+
+    .emb_code2{
+      height: auto;
+    }
+
+    .git1{
+      height: auto;
   
-  @media screen and (max-width: 400px){
-    .savedi2{
-      margin: auto;
+    }
+
+    .emb_code3{
+      margin-left: 140px;
+    }
+
+    #fa{
+      color: rgb(252,109,38);
+      width: 50%;
+      font-size: 50px;
       padding-left: 10px;
+      margin: auto;
     }
-  
-    .generate{
-      margin-top: 50px;
-      margin-left: 55px;
-      width: 100%;
+    
+    .git1_p{
+      width: 50%;
+      color: rgb(140,146,157);
+      font-size: 30px;
+      font-weight: 400;
+      margin: auto;
+    }
+
+    .emb_code2{
+      height: auto;
     }
   
   }
+  @media screen and (min-width: 360px) and (max-width: 640px){
+    .git1{
+      height: auto;
   
-  @media screen and (max-width: 360px){
-    .savedi2{
+    }
+
+    .emb_code2{
+      height: auto;
+    }
+
+    #fa{
+      color: rgb(252,109,38);
+      width: 50%;
+      font-size: 75px;
+      padding-left: 20px;
       margin: auto;
-      padding-left: 10px;
-      flex-wrap: wrap;
+    }
+    
+    .git1_p{
+      width: 50%;
+      color: rgb(140,146,157);
+      font-size: 50px;
+      font-weight: 400;
+      margin: auto;
+    }
+
+    
+    .emb_code3{
+      margin-left: 250px;
     }
   
-    .generate{
-      margin-top: 50px;
-      margin-left: 20px;
-      width: 100%;
-    }
-  }  */
+
+  }
+
+
+
+  

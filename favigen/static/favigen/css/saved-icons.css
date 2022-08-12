@@ -99,7 +99,7 @@ body{
 }
 
 .btn_generate a:hover{
-  color: rgb(31,159,211);
+  color: black;
   cursor: pointer;
 }
 
@@ -121,7 +121,7 @@ body{
 }
 
 .btn_saved a:hover{
-  color: rgb(31,159,211);
+  color: black;
   cursor: pointer;
 }
 
