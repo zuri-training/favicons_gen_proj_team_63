@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import CustomUser, Favicon
+from .models import CustomUser, Favicon, Image
 
 
 class CustomUserAdmin(UserAdmin):
@@ -26,5 +26,10 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('email',)
 
 
+class FavAdmin(admin.ModelAdmin):
+    readonly_fields = ('id',)
+
+
 admin.site.register(CustomUser, CustomUserAdmin)
-admin.site.register(Favicon)
+admin.site.register(Image,)
+admin.site.register(Favicon, FavAdmin,)
