@@ -362,3 +362,136 @@ b{
 }
 
 }
+
+
+@media screen and (max-width: 647px){
+  .savedi1 form{
+    margin: auto;
+    padding-right: 40px;
+    margin-bottom: 10px;
+  }
+
+  .savedi2{
+    margin: auto;
+    padding-left: 120px;
+  }
+}
+
+@media screen and (max-width: 570px){
+  .generate{
+    margin-top: 50px;
+    margin-left: 120px;
+    width: 100%;
+  }
+
+  .savedi1 form{
+    margin: auto;
+    padding-right: 30px;
+    margin-bottom: 10px;
+  }
+
+  .savedi2{
+    margin: auto;
+    padding-left: 90px;
+  }
+}
+
+@media screen and (max-width: 525px){
+  .generate{
+    margin-top: 50px;
+    margin-left: 120px;
+    width: 100%;
+  }
+
+  .savedi1 form{
+    margin: auto;
+    padding-right: 30px;
+    margin-bottom: 10px;
+  }
+
+  .savedi2{
+    margin: auto;
+    padding-left: 70px;
+  }
+}
+
+@media screen and (max-width: 506px){
+  .generate{
+    margin-top: 50px;
+    margin-left: 102px;
+    width: 100%;
+  }
+
+  .savedi1 form{
+    margin: auto;
+    padding-right: 50px;
+  }
+  
+  .savedi2{
+    margin: auto;
+    padding-left: 60px;
+  }
+
+  .h22{
+    padding-left: 205px;
+  }
+}
+
+@media screen and (max-width: 470px){
+  .savedi2{
+    margin: auto;
+    padding-left: 60px;
+  }
+
+  .generate{
+    margin-top: 50px;
+    margin-left: 75px;
+    width: 100%;
+  }
+
+  .logo {
+    padding-left: 30px;
+    padding-top: 10px;
+ }
+
+ .h22{
+  padding-left: 205px;
+}
+
+}
+
+@media screen and (max-width: 460px){
+  .savedi2{
+    margin: auto;
+    padding-left: 30px;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .savedi2{
+    margin: auto;
+    padding-left: 10px;
+  }
+
+  .generate{
+    margin-top: 50px;
+    margin-left: 55px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 360px){
+  .savedi2{
+    margin: auto;
+    padding-left: 10px;
+    flex-wrap: wrap;
+  }
+
+  .generate{
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 100%;
+  }
+}
