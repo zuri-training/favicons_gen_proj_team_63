@@ -22,14 +22,14 @@
             <div class="container1">
                 <div class="container2" id="container2">
                     <div class="header">
-                        <div class="logo">
+                        {% comment %} <div class="logo">
                             <img src="{% static '/favigen/img/faviGen_Logo.png' %}" alt="logo" />
                         </div>
                         <div class="nav-menu">
                             <nav class="nav">
                                 <a class="a" href="#">Home</a>
                                 <a class="a" href="#">Contact Us</a>
-                                <a class="a" href="#">Saved Icons</a>
+                                <a class="a" href="{% url 'fav:saved' %}">Saved Icons</a>
                                 <a class="a" href="#">Generate</a>
                                 {% if user.is_authenticated %}
                                     <a class="a" href="{% url 'fav:logout' %}">Log Out</a>
@@ -42,7 +42,7 @@
                             <span class="bar"></span>
                             <span class="bar"></span>
                             <span class="bar"></span>
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                     <div class="generate2">
                         <button class="btn_generate2" type="button">
