@@ -105,7 +105,7 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     #     'NAME': os.getenv('DB_NAME'),
     #     'USER': os.getenv('USER'),
-    #     'PASSWORD': os.getenv('PASSWORD'),
+    #     'PASSWORD': "Toluwan1",
     #     'HOST': os.getenv('HOST'),
     #     'PORT': os.getenv('PORT'),
     # }
@@ -158,7 +158,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'favigen/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 MEDIA_URL = '/media/'
 
 # Default primary key field type

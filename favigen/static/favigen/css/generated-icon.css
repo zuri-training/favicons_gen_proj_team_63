@@ -1,4 +1,4 @@
-* {
+ * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -9,14 +9,14 @@
     background-color: white;
   }
 
-.container2{
-  background-image: url(img/bg_header.png);
+ .container2{
+  background-image: url("../../../static/favigen/img/bg_header2.png");
   background-position: bottom;
   position: relative;
   height: 55vh;
   background-size: cover;
   background-repeat: no-repeat; 
-}
+} 
 
 .header{
     width: 100%;
@@ -47,13 +47,13 @@
   .nav a{
     justify-content: space-between;
     text-decoration: none;
-    color: rgb(95,93,93);
+    color: rgb(220,217,236);
     transition: 0.75s ease;
     padding: 0 20px;
   }
   
   .nav a:hover{
-    color: rgb(45,29,144);
+    color: rgb(31,159,211);
     cursor: pointer;
   }
   
@@ -66,7 +66,7 @@
   }
   
   .btn_generate2{
-    background-color: rgb(45,29,144);
+    background-color: rgb(31,159,211);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 80px;
@@ -78,6 +78,16 @@
     width: 30%;
     font-size: 16px;
     font-weight: 400;
+  }
+
+  .btn_generate2 a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .btn_generate2 a:hover{
+    color: black;
+    cursor: pointer;
   }
   
   .btn_saved2{
@@ -140,11 +150,12 @@
     border:  2px dashed rgb(104,104,104);
     padding: 8px 15px;
     margin-bottom: 25px;
+    height: 100px;
   }
   
   .emb_code3{
-    background-color: rgb(45,29,144);
-    color: rgb(213,210,233);
+    background-color: rgb(31,159,211);
+    color: black;
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
@@ -167,12 +178,12 @@
     -webkit-transition: all 0.3s in-out;
     transition: all 0.3s in-out;
     background-color: rgb(45,29,144);
-  }
-
-  /* Media Queries */
+  } 
+ 
+  /* Media Queries  */
 @media screen and (max-width: 768px){
     .container2{
-      background-image: url(img/bg_header.png);
+      background-image: url("../../../static/favigen/img/bg_header2.png");
       background-size: cover;
       background-position: bottom;
       position: relative;
@@ -186,12 +197,7 @@
       margin-right: 45px;
     }
   
-    .header{
-      border: 2px solid red;
-    }
-  
     .logo {
-      border: 2px solid red;
       padding-left: 45px;
       padding-top: 10px;
   }
@@ -298,5 +304,141 @@
   .btn_generate2{
     left: 50px;
   }
+
+  .emb_code2{
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 1030px) and (max-width: 1366px){
+    #fa{
+      color: rgb(252,109,38);
+      width: 50%;
+      font-size: 180px;
+      padding-left: 60px;
+    }
+    
+    .git1_p{
+      width: 50%;
+      color: rgb(140,146,157);
+      font-size: 80px;
+      font-weight: 400;
+      padding-top: 30px;
+    }
+
+    .emb_code3{
+      margin-left: 650px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    #fa{
+      color: rgb(252,109,38);
+      width: 50%;
+      font-size: 120px;
+      padding-left: 20px;
+      margin: auto;
+    }
+    
+    .git1_p{
+      width: 50%;
+      color: rgb(140,146,157);
+      font-size: 60px;
+      font-weight: 400;
+      margin: auto;
+    }
+
+    .emb_code3{
+      margin-left: 340px;
+    }
+
+    .emb_code2{
+      height: 140px;
+    }
+
+    .generate2{
+      margin-top: 90px;}
+  }
+  @media screen and (min-width: 320px) and (max-width: 480px){
+    .container2{
+      background-image: url("../../../static/favigen/img/bg_header2.png");
+      background-size: cover;
+      background-position: bottom;
+      position: relative;
+      height: 80vh;
+      background-repeat: no-repeat; 
+    }
+
+    .generate2{
+      margin-top: 120px;}
+
+    .emb_code2{
+      height: auto;
+    }
+
+    .git1{
+      height: auto;
+  
+    }
+
+    .emb_code3{
+      margin-left: 140px;
+    }
+
+    #fa{
+      color: rgb(252,109,38);
+      width: 50%;
+      font-size: 50px;
+      padding-left: 10px;
+      margin: auto;
+    }
+    
+    .git1_p{
+      width: 50%;
+      color: rgb(140,146,157);
+      font-size: 30px;
+      font-weight: 400;
+      margin: auto;
+    }
+
+    .emb_code2{
+      height: auto;
+    }
   
   }
+  @media screen and (min-width: 360px) and (max-width: 640px){
+    .git1{
+      height: auto;
+  
+    }
+
+    .emb_code2{
+      height: auto;
+    }
+
+    #fa{
+      color: rgb(252,109,38);
+      width: 50%;
+      font-size: 75px;
+      padding-left: 20px;
+      margin: auto;
+    }
+    
+    .git1_p{
+      width: 50%;
+      color: rgb(140,146,157);
+      font-size: 50px;
+      font-weight: 400;
+      margin: auto;
+    }
+
+    
+    .emb_code3{
+      margin-left: 250px;
+    }
+  
+
+  }
+
+
+
+  

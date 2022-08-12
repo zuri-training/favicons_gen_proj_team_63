@@ -38,10 +38,24 @@ class CustomUser(AbstractUser):
         return super().get_short_name()
 
 
-class Favicon(models.Model):
-    url = models.URLField()
-    uploader = models.ForeignKey(User, on_delete=models.CASCADE, related_name='uploaded_favicons')
-    # uploader = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='uploaded_favicons')
 
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+def user_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT / user_<id>/<filename>
+    return f"user_{instance.uploaded_by.id}/{filename}"
+
+
+class Image(models.Model):
+    # url = models.URLField()
+    uploaded_image = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
+    favourite = models.BooleanField(default=False)
+    uploaded_by = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name='image_info')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+
+class Favicon(models.Model):
+    image = models.OneToOneField(to=Image, null=True, on_delete=models.CASCADE)
+    original_filename = models.CharField(max_length=256, null=True)
+    new_filename = models.CharField(max_length=256, null=True)
+    file_type = models.CharField(max_length=10, null=True)
+    file_byte_size = models.IntegerField(default=0)
+    embed_link = models.TextField(null=True)
