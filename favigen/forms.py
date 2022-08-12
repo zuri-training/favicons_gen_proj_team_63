@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 from django.contrib.auth import authenticate
 from django import forms
-from .models import CustomUser
+from .models import CustomUser, Favicon
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -84,6 +84,15 @@ class CustomAuthenticationForm(forms.ModelForm):
             password = self.cleaned_data.get('password')
             if not authenticate(email=email, password=password):
                 raise forms.ValidationError('Invalid Login')
+
+
+# class HotelForm(forms.ModelForm):
+  
+#     class Meta:
+#         model = Favicon
+#         fields = ['name', 'hotel_Main_Img']
+
+
 
 
 
