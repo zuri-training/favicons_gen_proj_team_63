@@ -1,0 +1,719 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    line-height: -1;
+}
+
+.navdiv {
+    height: 30vh;
+    background-image: url(Rectangle\ 190.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.div2 {
+    position: relative;
+    top: -200px;
+    width: 100%;
+}
+
+.div2a {
+    margin-left: auto;
+    width: 60%;
+    position: relative;
+}
+
+.button_generate {
+    background-color: #4A90E2;
+    padding: 9px 70px 8px 30px;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    color: white;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    text-decoration: none;
+}
+
+.generate :hover {
+    color: black;
+}
+.button_generate :hover{
+    color: black;
+}
+
+.button_saved {
+    padding: 9px 35px 6px 50px;
+    border: 2px solid grey;
+    border-width: 1px;
+    background-color: transparent;
+    margin-left: 140px;
+    color: white;
+}
+
+.div2b {
+    width: 75%;
+    margin-left: auto;
+    font-size: 18px;
+    /* margin-left: 50%; */
+}
+
+.labelproject {
+    margin-right: 10px;
+    color: white;
+}
+
+.inputgit {
+    padding: 2px;
+    background-color: transparent;
+    border: 1px solid grey;
+}
+
+::placeholder {
+    padding-left: 20px;
+    color: white;
+}
+
+.file {
+    border-radius: 10px;
+    margin: -130px 450px 20px 450px;
+    background-color: transparent;
+}
+
+.file img {
+    height: 27vh;
+    margin-bottom: -10px;
+    /* margin-left: 15em; */
+}
+
+.div3 {
+    width: 42.5%;
+    margin: auto;
+
+}
+
+.text1 {
+    font-size: 22px;
+}
+
+.place {
+    border-radius: 7px;
+    border: 2px dashed grey;
+    margin-bottom: 30px;
+    width: 100%;
+    outline: none;
+    height: 50px;
+}
+
+
+
+.div4 {
+    width: 44%;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.check {
+    margin: 0 10px;
+    size: 30px;
+    transform: scale(1.5);
+}
+
+.div5 {
+    width: 44%;
+    margin: auto;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    
+}
+
+.button1 {
+    padding: 4px 6px;
+    border-radius: 7px;
+    border: none;
+    background-color: #4A90E2;
+    color: black;
+    font-size: 20px;
+}
+
+.button1 a {
+    color: black;
+    font-size: 22px;
+}
+
+.button1 :hover {
+    color: white;
+}
+
+@media screen and (max-width: 1519px) {
+
+
+    .file img {
+        height: 24vh;
+        margin-bottom: -10px;
+    }
+
+    .file button {
+        margin-left: 10em;
+    }
+
+    .div3 {
+        width: 39%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 40%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 40%;
+        margin: auto;
+        
+    }
+    
+}
+
+@media screen and (min-width:1519px) {
+    .div3 {
+        width: 42%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 42%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 42%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1485px) {
+    .div2 {
+        position: relative;
+    }
+
+    .file img {
+        height: 22.8vh;
+    }
+
+    .file p span {
+        margin-right: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 1477px) {
+
+
+    .file img {
+        height: 22;
+    }
+
+    .div3 {
+        width: 39%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 40%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 40%;
+        margin: auto;
+        
+    }
+    
+}
+
+@media screen and (max-width:1450px) {
+    .file img {
+        height: 22vh;
+        margin-left: -0.8em;
+    }
+
+    .div3 {
+        width: 38.5%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1418px) {
+
+
+    .file img {
+        height: 22vh;
+        margin-left: -1.2em;
+    }
+
+    .div3 {
+        width: 39%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 39.5%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 39.5%;
+        margin: auto;
+        
+    }
+}
+
+@media screen and (max-width: 1380px) {
+
+
+    .file img {
+        height: 21vh;
+        margin-left: -2em;
+    }
+
+    .div3 {
+        width: 38.4%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 39.5%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 39.5%;
+        margin: auto;
+        
+    }
+}
+
+@media screen and (max-width: 1360px) {
+
+
+    .file img {
+        height: 23vh;
+        margin-left: 0.3em;
+    }
+
+    .div3 {
+        width: 41%;
+        margin: auto;
+    }
+
+    .place {
+        padding-right: 27px;
+    }
+
+    .div4 {
+        width: 42%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 46%;
+        margin: auto;
+        
+    }
+
+    .file {
+        font-size: 19px;
+        margin: -150px 400px 20px 400px;
+        background-color: transparent;
+    }
+    
+}
+
+@media screen and (max-width: 1300px) {
+
+
+    .file img {
+        height: 26vh;
+        margin-left: -0.8em;
+    }
+
+    .div3 {
+        width: 48%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 49%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 53%;
+        margin: auto;
+        
+    }
+
+    .file button {
+        margin-left: 10em;
+        font-size: 20px;
+    }
+
+    .file {
+        font-size: 19px;
+        margin: -150px 350px 20px 350px;
+        padding: 25px 0 20px 0;
+        background-color: transparent;
+
+    }
+    
+}
+
+@media screen and (max-width: 1250px) {
+
+
+    .file img {
+    height: 26vh;
+    }
+
+    .div3 {
+        width: 49%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 49%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 49%;
+        margin: auto;
+        
+    }
+
+    .file button {
+        margin-left: 9em;
+        font-size: 20px;
+    }
+
+    .file {
+        font-size: 19px;
+        margin: -150px 310px 20px 330px;
+        padding: 25px 0 20px 0;
+        color: white;
+        background-color: transparent;
+    }
+    
+}
+
+@media screen and (max-width:1200px) {
+    .file img {
+        height: 25vh;
+        margin-left: -em;
+    }
+
+    .div3 {
+        width: 51%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 50%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 50%;
+        margin: auto;
+        
+    }
+
+    .file button {
+        margin-left: 9em;
+        font-size: 20px;
+    }
+
+    .file {
+        font-size: 19px;
+        margin: -150px 300px 20px 300px;
+    }
+    
+}
+
+@media screen and (max-width: 1125px) {
+    .file button {
+        margin-left: 10em;
+    }
+
+    .file img {
+        height: 25vh;
+        margin-left: -0.02em;
+    }
+
+    .div3 {
+        width: 53%;
+        margin: auto;
+    }
+
+    .div4 {
+        width: 54%;
+        margin: auto;
+    }
+    
+    .div5 {
+        width: 59%;
+        margin: auto;
+        
+    }
+
+    .file {
+        font-size: 19px;
+        margin: -150px 250px 20px 250px;
+    }
+    
+}
+
+    @media screen and (max-width:1030px) {
+        .file img {
+            height: 22vh;
+        }
+
+        .file button {
+            margin-left: 8em;
+        }
+
+        .div3 {
+            width: 51%;
+            margin: auto;
+        }
+    
+        .div4 {
+            width: 51%;
+            margin: auto;
+        }
+        
+        .div5 {
+            width: 51%;
+            margin: auto;
+            
+        }
+    }
+
+    @media screen and (max-width:990px) {
+        .file img {
+            height: 21vh;
+        }
+    
+        .div3 {
+            width: 52%;
+            margin: auto;
+        }
+    
+        .div4 {
+            width: 52%;
+            margin: auto;
+        }
+        
+        .div5 {
+            width: 52%;
+            margin: auto;
+        }
+    
+        .file {
+            margin: -150px 230px 20px 230px;
+        }
+        
+    }
+
+    @media screen and (max-width: 950px) {
+        .file img{
+            height: 20.8vh;
+        }
+
+        .file button {
+            margin-left: 7em;
+        }
+    }
+
+    @media screen and (max-width: 890px) {
+        .file img{
+            height: 19.7vh;
+            margin-left: -0.9em;
+        }
+
+        .div3 {
+            width: 52%;
+            margin: auto;
+        }
+    
+        .div4 {
+            width: 54%;
+            margin: auto;
+        }
+        
+        .div5 {
+            width: 59%;
+            margin: auto;
+        }
+
+    }
+
+    @media screen and (max-width: 850px) {
+        .file img{
+            height: 20.7vh;
+            margin-left: -0.1em;
+        }
+
+        .file {
+            font-size: 19px;
+            margin: -150px 180px 20px 180px;
+        }
+
+        .div3 {
+            width: 57%;
+            margin: auto;
+        }
+    
+        .div4 {
+            width: 58%;
+            margin: auto;
+        }
+        
+        .div5 {
+            width: 58%;
+            margin: auto;
+            
+        }
+
+        .labelproject {
+            margin-right: 7px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        header {
+            height: 30vh;
+            background-image: url(bg_header.png);
+        }
+            
+        .div2 {
+            position: relative;
+            top: -150px;
+            width: 100%;
+        }
+        
+        .div2a {
+            margin-left: auto;
+            width: 70%;
+            position: relative;
+        }
+        
+        .button_generate {
+            background-color: rgb(51, 51, 156);
+            padding: 7px 70px 8px 30px;
+            border-radius: 0 50px 50px 0;
+            border: none;
+            color: white;
+            position: absolute;
+            left: 10px;
+            top: 0px;
+            text-decoration: none;
+        }
+        
+        .button_saved {
+            padding: 7px 35px 6px 50px;
+            border: 2px solid grey;
+            border-width: 1px;
+            background-color: rgb(144,183,228);
+            margin-left: 140px;
+        }
+        
+        .div2b {
+            width: 80%;
+            margin-left: auto;
+            font-size: 18px;
+        }
+        
+        .labelproject {
+            margin-right: 2px;
+        }
+        
+        .inputgit {
+            padding: 5px 0;
+            border-radius: 5px;
+            background-color: white;
+            border: 1px solid grey;
+        }
+        
+        ::placeholder {
+            size: "20";
+            padding-left: 5px;
+            color: black;
+        }
+        
+        .file {
+            font-size: 20px;
+            margin: -100px 100px 10px 100px;
+            padding: 20px 0 20px 0;
+            color: white;
+            background-color: white;
+        }
+        
+        .file img {
+            height: 21vh;
+        }
+        
+        .div3 {
+            width: 100%;
+        }
+        
+        .div3a {
+            font-size: 28px;
+            text-align: center;
+        }
+        
+        .place {
+            border-radius: 10px ;
+            border: 3px dashed rgb(44, 5, 5);
+            width: 70%;
+            margin: auto;
+            outline: none;
+            height: 50PX;
+            display: flex;
+            padding-left: 20px;
+        }
+        
+        .div4 {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+        
+        .div5 {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .button1 {
+            padding: 6px 190px;
+            width: 100%;
+            margin: 0 100px 0 100px;
+            border-radius: 7px;
+            border: none;
+            font-size: 25px;
+            color: white;
+            background-color: #4A90E2;
+        }        
+    }
