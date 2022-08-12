@@ -11,7 +11,7 @@
         <!--left1 division-->
         <div class="left1">
             <!-- logo -->
-            <a href="#">
+            <a href="/">
                 <div class="logo">
                     <!--<img src="{% static '/favigen/img/logo.svg' %}" width="30" class="d-inline-block align-top" alt="logo" />-->
                 </div>
@@ -25,7 +25,7 @@
 
             <!--base image-->
             <img class="logo4" src="{% static '/favigen/img/logo 4.png' %}" />
-            <p class="v8_81">Version 1.0</p>
+            <p class="version">Version 1.0</p>
 
             <!--left1 division end-->
         </div>
@@ -36,13 +36,14 @@
             <form action="{% url 'fav:signup' %}" method="POST" name="Userinfo" id="Userinfo">
                 {% csrf_token %}
                 
-                <span class="v8_53"><a href="{% url 'fav:login' %}">Already have an accout? Log in</a> </span>
-                <span class="v8_54">Sign up</span>
+                <span class="login_path"><a href="{% url 'fav:login' %}"> Already have an accout? Log in </a> </span>
+                <span class="signup_head">Sign up</span>
 
                 <div class="details">
 
-                    {{signup_form.first_name}}
                     {% comment %} <input type="text" id="firstName" name="first_name" placeholder="Full Name" /> {% endcomment %}
+                    
+                    {{signup_form.first_name}}
                     <img
                         src="{% static '/favigen/img/icon-error.svg' %}"
                         alt="error-icon"
@@ -53,6 +54,8 @@
 
                 <div class="details">
 
+                    {% comment %} <input type="email" id="email" name="email" placeholder="Email Address" /> {% endcomment %}
+                    
                     {{signup_form.email}}
 
                     <img
@@ -88,7 +91,7 @@
                 </div>
 
                 <div class="details">
-                    <input type="checkbox" id="remember" name="remember" value="Remember" />
+                    <input type="checkbox" id="remember" name="remember" value="Remember" class="cremember" />
                     <label class="remember">Remember me</label>
                 </div>
 
@@ -109,28 +112,12 @@
                         <img src="{% static '/favigen/img/facebook.svg' %}" alt="facebook" />
                     </span>
                     <span>
-                        <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter" />
-                    </span>
-                    <span>
                         <img src="{% static '/favigen/img/google.svg' %}" alt="google" />
                     </span>
+                    <span>
+                        <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter" />
+                    </span>
                 </div>
-
-                <!--<span>
-                        <a class="facebook" href="#" title="Link to FaviGen on Facebook" target="_blank">
-                            <i class="fa fa-facebook fa-2x"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="Google_Account" href="#" title="Link to FaviGen Google Account " target="_blank">
-                            <i class="fa fa-google fa-2x"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a class="twitter" href="#" title="Link to FaviGen on Twitter" target="_blank">
-                            <i class="fa fa-twitter fa-2x"></i>
-                        </a>
-                    </span>-->
 
                 <!--form end-->
             </form>

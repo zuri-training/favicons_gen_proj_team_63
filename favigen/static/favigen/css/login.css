@@ -9,9 +9,28 @@
 body {
     font-family: montserrat;
 }
-
 .container1 > .login_right {
     width: 60%;
+}
+.login_head {
+    margin-top: 20%;
+    text-align: center;
+    position: relative;
+    color: #261878;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 35px;
+}
+.head5 {
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 4%;
+    right: 40px;
+    font-family: Inter;
+    font-weight: Light;
+    font-size: 20px;
+    opacity: 0.4000000059604645;
+    text-align: left;
 }
 .login_right {
     padding-top: 50px;
@@ -36,7 +55,6 @@ body {
     margin-bottom: 20px;
     border-radius: 8px;
     border: 1px solid #2d1d90;
-    padding-left: 20px;
     outline: none;
     background-color: #2d1d90;
     color: #ffffff;
@@ -50,6 +68,16 @@ body {
     box-shadow: 0 3px rgba(255, 255, 255, 0.5);
 }
 
+.forget {
+    margin-left: 50%;
+}
+.text{
+    color: #2d1d90;
+    font-family: Inter;
+    font-weight: Light;
+    font-size: 20px;
+    opacity: 0.4000000059604645;
+}
 
 /* styling for login page  */
 
@@ -153,16 +181,6 @@ h2 {
 } */
 
 
-
-
-
-.text {
-    text-align: end;
-    color: #2d1d90;
-    opacity: 0.5;
-    margin-top: 20px;
-}
-
 .container1 {
     width: 100%;
     display: flex;
@@ -174,7 +192,7 @@ h2 {
     width: 40%;
 
 }
-.container1 > .right {
+.container1 > .login_right {
     width: 60%;
 }
 .left1 {
@@ -198,17 +216,17 @@ h2 {
     line-height: 48px;
 } */
 
-.right {
+.login_right {
     padding-top: 50px;
 }
-.right .form {
+.login_right .form {
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 5px hsla(249, 10%, 26%, 0.5);
 }
 
 
-#txt-input {
+/* #txt-input {
     width: 70%;
     height: 50px;
     margin: 15px 5px;
@@ -221,7 +239,7 @@ h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 16px;
-}
+} */
 
 /* .form-input {
     width: 100%;
@@ -244,19 +262,15 @@ hr {
     display: inline-block;
     margin: 8px;
 }
-.right input:focus {
+.login_right input:focus {
     border: 1.5px solid hsl(249, 10%, 26%);
 }
-.right input::placeholder {
+.login_right input::placeholder {
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
 
-.text{
-    text-align: right;
-    margin-right: 100px;
-}
 .logo {
     width: 214px;
     height: 214px;
@@ -323,14 +337,14 @@ a {
     text-decoration: none;
     color: rgba(0, 0, 0, 5);
 }
-.v8_54 {
+/* .v8_54 {
     text-align: center;
     position: relative;
     color: rgba(0, 0, 0, 1);
     font-family: Inter;
     font-weight: Regular;
     font-size: 35px;
-}
+} */
 
 /* .wrap {
     display: flex;
@@ -358,12 +372,9 @@ a {
     .container1 > .left1 {
         width: 100%;
     }
-    .container1 > .right {
+    .container1 > .login_right {
         width: 100%;
     }
-
-    
-
     .v8_53 {
         top: 100%;
         right: 0.25%;
@@ -373,11 +384,11 @@ a {
         top: 90px;
     }
     
-    .right button[type="submit"] {
+    .login_right button[type="submit"] {
         position: relative;
         top: 100px;
     }
-    .right input::placeholder {
+    .login_right input::placeholder {
         font-size: 14px;
     }
     .social-icon {
