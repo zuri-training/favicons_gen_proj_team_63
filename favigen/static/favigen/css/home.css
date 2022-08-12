@@ -83,6 +83,9 @@ footer {
     top: 120px;
     width: 10%;
   }
+  .hero {
+    height: 65vh;
+  }
 }
 
 @media (min-width: 1440px) {
