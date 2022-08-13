@@ -13,8 +13,9 @@ body {
   color: #000;
 }
 .btn-purple {
-  background-color: #41A2EF;
-  color: #000;
+  background-color: #2d1d90;
+  box-shadow: 3px 2px 2px #41a2ef !important;
+  color: #fff;
 }
 .nav-link {
   color: #fff;
@@ -91,7 +92,7 @@ footer {
 @media (min-width: 1440px) {
 
   .hero {
-    height: 55vh;
+    height: 80vh;
   }
 }
 
