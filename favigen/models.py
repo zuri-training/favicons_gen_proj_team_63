@@ -45,17 +45,24 @@ def user_directory_path(instance, filename):
 
 
 class Image(models.Model):
-    # url = models.URLField()
+    title = models.CharField(max_length=100, null=True)
     uploaded_image = models.ImageField(upload_to=user_directory_path, blank=True, null=True)
     favourite = models.BooleanField(default=False)
     uploaded_by = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name='image_info')
     uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
 
 
 class Favicon(models.Model):
     image = models.OneToOneField(to=Image, null=True, on_delete=models.CASCADE)
     original_filename = models.CharField(max_length=256, null=True)
     new_filename = models.CharField(max_length=256, null=True)
+    zipped_favs = models.FileField(blank=True, null=True)
     file_type = models.CharField(max_length=10, null=True)
     file_byte_size = models.IntegerField(default=0)
     embed_link = models.TextField(null=True)
+
+    def __str__(self):
+        return self.new_filename
