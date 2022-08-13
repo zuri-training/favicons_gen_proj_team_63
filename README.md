@@ -19,6 +19,7 @@ The list of all the major technologies used in the project.
 - [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - [CSS](https://web.dev/learn/css/)
 - [Postgres](https://www.postgresql.org/)
+- [Heroku](https://www.heroku.com/)
 
 <!-- CONTRIBUTING -->
 ## Contribution Guide
@@ -27,63 +28,63 @@ Please ensure your codes and changes are properly tested.
 
 ### Fork the Project Repo
 
-Fork this repository to get a personal copy on your github account
-
+> Fork this repository to get a personal copy on your github account
+> 
 ### Clone the Repo to your local machine using
 
-To clone the forked repository to your local machine, copy the URL for the forked repo, open command prompt and run:
-
-`git clone <url-for-your-forked-repo>`
+> To clone the forked repository to your local machine, copy the URL for the forked repo, open command prompt and run:
+> 
+> `git clone <url-for-your-forked-repo>`
 
 ### Set Upstream Remote
 
-Set your upstream remote so you can pull changes from upstream to update your repo by running:
-
-`git remote add upstream https://github.com/zuri-training/favicons_gen_proj_team_63`
+> Set your upstream remote so you can pull changes from upstream to update your repo by running:
+> 
+> `git remote add upstream https://github.com/zuri-training/favicons_gen_proj_team_63`
 
 ### Creating Feature Branch
 
-First create a dev branch by running:
-
-`git checkout -b dev`
-
-Then make sure you're in the dev branch by running:
-
-`git checkout dev`
-
-Then create the feature branch (the branch you will be pushing you work to) by running:
-
-`git checkout -b feature`
-
-NB: For consistency, I would recommend we all use the above naming scheme and make sure to create any new branch from the dev branch and not main branch. Ensure your local dev branch is up to date with upstream remote dev branch before creating new branch.
+> First create a dev branch by running:
+> 
+> `git checkout -b dev`
+> 
+> Then make sure you're in the dev branch by running:
+> 
+> `git checkout dev`
+> 
+> Then create the feature branch (the branch you will be pushing you work to) by running:
+> 
+> `git checkout -b feature`
+> 
+> NB: For consistency, I would recommend we all use the above naming scheme and make sure to create any new branch from the dev branch and not main branch. Ensure your local dev branch is up to date with upstream remote dev branch before creating new branch.
 
 ### Set up Development Environment
 
-Tip: Check the Getting Started guide below
+> Tip: Check the Getting Started guide below
 
 ### Making Changes
 
-Make all your changes on your feature branch, add and commit your changes using a concise descriptive commit message
+> Make all your changes on your feature branch, add and commit your changes using a concise descriptive commit message
 
 ### Pulling Updates from Remote
 
-Pull latest updates from Upstream branch by running:
-
-`git pull upstream dev`
-
-NB: If conflicts are encountered after pulling changes, please resolve them locally first before committing
+> Pull latest updates from Upstream branch by running:
+> 
+> `git pull upstream dev`
+> 
+> NB: If conflicts are encountered after pulling changes, please resolve them locally first before committing
 
 ### Pushing Changes
 
-Publish your Feature Branch and changes to origin by running:
-
-`git push origin active`
+> Publish your Feature Branch and changes to origin by running:
+> 
+> `git push origin active`
 
 ### Pull Request
 
-Go to Github, open a Pull Request to the Upstream Remote dev branch and request a review by tagging team members
-
-NB: Add a proper description of the changes made when making a Pull Request for easy review.
+> Go to Github, open a Pull Request to the Upstream Remote dev branch and request a review by tagging team members
+> 
+> NB: Add a proper description of the changes made when making a Pull Request for easy review.
 
 ## Getting Started
 
@@ -97,7 +98,7 @@ Setup virtual environment:
 6. Install the project dependencies with `pip install -r requirements.txt`. This will install Django and any other package for this project
 7. Now your VS Code color-coding should adjust since you have installed all the packages
 
-Setup Postgres:
+Setup Postgres locally (on Windows OS):
 
 1. Go to [Postgres website](https://www.postgresql.org/download/) and download the latest Postgres version for your OS
 2. Run the installer make sure all options are ticked including pgAdmin 4
@@ -127,7 +128,23 @@ Setup Postgres:
 15. Then after that run `python manage.py migrate`
 16. You should not get any errors when you run `python manage.py runserver`. If you do, pls ask any of the other devs
 
-NB:
+## Running/Deploying The Project
+
+For this project, we have settled with using the built in sqlite3 database integration.
+Before this project can be run, the following steps need to have been taken;
+
+1. Cloning the project
+2. Creating a virtual environment in the root directory
+3. Activating the virtual environment
+4. Installing all dependencies from the requirements.txt
+5. Making migrations and the migrating
+
+After the above steps, the project can be run using either gunicorn or runserver:
+
+- Gunicorn: `gunicorn config.wsgi`
+- Runserver: `python manage.py runserver`
+
+## NB
 
 - It is highly advisable to use Git Bash as your terminal app as it easily shows the current branch you're working in
 - Team members should please ask questions if anything is not clear!
