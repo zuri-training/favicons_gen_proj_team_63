@@ -3,13 +3,15 @@ import os
 from os.path import basename
 
 
-def zippify(directory):
+def zippify(dir_to_zip, zip_loc, zip_name):
     # create a ZipFile object
-    with ZipFile("fav.zip", "w") as zipObj:
+    file = os.path.join(zip_loc, f"{zip_name}.zip")
+    with ZipFile(file, "w") as zipObj:
         # Iterate over all the files in directory
-        for filename in os.listdir(directory):
+        for filename in os.listdir(dir_to_zip):
+            filepath = os.path.join(dir_to_zip, filename)
             # Add file to zip
-            zipObj.write(filename)
+            zipObj.write(filepath)
 
 
 
@@ -29,12 +31,12 @@ def get_all_file_paths(directory):
 
 
 
-def main():
+def main(dir):
     # path to folder which needs to be zipped
-    directory = "./myownfolder"
+    # directory = "./myownfolder"
 
     # calling function to get all file paths in the directory
-    file_paths = get_all_file_paths(directory)
+    file_paths = get_all_file_paths(dir)
 
     # printing the list of all files to be zipped
     print("Following files will be zipped in this program:")
