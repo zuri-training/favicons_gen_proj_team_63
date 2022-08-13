@@ -18,11 +18,12 @@ def delete(path):
 
 
 def download(request, path):
-    file_path = os.path.join(settings.MEDIA_ROOT, path)
-    if os.path.exists(file_path):
-        with open(file_path, 'rb') as fh:
-            response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
-            response['Content-Disposition'] = f'inline; filename={os.path.basename(file_path)}'
+    # get the download path
+    download_path = os.path.join(settings.MEDIA_ROOT, path)
+    if os.path.exists(download_path):
+        with open(download_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/adminupload")
+            response['Content-Disposition'] = f'inline; filename={os.path.basename(download_path)}'
 
             return response
     raise Http404
