@@ -8,22 +8,32 @@
     {% csrf_token %}
     {{ form.as_p }}
 
+    <div class="title">
+        <input type="text" name="title">
+    </div>
+
     <div class="upload">
         <input type="file" name="document">
     </div>
 
     <div class="details">
         {% comment %} <input type="checkbox" id="favourite" name="favourite" value="Favourite" /> {% endcomment %}
-        <input type="checkbox" id="embedded" name="embedded" value="Embedded" />
-        <label class="embedded">Generate Embedded HTML Code</label>
+        <input type="checkbox" id="favourite" name="favourite" value="Favourite" />
+        <label class="embedded">Favourite</label>
     </div>
     <button type="submit">Uplod File</button>
 
 </form>
 
-{% if url %}
+{% if url_img %}
     <p>Uploaded file: 
-        <a href="{{ url }}">{{ url }}</a>
+        <a href="{{ url_img }}">{{ url_img }}</a>
+    </p>
+{% endif %}
+
+{% if url_zip %}
+    <p>Uploaded file: 
+        <a href="{{ url_zip }}" download>{{ url_zip }}</a>
     </p>
 {% endif %}
 
