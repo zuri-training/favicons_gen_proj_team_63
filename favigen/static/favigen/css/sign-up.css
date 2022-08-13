@@ -206,10 +206,8 @@ span {
     padding-top: 15px;
     display: block;
 }
-.social-icon > span {
-    padding: 20px;
+.social-icon > img {
     box-shadow: 10px 5px 30px hsl(246, 25%, 77%);
-    border-radius: 50%;
     cursor: pointer;
 }
 
