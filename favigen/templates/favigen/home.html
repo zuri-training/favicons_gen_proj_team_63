@@ -45,9 +45,9 @@
                         </li>
                         <li class="nav-item">
                             {% if user.is_authenticated %}
-                                <a class="nav-link" href="{% url 'fav:logout' %}">Log Out</a>
+                            <a class="nav-link" href="{% url 'fav:logout' %}">Log Out</a>
                             {% else %}
-                                <a class="nav-link" href="{% url 'fav:login' %}">Sign In</a>
+                            <a class="nav-link" href="{% url 'fav:login' %}">Sign In</a>
                             {% endif %}
                         </li>
                     </ul>
@@ -75,7 +75,7 @@
                 <h2 class="py-3">Generate your own favicon easily in seconds </h2>
                 <p class="">Powerful yet easy to use favicon generator for everyone
                     and for every task</p>
-                <button type="button" class="btn btn-top my-3">CREATE YOUR FAVICON</button>
+                <button type="button" onclick="redirect(`{% url 'fav:generate' %}`)" class="btn btn-top my-3">CREATE YOUR FAVICON</button>
 
                 {% comment %} {% if messages %}
                     {% for message in messages %}
@@ -139,8 +139,8 @@
         <h3 class="text-center py-5">Let's Generate</h3>
         <div class="row">
             <div class="col-12 col-md-6 text-center my-auto">
-                <p>Click here to generate your Favicon</p>
-                <button type="button" class="btn btn-purple my-3">GENERATE</button>
+                <h5>Click here to generate your Favicon</h5>
+                <button type="button" onclick="redirect(`{% url 'fav:generate' %}`)" class="btn btn-purple my-3">GENERATE</button>
 
             </div>
             <div class="col-12 col-md-6 text-center">
@@ -161,7 +161,7 @@
         </p>
         <h5>Is FaviGen favicon generator free to use?</h5>
         <p>Yes, - we will never charge you for your icons.</p>
-        <!-- {% comment %} </div> {% endcomment %} -->
+        {% comment %} </div> {% endcomment %}
     </section>
     <footer class="px-5 py-3 d-flex justify-content-between text-white">
         <div>
@@ -180,6 +180,9 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
         <script>
+            const redirect = (url) => {
+                window.location.href = url;
+            }
             const user = () => {
                 display = document.getElementById('user');
                 console.log(display.classList.contains('d-none'));

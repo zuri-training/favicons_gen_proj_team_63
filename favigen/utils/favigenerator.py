@@ -6,11 +6,12 @@ fav = "static/media/Group 442.png"
 loc = "static/media/favs"
 color = "#F15A24"
 
-if not os.path.exists(loc):
-    os.makedirs(loc)
 
 
 def generate_favicon(source, location, color='#000000'):
+    if not os.path.exists(location):
+        os.makedirs(location)
+
     with Favicons(source=source, output_directory=location, background_color=color) as favicons:
         favicons.generate()
         html = favicons.html_gen()

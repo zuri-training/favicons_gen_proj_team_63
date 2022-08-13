@@ -77,7 +77,7 @@ body{
 .generate{
     width: 100%;
     margin-top: 60px;
-    margin-left: 35%;
+    margin-left: 45%;
     align-items: center;
     position: relative;
 }
@@ -95,19 +95,19 @@ body{
 
 .btn_generate a{
   text-decoration: none;
-  color: rgb(177,171,214);
+  color: black;
 }
 
 .btn_generate a:hover{
-  color: black;
+  color: rgb(177,171,214);
   cursor: pointer;
 }
 
 .btn_saved{
-  background-color: rgb(31,159,211);
+  background-color: white;
   border-radius:  50px 0 0 50px;
   padding: 14px 50px;
-  color: white;
+  color: black;
   font-size: 16px;
   font-weight: 400;
   position: absolute;
@@ -117,11 +117,11 @@ body{
 
 .btn_saved a{
   text-decoration: none;
-  color: rgb(177,171,214);
+  color: black;
 }
 
 .btn_saved a:hover{
-  color: black;
+  color: rgb(177,171,214);
   cursor: pointer;
 }
 
