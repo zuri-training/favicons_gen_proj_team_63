@@ -97,7 +97,7 @@
   }
   button {
     width: 25%;
-    float: inline-end;
+    float: right;
     background-color: #2d1d90;
     border: none;
     padding: 10px;
@@ -109,7 +109,7 @@
     display: block;
   }
   .logo {
-    float: inline-end;
+    float: right;
     margin-right: -5%;
     margin-top: 10%;
     width: 40%;
