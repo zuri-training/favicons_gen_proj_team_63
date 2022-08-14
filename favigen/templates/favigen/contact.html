@@ -8,23 +8,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="{% static 'favigen/img/logo.svg' %}" />
         <title>contact page</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
         />
         <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="{% static 'favigen/css/contact.css' %}" />
     </head>
-    
+
     <body>
         <header>
             <!-- LOGO -->
@@ -32,32 +32,23 @@
             <nav class="navbar">
                 <!-- NAVIGATION MENU -->
                 <ul class="nav-links">
-                  <!-- USING CHECKBOX HACK -->
-                  <input type="checkbox" id="checkbox_toggle" />
-                  <label for="checkbox_toggle" class="hamburger"><i class="material-icons" style="font-size:36px; color: #2D1D90">apps</i></label>
-                  <!-- NAVIGATION MENUS -->
-                  <div class="menu">
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger"
+                        ><i class="material-icons" style="font-size: 36px; color: #2d1d90">apps</i></label
+                    >
+                    <!-- NAVIGATION MENUS -->
+                    <div class="menu">
                         <li><a href="{% url 'fav:home' %}">Home</a></li>
                         <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
                         {% if user.is_authenticated %}
-                        <li><a href="{% url 'fav:signup' %}">Log Out</a></li>
+                            <li><a href="{% url 'fav:signup' %}">Log Out</a></li>
                         {% else %}
-                        <li><a href="{% url 'fav:login' %}">Sign In</a></li>
+                            <li><a href="{% url 'fav:login' %}">Sign In</a></li>
                         {% endif %}
-                  </div>
+                    </div>
                 </ul>
-              </nav>
-            <!--<nav>
-                <ul class="nav-links">
-                    <li><a href="{% url 'fav:home' %}">Home</a></li>
-                    <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
-                    {% if user.is_authenticated %}
-                    <li><a href="{% url 'fav:signup' %}">Log Out</a></li>
-                    {% else %}
-                    <li><a href="{% url 'fav:login' %}">Sign In</a></li>
-                    {% endif %}
-                </ul>
-            </nav>-->
+            </nav>
         </header>
         <div class="container">
             <div class="container-left">
@@ -74,33 +65,47 @@
                 </div>
                 <div class="icons">
                     <span>
-                        <img class="socials" src="{% static 'favigen/img/twittercontact.svg' %}" alt="twitter" />
+                        <img
+                            class="socials"
+                            src="{% static 'favigen/img/twittercontact.svg' %}"
+                            alt="twitter"
+                        />
                     </span>
                     <span>
                         <img class="socials" src="{% static 'favigen/img/phonecontact.svg' %}" alt="phone" />
                     </span>
                     <span>
-                        <img class="socials" src="{% static 'favigen/img/facebookcontact.svg' %}" alt="facebook" />
+                        <img
+                            class="socials"
+                            src="{% static 'favigen/img/facebookcontact.svg' %}"
+                            alt="facebook"
+                        />
                     </span>
                     <span>
-                        <img class="socials" src="{% static 'favigen/img/instagramcontact.svg' %}" alt="instagram" />
+                        <img
+                            class="socials"
+                            src="{% static 'favigen/img/instagramcontact.svg' %}"
+                            alt="instagram"
+                        />
                     </span>
                 </div>
                 <img src="{% static 'favigen/img/biglogo.png' %}" alt="" class="logo" />
             </div>
             <div class="container-right">
-                <form id="form">
+                <form action="{% url 'fav:contact' %}" method="POST" name="contact" id="form">
+                    {% csrf_token %}
+                    
                     <div>
                         <label for="">Subject</label>
-                        <input type="text" id="Subject" required />
+                        <input type="text" id="Subject" name="subject" required />
                     </div>
                     <div>
                         <label for="">Email</label>
-                        <input type="email" id="Email" required />
+                        <input type="email" id="Email" name="email" required />
                     </div>
                     <div>
                         <label for="">Message</label>
-                        <textarea rows="6" id="Message" required></textarea>
+                        <textarea rows="6" id="Message" name="message" required></textarea>
                     </div>
                     <div>
                         <label for="">Priority</label>
@@ -116,7 +121,5 @@
                 </form>
             </div>
         </div>
-
-        
     </body>
 </html>
