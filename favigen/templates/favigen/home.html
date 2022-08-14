@@ -7,93 +7,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="% static '/favigen/img/logo.svg' %}" />
+    <link rel="icon" href="{% static '/favigen/img/logo.svg' %}" />
     <title>FaviGen</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static '/favigen/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'favigen/css/home.css ' %}">
 </head>
 
 <body>
     <div class="hero position-relative">
-        <img class="img-fluid position-absolute hero_img_2 " src="{% static '/favigen/img/bg_hero_2.png' %}" alt="">
-        <img class="img-fluid position-absolute hero_img_3" src="{% static '/favigen/img/bg_hero_3.png' %}" alt="">
-        <img class="img-fluid position-absolute hero_img_4" src="{% static '/favigen/img/bg_hero_4.png' %}" alt="">
+        <img class="img-fluid position-absolute hero_img_2 " src="{% static 'favigen/img/bg_hero_2.png ' %}" alt="">
+        <img class="img-fluid position-absolute hero_img_3" src="{% static 'favigen/img/bg_hero_3.png ' %}" alt="">
+        <img class="img-fluid position-absolute hero_img_4" src="{% static 'favigen/img/bg_hero_4.png ' %}" alt="">
         <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid px-5">
+            <div class="container-fluid px-3">
                 <a class="navbar-brand" href="#">
-                    <img src="{% static '/favigen/img/logo.svg' %}" width="30" class="d-inline-block align-top"
-                        alt="logo">
+                    <img src="{% static 'favigen/img/logo.svg ' %}" width="30" class="d-inline-block align-top" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-5">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'fav:home' %}">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'fav:home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'fav:contact' %}">Contact Us</a>
+                            <a class="nav-link" href="{% url 'fav:contact">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'fav:saved' %}">Saved Icons</a>
+                            <a class="nav-link" href="{% url 'fav:saved">Saved Icons</a>
                         </li>
                         <li class="nav-item">
                             {% if user.is_authenticated %}
-                                <a class="nav-link" href="{% url 'fav:logout' %}">Log Out</a>
+                            <a class="nav-link" href="{% url 'fav:logout">Log Out</a>
                             {% else %}
-                                <a class="nav-link" href="{% url 'fav:login' %}">Sign In</a>
+                            <a class="nav-link" href="{% url 'fav:login">Sign In</a>
                             {% endif %}
                         </li>
                     </ul>
+                    <div class="me-5 position-relative">
+                        <img src="{% static 'favigen/img/user.svg ' %}" width="30" role="button" onclick="user()" class="d-inline-block align-top" alt="user">
+                        <div id="user" class="bg-white d-none py-3 px-1 user-dropdown position-absolute">
+                            <ul>
+                                <li >
+                                    <a  href="{% url 'fav:saved">username: dummy </a> 
+                                </li>
+                                <li>
+                                    <a  href="{% url 'fav:logout">Log Out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </nav>
         <section class="d-flex">
-            <div class="d-none d-lg-block col-lg-8 ps-5 my-5 py-5 text-center">
-                <h2 class="py-3 gray">Generate your own favicon easily in seconds </h2>
+            <div class="d-none d-lg-block col-lg-8 ps-5 my-5 py-5 text-center text-white">
+                <h2 class="py-3">Generate your own favicon easily in seconds </h2>
                 <p class="">Powerful yet easy to use favicon generator for everyone
                     and for every task</p>
-                <button type="button" class="btn btn-purple my-3">CREATE YOUR FAVICON</button>
+                <button type="button" class="btn btn-top my-3">CREATE YOUR FAVICON</button>
 
                 {% comment %} {% for message in messages %}
-                    <p id="messages">{{messages}}</p>
+                <p id="messages">{{messages}}</p>
                 {% endfor %} {% endcomment %}
-                
+
             </div>
-            <div class="d-lg-none mx-auto my-5 py-5 text-center">
-                <h2 class="py-3 gray">Generate your own favicon easily in seconds </h2>
+            <div class="d-lg-none mx-auto my-5 py-5 text-center text-white">
+                <h2 class="py-3">Generate your own favicon easily in seconds </h2>
                 <p class="">Powerful yet easy to use favicon generator for everyone
                     and for every task</p>
-                <button type="button" class="btn btn-purple my-3">CREATE YOUR FAVICON</button>
+                <button type="button" class="btn btn-top my-3">CREATE YOUR FAVICON</button>
             </div>
         </section>
 
     </div>
-    <section class="container mx-auto row text-center">
+    <section class="container mx-auto row py-0 md:py-0 text-center">
         <div class="col-12 col-lg-4">
-            <img class="img-fluid my-3" src="{% static '/favigen/img/free_icon.svg' %}" alt="">
+            <img class="img-fluid my-3" src="{% static 'favigen/img/free_icon.svg ' %}" alt="">
             <h5 class="purple py-1">COMPLETELY FREE</h5>
             <p class="py-2">You can create and use favicons with FaviGen completely free of charge.</p>
         </div>
         <div class="col-12 col-lg-4">
-            <img class="img-fluid my-3" src="{% static '/favigen/img/fast_icon.svg' %}" alt="">
+            <img class="img-fluid my-3" src="{% static 'favigen/img/fast_icon.svg ' %}" alt="">
             <h5 class="purple py-1">SUPER FAST</h5>
             <p class="py-2">With its straightfoward interface, you can create your own favicon in seconds.</p>
         </div>
         <div class="col-12 col-lg-4">
-            <img class="img-fluid my-3" src="{% static '/favigen/img/easy_icon.svg' %}" alt="">
+            <img class="img-fluid my-3" src="{% static 'favigen/img/easy_icon.svg ' %}" alt="">
             <h5 class="purple py-1">EASY TO USE</h5>
             <p class="py-2">Simply upload your file and click download. It’s never been easier to create favicons.</p>
         </div>
 
     </section>
     <section class="container row mx-auto pt-3">
-        <div class="col-12 col-md-6"><img class="img-fluid" src="{% static '/favigen/img/favicon_icon.svg' %}"
-            alt="Favicon Icon" /></div>
+        <h3 class="text-center py-5">Create your favicon in 3 simple steps</h3>
+        <div class="col-12 col-md-6 my-auto"><img class="img-fluid" src="{% static 'favigen/img/favicon_icon.svg ' %}"
+                alt="Favicon Icon" /></div>
         <div class="container col-12 py-5 text-center text-md-start col-md-6 px-5">
             <div class=>
                 <h5 class="purple py-1">1</h5>
@@ -113,7 +127,7 @@
         </div>
     </section>
     <section class="container pt-3">
-        <h3 class="text-center py-5">Create your favicon in 3 simple steps</h3>
+        <h3 class="text-center py-5">Let's Generate</h3>
         <div class="row">
             <div class="col-12 col-md-6 text-center my-auto">
                 <p>Click here to generate your Favicon</p>
@@ -121,29 +135,32 @@
 
             </div>
             <div class="col-12 col-md-6 text-center">
-                <img class="img-fluid" src="{% static '/favigen/img/gif.gif' %}" alt="Animated Gif">
+                <img class="img-fluid" src="{% static 'favigen/img/gif.gif ' %}" alt="Animated Gif">
             </div>
         </div>
     </section>
     <section class="container py-3">
+        <h3 class="text-center py-5">FaviGen Favicon Generator - FAQ</h3>
         <h5>What is an Online Favicon Generator?</h5>
         <p>FaviGen is a tool that allows you to easily create a favicon for your website. Favicons are small icons
             files that are displayed next to the URL of your site in a browers‘s address bar. This tool provdes an
             easy way to convert any GIF, PNG or JPEG to ICO which is supported by allmodern web browsers</p>
         <p>To install the favicon, extract the downloaded files into the root directory of tehe website and copy the
-            generated HTML snippet into the <head> section of the code </head>
+            generated HTML snippet into the
+
+            <head> section of the code </head>
         </p>
         <h5>Is FaviGen favicon generator free to use?</h5>
         <p>Yes, - we will never charge you for your icons.</p>
-        <!-- {% comment %} </div> {% endcomment %} -->
+        {% comment %} </div> {% endcomment %}
     </section>
-    <footer class="px-5 py-3 d-flex justify-content-between">
+    <footer class="px-5 py-3 d-flex justify-content-between text-white">
         <div>
             <p>Created by; Zuri Project-FavGen-Team 63</p>
             <p>Copyright 2022</p>
         </div>
         <div>
-            <img src="{% static '/favigen/img/zuri.svg' %}" alt="Zuri Logo" class="img-fluid">
+            <img src="{% static 'favigen/img/zuri.svg ' %}" alt="Zuri Logo" class="img-fluid">
 
 
         </div>
@@ -153,6 +170,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+        <script>
+            const user = () => {
+                display = document.getElementById('user');
+                console.log(display.classList.contains('d-none'));
+                if(display.classList.contains('d-none')){
+                    document.getElementById('user').classList.remove('d-none')
+                    document.getElementById('user').classList.add('d-block');
+                }else{
+                    document.getElementById('user').classList.remove('d-block')
+                    document.getElementById('user').classList.add('d-none');
+                }
+            }
+        </script>
 </body>
 
 </html>

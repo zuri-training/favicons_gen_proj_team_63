@@ -22,14 +22,14 @@
             <div class="container1">
                 <div class="container2" id="container2">
                     <div class="header">
-                        <div class="logo">
+                        {% comment %} <div class="logo">
                             <img src="{% static '/favigen/img/faviGen_Logo.png' %}" alt="logo" />
                         </div>
                         <div class="nav-menu">
                             <nav class="nav">
                                 <a class="a" href="#">Home</a>
                                 <a class="a" href="#">Contact Us</a>
-                                <a class="a" href="#">Saved Icons</a>
+                                <a class="a" href="{% url 'fav:saved' %}">Saved Icons</a>
                                 <a class="a" href="#">Generate</a>
                                 {% if user.is_authenticated %}
                                     <a class="a" href="{% url 'fav:logout' %}">Log Out</a>
@@ -42,11 +42,12 @@
                             <span class="bar"></span>
                             <span class="bar"></span>
                             <span class="bar"></span>
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                     <div class="generate2">
-                        <button class="btn_generate2" type="submit">GitLab</button>
-                        <button class="btn_saved2" type="submit">Saved</button>
+                        <button class="btn_generate2" type="button">
+                            <a href="#">GitLab</a></button>
+                        <button class="btn_saved2" type="button">Saved</button>
                     </div>
                     <div class="git1">
                         <i class="fa fa-gitlab" id="fa"></i>
@@ -56,11 +57,13 @@
 
                 <div class="emb_code">
                     <p class="emb_code1">Embedded Code</p>
-                    <p class="emb_code2">
+                    <p class="emb_code2"> 
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptate magni
                         architecto quod eveniet, aspernatur quaerat ducimus facilis aperiam rem vitae commodi
-                        illo error distinctio mollitia inventore dolores! Corrupti, saepe.
-                    </p>
+                        illo error distinctio mollitia inventore dolores! Corrupti, saepe. 
+                    </p> 
+
+                {% comment %} <input type="" size >  {% endcomment %}
                     <button class="emb_code3" type="button">Download</button>
                 </div>
             </div>

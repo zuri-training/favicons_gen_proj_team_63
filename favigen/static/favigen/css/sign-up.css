@@ -14,8 +14,9 @@ body {
     text-align: center;
 }
 .container1 > .left1 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    align-items: center;
 }
 .container1 > .right {
     width: 60%;
@@ -54,8 +55,11 @@ span.v8_80 {
     font-weight: 600;
     font-size: 16px;
 }
+.remember {
+    color: #261878;
+}
 #remember {
-    margin-left: -45%;
+    margin-left: -30%;
     margin-top: 5px;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -65,7 +69,7 @@ span.v8_80 {
     cursor: pointer;
 }
 label {
-    color: hsl(249, 10%, 26%);
+    color: #261878;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -106,11 +110,17 @@ input:focus::placeholder {
     margin: 0 auto;
     cursor: pointer;
 }
+.version {
+    padding-left: 20px;
+    padding-top: 250px;
+    font-family: Inter;
+    font-weight: Light;
+    font-size: 20px;
+    text-align: left;
+}
 .logo4 {
-    display: inline;
     float: right;
-    padding-top: 130px;
-    padding-bottom: 0px;
+    padding-top: 430px;
     width: 20%;
     height: 20%;
     cursor: pointer;
@@ -122,10 +132,7 @@ input:focus::placeholder {
     font-weight: Regular;
     font-size: 40px;
 }
-.v8_80,
-.v8_81 {
-    color: rgba(0, 0, 0, 1);
-}
+
 .v8_80 {
     font-family: Inter;
     font-weight: Light;
@@ -134,18 +141,20 @@ input:focus::placeholder {
     text-align: center;
 }
 .FaviGenContent {
-    margin: 0 75px;
+    margin: 0px 75px
 }
-.v8_81 {
-    padding-left: 20px;
-    padding-top: 180px;
+
+.login_path {
+    position: absolute;
+    top: 2%;
+    right: 20px;
     font-family: Inter;
     font-weight: Light;
     font-size: 20px;
+    opacity: 0.4000000059604645;
     text-align: left;
 }
-.v8_53 {
-    color: rgba(0, 0, 0, 1);
+.signup_path {
     position: absolute;
     top: 2%;
     right: 20px;
@@ -159,10 +168,11 @@ a {
     text-decoration: none;
     color: rgba(0, 0, 0, 5);
 }
-.v8_54 {
+.signup_head {
+    top: 3%;
     text-align: center;
     position: relative;
-    color: rgba(0, 0, 0, 1);
+    color: #261878;
     font-family: Inter;
     font-weight: Regular;
     font-size: 35px;
@@ -197,7 +207,7 @@ span {
     display: block;
 }
 .social-icon > span {
-    padding: 23px;
+    padding: 20px;
     box-shadow: 10px 5px 30px hsl(246, 25%, 77%);
     border-radius: 50%;
     cursor: pointer;
@@ -231,80 +241,45 @@ span {
     color: hsl(0, 100%, 74%);
 }
 
-@media screen and (max-width: 1100px) {
-    .FaviGenContent {
-        margin: 0px 5px;
+@media screen and (min-width: 1700px){
+    .container1 {
+        position: fixed;
+        overflow-y: scroll;
     }
 }
 
-@media screen and (max-width: 900px) {
-    .FaviGenContent {
-        margin: 0px 150px;
+/* @media screen and (min-width: 1350.5px) {
+    .logo4 {
+        margin-top: 250px;
     }
-    .container1 {
-        flex-direction: column;
+    .version {
+        margin-top: 250px;
     }
-    .container1 > .left1 {
-        width: 100%;
-    }
-    .container1 > .right {
-        width: 100%;
-    }
+} */
 
-    .v8_53 {
-        top: 130%;
-        right: 0.25%;
-        font-size: 16px;
+@media screen and (min-width: 1100.5px) {
+    .logo4 {
+        margin-top: 200px;
     }
-    .v8_54 {
-        top: 90px;
-    }
-    .details {
-        top: 100px;
-    }
-    .right button[type="submit"] {
-        position: relative;
-        top: 100px;
-    }
-    .right input::placeholder {
-        font-size: 14px;
-    }
-    .social-icon {
-        margin: 100px;
-        padding-top: 50px;
-        display: block;
-    }
-    .social-icon > span {
-        margin-right: 10%;
+    .version {
+        margin-top: 150px;
     }
     #remember {
-        margin-left: -30%;
+        margin-left: -50%;
     }
-    hr {
-        width: 90px;
-    }
-    ::-webkit-scrollbar {
-        -webkit-appearance: none;
-    }
+}
 
-    ::-webkit-scrollbar:vertical {
-        width: 12px;
+@media screen and (min-width: 900.5px) and (max-width: 1100px) {
+    .logo4 {
+        margin-top: 300px;
     }
-
-    ::-webkit-scrollbar:horizontal {
-        height: 12px;
+    .version {
+        margin-top: 200px;
     }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        border: 2px solid #ffffff;
+    #remember {
+        margin-left: -45%;
     }
-
-    ::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: #ffffff;
-    }
+    
 }
 
 @media screen and (max-width: 1100px) {
@@ -326,13 +301,15 @@ span {
     .container1 > .right {
         width: 100%;
     }
-
-    .v8_53 {
+    .cremeber {
+        margin-left: -600px;
+    }
+    .login_path {
         top: 130%;
         right: 0.25%;
         font-size: 16px;
     }
-    .v8_54 {
+    .signup_head {
         top: 90px;
     }
     .details {
@@ -352,85 +329,6 @@ span {
     }
     .social-icon > span {
         margin-right: 10%;
-    }
-    #remember {
-        margin-left: -30%;
-    }
-    hr {
-        width: 90px;
-    }
-    ::-webkit-scrollbar {
-        -webkit-appearance: none;
-    }
-
-    ::-webkit-scrollbar:vertical {
-        width: 12px;
-    }
-
-    ::-webkit-scrollbar:horizontal {
-        height: 12px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        border: 2px solid #ffffff;
-    }
-
-    ::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: #ffffff;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .FaviGenContent {
-        margin: 0px 5px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .FaviGenContent {
-        margin: 0px 150px;
-    }
-    .container1 {
-        flex-direction: column;
-    }
-    .container1 > .left1 {
-        width: 100%;
-    }
-    .container1 > .right {
-        width: 100%;
-    }
-
-    .v8_53 {
-        top: 130%;
-        right: 0.25%;
-        font-size: 16px;
-    }
-    .v8_54 {
-        top: 90px;
-    }
-    .details {
-        top: 100px;
-    }
-    .right button[type="submit"] {
-        position: relative;
-        top: 100px;
-    }
-    .right input::placeholder {
-        font-size: 14px;
-    }
-    .social-icon {
-        margin: 100px;
-        padding-top: 50px;
-        display: block;
-    }
-    .social-icon > span {
-        margin-right: 10%;
-    }
-    #remember {
-        margin-left: -30%;
     }
     hr {
         width: 90px;
@@ -475,90 +373,97 @@ span {
 }
 
 @media screen and (max-width: 510px) {
-    .v8_53 {
+    .login_path {
         top: 135%;
     }
 }
 @media screen and (max-width: 475px) {
-    .v8_53 {
+    .login_path {
         top: 150%;
     }
 }
 @media screen and (max-width: 414px) {
-    .v8_53 {
-        top: 107%;
+    .login_path {
+        top: 115%;
+    }
+    .forget {
+        margin-top: -28px;
+    }
+    .signup_path {
+        top: 1500px;
+        text-align: center;
     }
     
 }
 @media screen and (max-width: 400px) {
-    .v8_53 {
-        top: 10%;
+    .login_path {
+        margin-top: -70px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .v8_54 {
+    .signup_path {
+        top: 570px;
+        text-align: center;
+    }
+    hr {
+        width: 200px;
+    }
+    .signup_head {
         top: 40px;
     }
     /* Mobile view*/
     div.left1 {
         display: none !important;
     }
-    .v8_53 {
+    .cremeber {
+        margin-right: -10%;
+    }
+    .login_path {
         top: 105%;
         max-width: fit-content;
         right:  12%;
         left: 12%;
     }
     .alt_signup {
+        color: #261878;
         padding-top: 50px;
     }
     
 }
 @media screen and (max-width: 393px) {
-    .v8_53 {
+    .login_path {
         top: 82%;
     }
     
 }
 @media screen and (max-width: 390px) {
-    .v8_53 {
+    .login_path {
         top: 85%;
     }
     
 }
 @media screen and (max-width: 375px) {
-    .v8_53 {
-        top: 107%;
+    .login_path {
+        margin-top: 155px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .signup_path {
+        top: 480px;
+        text-align: center;
+    }
+    .forget {
+        margin-top: -15px;
+    }
+    #signin {
+        margin-top: -100px;
     }
     
 }
 @media screen and (max-width: 360px) {
-    .v8_53 {
+    .login_path {
         top: 95%;
         font-size: 14px;
     }
     
-}
-
-@media screen and (min-width: 1100.5px) {
-    .logo4 {
-        margin-top: 100px;
-    }
-    .v8_81 {
-        margin-top: 150px;
-    }
-}
-@media screen and (min-width: 1350.5px) {
-    .logo4 {
-        margin-top: 250px;
-    }
-    .v8_81 {
-        margin-top: 250px;
-    }
-}
-@media screen and (min-width: 900.5px) and (max-width: 1100px) {
-    .logo4 {
-        margin-top: 200px;
-    }
-    .v8_81 {
-        margin-top: 200px;
-    }
 }
