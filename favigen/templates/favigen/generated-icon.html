@@ -85,9 +85,11 @@
                     
                     <div class="generate2">
                         <button class="btn_generate2" type="button">
-                            <a href="#">GitLab</a></button>
-                        <button class="btn_saved2" type="button">Saved</button>
+                            <a class="b" href="{% url 'fav:generated' %}">Generate</a></button>
+                        <button class="btn_saved2" type="button">
+                            <a class="b" href="{% url 'fav:saved' %}">Saved Icons</a></button>
                     </div>
+
                     <div class="git1">
                         <i class="fa fa-gitlab" id="fa"></i>
                         <p class="git1_p">GitLab</p>

@@ -1,7 +1,5 @@
 {% extends 'favigen/base.html' %} 
-
 {% load static %} 
-
 {% block content %}
 
 <main>
@@ -33,31 +31,22 @@
             <form action="{% url 'fav:login' %}" method="POST" name="login" id="signin">
                 {% csrf_token %}
 
-            <!--form begin-->
-                <!--<div class="head5">-->
-
-                    <!--     Start  header Content  -->
-                    <a href="{% url 'fav:signup' %}">
-                        <!--     A welcome message or an explanation of the login form -->
-                        <span class="signup_path">Don't have an account? Sign up</span>
-                    </a>
-                <!--</div>-->
+                <!--form begin-->
+                <!--     Start  header Content  -->
+                <a href="{% url 'fav:signup' %}">
+                    <!--     A welcome message or an explanation of the login form -->
+                    <span class="signup_path">Don't have an account? Sign up</span>
+                </a>
 
                 <h2 class="login_head">Log in</h2>
 
-                    <!--     End  header Content  -->
+                <!--     End  header Content  -->
 
                 <!-- Input content -->
                 <div class="details">
                     <!--   email Input-->
                     {{ login_form.email }}
-                    {% comment %} <input
-                        class="form-input"
-                        id="txt-input"
-                        type="text"
-                        placeholder="Email"
-                        required
-                    /> {% endcomment %}
+
                     <img
                         src="{% static '/favigen/img/icon-error.svg' %}"
                         alt="error-icon"
@@ -69,14 +58,7 @@
                 <div class="details">
                     <!--   Password Input-->
                     {{ login_form.password }}
-                    {% comment %} <input
-                        class="form-input"
-                        id="txt-input2"
-                        type="password"
-                        placeholder="Password"
-                        required
-                    /> {% endcomment %}
-                    
+
                     <img
                         src="{% static '/favigen/img/icon-error.svg' %}"
                         alt="error-icon"
@@ -90,7 +72,7 @@
                     <p class="text"><a href="#">Forget password?</a></p>
                 </div>
 
-                    {{signup_form.errors}}
+                {{signup_form.errors}}
 
                 <button type="submit">Log In</button>
 
@@ -102,20 +84,20 @@
 
                 <!--social media icons-->
                 <div class="social-icon">
+                    <span>
                         <img src="{% static '/favigen/img/facebook.svg' %}" alt="facebook" />
+                    </span>
+                    <span>
                         <img src="{% static '/favigen/img/google.svg' %}" alt="google" />
+                    </span>
+                    <span>
                         <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter" />
-                    
-                    <!--      End Other the Division -->
+                    </span>
                 </div>
-
-                    <!-- End Form -->
+                <!-- End Form -->
             </form>
-            
         </div>
-
     </div>
-
 </main>
 
 {% endblock %}

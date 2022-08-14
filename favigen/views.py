@@ -1,14 +1,13 @@
 from datetime import datetime
 from django.shortcuts import render
-from django.http import FileResponse
 from django.core.files import File
 from django.core.files.storage import FileSystemStorage
 
-from django.shortcuts import render, redirect
-from favigen.forms import CustomUserCreationForm, CustomAuthenticationForm
-from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, logout, authenticate
+from favigen.forms import CustomUserCreationForm, CustomAuthenticationForm
 
 from pathlib import Path
 from .models import *
@@ -33,13 +32,13 @@ def signup_page(request):
     custom message if the registration is successful, after which it 
     redirects the user to the home page.
     """
-    # if not request.user.is_anonymous:
-    #     return redirect("favigen:home")
+    if not request.user.is_anonymous:
+        return redirect("favigen:home")
 
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            form.save()
             f_name = form.cleaned_data.get("first_name")
             messages.success(request, f"Registration successful for {f_name}")
             return redirect("favigen:home")
@@ -82,7 +81,6 @@ def logout_view(request):
     return redirect("favigen:login")
 
 
-# @login_required
 @login_required(login_url='fav:login')
 def image_upload(request):
     user = request.user
@@ -105,7 +103,9 @@ def image_upload(request):
         # To generate a new file name, we get the current date and time 
         # and add a prefix to it then join the extension at the end
         a = f"FAV{str(datetime.now())}"
+        # Remove special chacracters and spaces from the date string
         b = ''.join(re.split(r'-|\.|:|\ ', a))
+        # Combine the date string with file extension to form new file name
         new_name = f"{b}.{f_type}"
 
         # Generate favicons and zip them
@@ -118,6 +118,7 @@ def image_upload(request):
             uploaded_by=user)
         img.save()
 
+        # Create the zipped file
         user_dir = f"static/media/user_{user.id}"
         zippify.zippify(favs_dir, user_dir, b)
 
@@ -138,21 +139,45 @@ def image_upload(request):
             saved_fav.save()
 
         # Rename the saved favicon
-        former_name = os.path.join(user_dir, image_file.name)
-        new_name = os.path.join(user_dir, new_name)
-        os.rename(former_name, new_name)
+        former_name_path = os.path.join(user_dir, image_file.name)
+        new_name_path = os.path.join(user_dir, new_name)
+        os.rename(former_name_path, new_name_path)
 
+        # Delete generated favicons after zipping them
         utility.delete(favs_dir)
 
-        # f_zip = open(os.path.join(user_dir, f"{b}.zip"), 'rb')
+        # Get the object of the current favicon from the database
+        saved_zip = Favicon.objects.filter(new_filename=new_name)
 
         context["url_img"] = url_img
-        # context["url_zip"] = 
+        context["url_zip"] = saved_zip
     return render(request, "favigen/upload.html", context)
 
 
 def contact_page(request):
-    return render(request, "favigen/contact.html")
+    user = request.user
+    context = {}
+
+    if request.method == 'POST':
+        subject = request.POST.get('subject')
+        email = request.POST.get('email')
+        message = request.POST.get('subject')
+        priority = request.POST.get('priority')
+
+        message = Message.objects.create(
+            title=subject,
+            user=user,
+            email=email,
+            message=message,
+            priority=priority,
+        )
+        message.save()
+        return redirect("favigen:sent")
+    return render(request, "favigen/contact.html", context)
+
+
+def message_sent(request):
+    return render(request, "favigen/message_sent.html")
 
 
 @login_required(login_url='fav:login')
