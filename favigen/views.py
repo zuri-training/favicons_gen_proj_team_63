@@ -182,7 +182,15 @@ def message_sent(request):
 
 @login_required(login_url='fav:login')
 def saved_icons(request):
-    return render(request, "favigen/saved-icons.html")
+    user = request.user
+    current_user_email = user.email
+    # favicons = Favicon.objects.get()
+
+    visitor = CustomUser.objects.get(email=current_user_email)
+    favicons = visitor.order_set.all()
+
+    context = {'favicons': favicons}
+    return render(request, "favigen/saved-icons.html", context)
 
 
 @login_required(login_url='fav:login')
