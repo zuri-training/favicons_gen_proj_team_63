@@ -192,4 +192,4 @@ def generated_icon(request):
 
 @login_required(login_url='fav:login')
 def generate_icon(request):
-    return render(request, "favigen/index.html")
+    return render(request, "favigen/generate.html")
