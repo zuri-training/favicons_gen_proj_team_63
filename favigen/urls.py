@@ -10,6 +10,7 @@ urlpatterns = [
     path("logout/", views.logout_view, name="logout"),
     path("upload/", views.image_upload, name="upload"),
     path("contact/", views.contact_page, name="contact"),
+    path("message-sent/", views.message_sent, name="sent"),
     path("saved-icons/", views.saved_icons, name="saved"),
     path("generated-icon/", views.generated_icon, name="generated"),
     path("generate-icon/", views.generate_icon, name="generate"),
