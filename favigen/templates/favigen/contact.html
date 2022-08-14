@@ -6,7 +6,9 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="{% static 'favigen/img/logo.svg' %}" />
         <title>contact page</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -25,8 +27,27 @@
     
     <body>
         <header>
+            <!-- LOGO -->
             <img class="nav-logo" src="{% static 'favigen/img/smalllogo.svg' %}" alt="" />
-            <nav>
+            <nav class="navbar">
+                <!-- NAVIGATION MENU -->
+                <ul class="nav-links">
+                  <!-- USING CHECKBOX HACK -->
+                  <input type="checkbox" id="checkbox_toggle" />
+                  <label for="checkbox_toggle" class="hamburger"><i class="material-icons" style="font-size:36px; color: #2D1D90">apps</i></label>
+                  <!-- NAVIGATION MENUS -->
+                  <div class="menu">
+                        <li><a href="{% url 'fav:home' %}">Home</a></li>
+                        <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'fav:signup' %}">Log Out</a></li>
+                        {% else %}
+                        <li><a href="{% url 'fav:login' %}">Sign In</a></li>
+                        {% endif %}
+                  </div>
+                </ul>
+              </nav>
+            <!--<nav>
                 <ul class="nav-links">
                     <li><a href="{% url 'fav:home' %}">Home</a></li>
                     <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
@@ -36,7 +57,7 @@
                     <li><a href="{% url 'fav:login' %}">Sign In</a></li>
                     {% endif %}
                 </ul>
-            </nav>
+            </nav>-->
         </header>
         <div class="container">
             <div class="container-left">

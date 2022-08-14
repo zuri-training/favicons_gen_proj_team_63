@@ -7,6 +7,68 @@
     background-color: white;
     font-family: "Manrope", sans-serif;
   }
+  li {
+    list-style: none;
+   }
+   /* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  color: #2d1d90;
+ }
+ /* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+ }
+ .menu li:hover {
+  background-color: #4A90E2;
+  border-radius: 3px;
+  transition: 0.3s ease;
+ }
+ .menu li {
+  padding: 5px 5px;
+ }
+ /*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+  display: none;
+ } 
+ /*HAMBURGER MENU*/
+ .hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+ }
+ /* APPLYING MEDIA QUERIES */
+ @media (max-width: 768px) {
+ .menu { 
+  display:none;
+  position: absolute;
+  background-color:#2d1d90;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 16px 0;
+ }
+ .menu li:hover {
+  display: inline-block;
+  transition: 0.3s ease;
+ }
+ .menu li + li {
+  margin-top: 12px;
+ }
+ input[type=checkbox]:checked ~ .menu{
+  display: block;
+ }
+ .hamburger {
+  display: block;
+ }
+ }
   li,
   a {
     text-decoration: none;
