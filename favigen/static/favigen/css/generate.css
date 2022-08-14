@@ -11,8 +11,160 @@ body {
     line-height: -1;
 }
 
+.container2{
+    background-image: url("../../../static/favigen/img/bg_header2.png");
+    background-position: bottom;
+    height: 55vh;
+    background-size: cover;
+    background-repeat: no-repeat; 
+  }
+  
+  
+  .header{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+  }
+  .logo{
+      margin-left: 40px;
+      padding-top: 5px;
+  }
+  
+  .logo img{
+      align-items: center;
+      width: 35%;
+      justify-content: space-around;
+      padding-top: 5px;
+      
+      
+  }
+  
+  .nav{
+      display: flex;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 3px 30px;
+  }
+  
+  .nav a{
+    justify-content: space-between;
+    text-decoration: none;
+    color: rgb(220,217,236); 
+    transition: 0.75s ease;
+    padding: 0 20px;
+  }
+  
+  .nav a:hover{
+    color: rgb(31,159,211);
+    cursor: pointer;
+  }
+  
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar{
+    display: block;
+    width: 35px;
+    height: 7px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s in-out;
+    transition: all 0.3s in-out;
+    background-color: rgb(45,29,144);
+  }
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    color: #2d1d90;
+   }
+
+   li {
+    list-style: none;
+   }
+   /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: #4A90E2;
+    border-radius: 3px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 5px;
+   }
+
+   /*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* APPLYING MEDIA QUERIES */
+   @media (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:#2d1d90;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+   }
+   .menu li:hover {
+    display: inline-block;
+    transition: 0.3s ease;
+   }
+   .menu li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+   }
+   }
+    li,
+    a {
+      text-decoration: none;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10%;
+      
+    }
+    
+    .nav-logo {
+      cursor: pointer;
+    }
+    .nav-links {
+      list-style: none;
+    }
+    .nav-links li {
+      display: inline-block;
+      padding: 20px 20px;
+      margin-top: 5px;
+    }
+
 .navdiv {
-    height: 30vh;
+    height: 55vh;
     background-image: url("../../../static/favigen/img/Rectangle 190.png");
     background-position: bottom;
     background-size: cover;
@@ -33,12 +185,12 @@ body {
     position: relative;
 }
 
-.button_generate {
-    background-color: #4A90E2;
+/*.button_generate {
+    background-color: transparent;
     padding: 9px 70px 8px 30px;
     border-radius: 0 50px 50px 0;
-    border: none;
-    color: white;
+    border: 2px solid grey;
+    color: black;
     position: absolute;
     left: 10px;
     top: 0px;
@@ -58,7 +210,59 @@ body {
     border-width: 1px;
     background-color: transparent;
     margin-left: 140px;
+} */
+
+.generate{
+    width: 100%;
+    margin-top: 60px;
+    margin-left: 45%;
+    align-items: center;
+    position: relative;
 }
+
+.btn_generate{
+  margin-right: 12%;
+  padding: 12px 40px;
+  border: 2px solid rgb(177,171,214);
+  font-size: 16px;
+  color: rgb(177,171,214);
+  font-weight: 400;
+  border-width: 1px;
+  background-color: transparent;
+}
+
+.btn_generate a{
+  text-decoration: none;
+  color: black;
+}
+
+.btn_generate a:hover{
+  color: rgb(177,171,214);
+  cursor: pointer;
+}
+
+.btn_saved{
+  background-color: white;
+  border-radius:  50px 0 0 50px;
+  padding: 14px 50px;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 120px;
+  border: none;
+}
+
+.btn_saved a{
+  text-decoration: none;
+  color: black;
+}
+
+.btn_saved a:hover{
+  color: rgb(177,171,214);
+  cursor: pointer;
+}
+/* */
 
 .div2b {
     width: 75%;
@@ -625,6 +829,12 @@ body {
         .div2 {
             position: relative;
             top: -150px;
+            width: 100%;
+        }
+
+        .generate{
+            margin-top: 50px;
+            margin-left: 180px;
             width: 100%;
         }
         
