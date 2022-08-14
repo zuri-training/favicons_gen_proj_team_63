@@ -22,7 +22,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link rel="stylesheet" href="{% static 'favigen/css/contact.css' %}" />
+        <link rel="stylesheet" href="{% static 'favigen/css/message_sent.css' %}" />
     </head>
 
     <body>
@@ -92,33 +92,9 @@
                 <img src="{% static 'favigen/img/biglogo.png' %}" alt="" class="logo" />
             </div>
             <div class="container-right">
-                <form action="{% url 'fav:contact' %}" method="POST" name="contact" id="form">
-                    {% csrf_token %}
-                    
-                    <div>
-                        <label for="">Subject</label>
-                        <input type="text" id="Subject" name="subject" required />
-                    </div>
-                    <div>
-                        <label for="">Email</label>
-                        <input type="email" id="Email" name="email" required />
-                    </div>
-                    <div>
-                        <label for="">Message</label>
-                        <textarea rows="6" id="Message" name="message" required></textarea>
-                    </div>
-                    <div>
-                        <label for="">Priority</label>
-                        <select class="option" name="priority">
-                            <option value="">--select urgency of issue</option>
-                            <option value="critical">Critical</option>
-                            <option value="Major">Major</option>
-                            <option value="Medium">Medium</option>
-                            <option value="Minor">Minor</option>
-                        </select>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
+                <p> Thank you {{user.first_name}} for reaching out to us. You will receive a response via email as soon is the issue is resolved. 
+                    Click <a href="{% url 'fav:home' %}"> here </a> to return to the home page.
+                </p>
             </div>
         </div>
     </body>

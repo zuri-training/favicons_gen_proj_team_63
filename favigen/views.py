@@ -9,8 +9,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, logout, authenticate
 from favigen.forms import CustomUserCreationForm, CustomAuthenticationForm
 
-from .models import *
 from pathlib import Path
+from .models import *
 from .utils import zippify
 from .utils import utility
 from .utils.favigenerator import generate_favicon
@@ -103,7 +103,9 @@ def image_upload(request):
         # To generate a new file name, we get the current date and time 
         # and add a prefix to it then join the extension at the end
         a = f"FAV{str(datetime.now())}"
+        # Remove special chacracters and spaces from the date string
         b = ''.join(re.split(r'-|\.|:|\ ', a))
+        # Combine the date string with file extension to form new file name
         new_name = f"{b}.{f_type}"
 
         # Generate favicons and zip them
@@ -153,7 +155,29 @@ def image_upload(request):
 
 
 def contact_page(request):
-    return render(request, "favigen/contact.html")
+    user = request.user
+    context = {}
+
+    if request.method == 'POST':
+        subject = request.POST.get('subject')
+        email = request.POST.get('email')
+        message = request.POST.get('subject')
+        priority = request.POST.get('priority')
+
+        message = Message.objects.create(
+            title=subject,
+            user=user,
+            email=email,
+            message=message,
+            priority=priority,
+        )
+        message.save()
+        return redirect("favigen:sent")
+    return render(request, "favigen/contact.html", context)
+
+
+def message_sent(request):
+    return render(request, "favigen/message_sent.html")
 
 
 @login_required(login_url='fav:login')

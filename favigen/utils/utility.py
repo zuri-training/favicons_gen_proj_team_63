@@ -27,3 +27,8 @@ def download(request, path):
 
             return response
     raise Http404
+
+
+def user_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT / user_<id>/<filename>
+    return f"user_{instance.uploaded_by.id}/{filename}"
