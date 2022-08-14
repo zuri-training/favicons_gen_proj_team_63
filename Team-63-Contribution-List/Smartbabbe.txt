@@ -1,1 +1,12 @@
+SECTION 1
 
+Full name: Esther Isreal Okon
+Track: Full-stack
+Student ID: I4G007749LYT
+
+SECTION 2: My contributions
+
+Created the generate icons pages..
+Live page at https://smartbabbe.github.io/favicon/
+
+Created a pull request #93
