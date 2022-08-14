@@ -59,22 +59,25 @@
   
 
   .generate2{
-    width: 100%;
     margin-top: 60px;
-    margin-left: 45%;
+    margin-left: 30%;
     align-items: center;
     position: relative;
   }
   
   .btn_generate2{
-    margin-right: 12%;
-    padding: 12px 40px;
-    border: 2px solid rgb(177,171,214);
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    color: white;
+    position: absolute;
+    left: 100px;
+    width: 30%;
     font-size: 16px;
-    color: rgb(177,171,214);
     font-weight: 400;
-    border-width: 1px;
-    background-color: transparent;
   }
 
   .btn_generate2 a{
@@ -88,30 +91,13 @@
   }
   
   .btn_saved2{
-    background-color: white;
-    border-radius:  50px 0 0 50px;
-    padding: 14px 50px;
-    color: black;
+    margin-left: 12%;
+    width: 30%;
+    padding: 8px 50px;
+    border: 1px solid rgb(102,115,124);
+    background-color: transparent;
     font-size: 16px;
     font-weight: 400;
-    position: absolute;
-    left: 120px;
-    border: none;
-  }
-  
-  .btn_saved2 a{
-    text-decoration: none;
-    color: black;
-  }
-
-  .btn_saved2 a:hover{
-    color: rgb(177,171,214);
-    cursor: pointer;
-  }
-
-  b{
-    font-size: 20px;
-    font-weight: 600;
   }
   
   .git1{
@@ -252,7 +238,7 @@
     left: 0;
   }
   
-  .generate2{
+  .generate{
     margin-top: 50px;
     margin-left: 180px;
     width: 100%;
