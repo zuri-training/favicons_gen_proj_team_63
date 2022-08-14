@@ -1,7 +1,5 @@
 {% extends 'favigen/base.html' %} 
-
 {% load static %} 
-
 {% block content %}
 
 <main>
@@ -9,7 +7,7 @@
         <!--left1 division-->
         <div class="left1">
             <!-- logo -->
-            <a href="#">
+            <a href="/">
                 <div class="logo">
                     <!--<img src="{% static '/favigen/img/logo.svg' %}" width="30" class="d-inline-block align-top" alt="logo" />-->
                 </div>
@@ -23,89 +21,94 @@
 
             <!--base image-->
             <img class="logo4" src="{% static '/favigen/img/logo 4.png' %}" />
-            <p class="v8_81">Version 1.0</p>
+            <p class="version">Version 1.0</p>
 
             <!--left1 division end-->
         </div>
 
+<<<<<<< HEAD
             <form action="{% url 'fav:login' %}" method="POST" name="login" id="signin">
 
-                        
-                            <!--   user name -->
-                            <div class="wrap details">
-                                <span class="input-item">
-                                    <!-- <i class="fa fa-user-circle"></i> -->
-                                </span>
-                                <!--   user name Input-->
-                                {{ login_form.email }}
-                                {% comment %} <input
-                                    class="form-input"
-                                    id="txt-input"
-                                    type="text"
-                                    placeholder="Email"
-                                    required
-                                /> {% endcomment %}
-                            </div>
-                            <br />
+=======
+        <!--right division-->
+        <div class="login_right">
+            <form action="{% url 'fav:login' %}" method="POST" name="login" id="signin">
+                {% csrf_token %}
 
-                            <!--   Password -->
-                            <div class="wrap">
-                                <span class="input-item">
-                                    <!-- <i class="fa fa-key"></i> -->
-                                </span>
+                <!--form begin-->
+                <!--     Start  header Content  -->
+                <a href="{% url 'fav:signup' %}">
+                    <!--     A welcome message or an explanation of the login form -->
+                    <span class="signup_path">Don't have an account? Sign up</span>
+                </a>
 
-                                <!--   Password Input-->
-                                {{ login_form.password }}
-                                {% comment %} <input
-                                    class="form-input"
-                                    id="txt-input2"
-                                    type="password"
-                                    placeholder="Password"
-                                    required
-                                /> {% endcomment %}
+                <h2 class="login_head">Log in</h2>
 
-                                <!--show/hide password  -->
-                                <span class="input-item">
-                                    <!-- <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i> -->
-                                </span>
-                            </div>
-                            <p class="text">Forget password?</p>
+                <!--     End  header Content  -->
 
-                            <br />
-                            <!--        buttons -->
-                            <!--      button LogIn -->
-                            <button type="submit">Log In</button>
-                        
-                        <!--   other items -->
-                        <div class="other">
-                            <!--      Forgot Password -->
-                            <hr />
-                            <span class="hr_text">Or login with</span>
-                            <hr/>
-                            <div class="icons">
-                                <span class="shadow">
-                                    <img src="{% static '/favigen/img/facebook.svg' %}" alt="facebook" />
-                                </span>
-                                <span class="shadow">
-                                    <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter" />
-                                </span>
-                                <span class="shadow">
-                                    <img src="{% static '/favigen/img/google.svg' %}" alt="google" />
-                                </span>
-                            </div>
-                            <!--      End Other the Division -->
-                        </div>
+                <!-- Input content -->
+                <div class="details">
+                    <!--   email Input-->
+                    {{ login_form.email }}
 
+                    <img
+                        src="{% static '/favigen/img/icon-error.svg' %}"
+                        alt="error-icon"
+                        class="error-icon"
+                    />
+                    <p class="error-text">Looks like this is not an email</p>
+                </div>
+>>>>>>> 8e2c9767c5342d91836664b352f8b36f2b84abff
+
+                <div class="details">
+                    <!--   Password Input-->
+                    {{ login_form.password }}
+
+                    <img
+                        src="{% static '/favigen/img/icon-error.svg' %}"
+                        alt="error-icon"
+                        class="error-icon"
+                    />
+                    <p class="error-text">Password cannot be empty</p>
+                </div>
+
+                <div class="forget">
+                    <!-- input content ends -->
+                    <p class="text"><a href="#">Forget password?</a></p>
+                </div>
+
+                {{signup_form.errors}}
+
+<<<<<<< HEAD
                         <!--   End Conrainer  -->
 
                     </div>
+=======
+                <button type="submit">Log In</button>
+>>>>>>> 8e2c9767c5342d91836664b352f8b36f2b84abff
 
-                    <!-- End Form -->
-                </form>
-            </div>
+                <div class="details">
+                    <hr />
+                    <label class="alt_signup">Or sign in with</label>
+                    <hr />
+                </div>
+
+                <!--social media icons-->
+                <div class="social-icon">
+                    <span>
+                        <img src="{% static '/favigen/img/facebook.svg' %}" alt="facebook" />
+                    </span>
+                    <span>
+                        <img src="{% static '/favigen/img/google.svg' %}" alt="google" />
+                    </span>
+                    <span>
+                        <img src="{% static '/favigen/img/twitter.svg' %}" alt="twitter" />
+                    </span>
+                </div>
+                <!-- End Form -->
+            </form>
         </div>
     </div>
-
 </main>
 
 {% endblock %}

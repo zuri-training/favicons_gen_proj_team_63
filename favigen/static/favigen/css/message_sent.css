@@ -2,134 +2,134 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body {
+}
+body {
     background-color: white;
     font-family: "Manrope", sans-serif;
-  }
-  li {
+}
+li {
     list-style: none;
-   }
-   /* NAVBAR STYLING STARTS */
+}
+/* NAVBAR STYLING STARTS */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #fff;
-  color: #2d1d90;
- }
- /* NAVBAR MENU */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    color: #2d1d90;
+}
+/* NAVBAR MENU */
 .menu {
-  display: flex;
-  gap: 1em;
-  font-size: 18px;
- }
- .menu li:hover {
-  background-color: #4A90E2;
-  border-radius: 3px;
-  transition: 0.3s ease;
- }
- .menu li {
-  padding: 5px 5px;
- }
- /*RESPONSIVE NAVBAR MENU STARTS*/
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: #4a90e2;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 5px 5px;
+}
+/*RESPONSIVE NAVBAR MENU STARTS*/
 /* CHECKBOX HACK */
-input[type=checkbox]{
-  display: none;
- } 
- /*HAMBURGER MENU*/
- .hamburger {
-  display: none;
-  font-size: 24px;
-  user-select: none;
- }
- /* APPLYING MEDIA QUERIES */
- @media (max-width: 768px) {
- .menu { 
-  display:none;
-  position: absolute;
-  background-color:#2d1d90;
-  right: 0;
-  left: 0;
-  text-align: center;
-  padding: 16px 0;
- }
- .menu li:hover {
-  display: inline-block;
-  transition: 0.3s ease;
- }
- .menu li + li {
-  margin-top: 12px;
- }
- input[type=checkbox]:checked ~ .menu{
-  display: block;
- }
- .hamburger {
-  display: block;
- }
- }
-  li,
-  a {
+input[type="checkbox"] {
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: #2d1d90;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .menu li:hover {
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 12px;
+    }
+    input[type="checkbox"]:checked ~ .menu {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+li,
+a {
     text-decoration: none;
-  }
-  header {
+}
+header {
     display: flex;
     justify-content: space-between;
     padding: 10px 10%;
-    
-  }
-  
-  .nav-logo {
+}
+
+.nav-logo {
     cursor: pointer;
-  }
-  .nav-links {
+}
+.nav-links {
     list-style: none;
-  }
-  .nav-links li {
+}
+.nav-links li {
     display: inline-block;
     padding: 20px 20px;
     margin-top: 5px;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     padding: 20px 7%;
     width: 100%;
-  }
-  .container-left {
+}
+.container-left {
     background-color: #2d1d90;
     flex-basis: 50%;
     color: #ffffff;
     padding: 5% 0px 0px 5%;
     margin-right: 15px;
     border-radius: 5px;
-  }
-  .container-left h2 {
+}
+.container-left h2 {
     margin-bottom: 20px;
-  }
-  .container-left p {
+}
+.container-left p {
     line-height: 25px;
     padding-right: 20px;
-  }
-  .second {
+}
+.second {
     text-align: center;
     margin-right: 20%;
     margin-top: 20px;
-  }
-  .second p {
+}
+.second p {
     margin: 20px 20px;
-  }
-  .socials {
+}
+.socials {
     width: 90%;
-  }
-  .container-right {
-      margin-left: 7%;
-      margin-top: 3%;
-      color: #666666;
-      flex-basis: 50%;
-  }
-  textarea {
+}
+.container-right {
+    margin-left: 7%;
+    margin-top: 3%;
+    color: #000000;
+    text-align: center;
+    flex-basis: 50%;
+}
+textarea {
     margin-top: 10px;
     margin-bottom: 20px;
     resize: none;
@@ -137,9 +137,9 @@ input[type=checkbox]{
     border-radius: 5px;
     border-style: groove;
     font-size: large;
-  }
-  
-  input {
+}
+
+input {
     width: 100%;
     height: 30px;
     margin-top: 10px;
@@ -147,8 +147,8 @@ input[type=checkbox]{
     border-radius: 5px;
     border-style: groove;
     font-size: large;
-  }
-  .option {
+}
+.option {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -156,8 +156,8 @@ input[type=checkbox]{
     height: 30px;
     border-radius: 5px;
     border-style: groove;
-  }
-  button {
+}
+button {
     width: 25%;
     float: inline-end;
     background-color: #2d1d90;
@@ -165,46 +165,45 @@ input[type=checkbox]{
     padding: 10px;
     border-radius: 5px;
     color: white;
-  }
-  
-  label {
+}
+
+label {
     display: block;
-  }
-  .logo {
+}
+.logo {
     float: inline-end;
     margin-right: -5%;
     margin-top: 10%;
     width: 40%;
-  }
-  .icons {
+}
+.icons {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
     margin-right: 40px;
-  }
-  
-  @media (max-width: 1000px) {
+}
+
+@media (max-width: 1000px) {
     button {
-      width: 35%;
+        width: 35%;
     }
     .socials {
-      width: 70%;
+        width: 70%;
     }
-  }
-  @media (max-width: 900px) {
+}
+@media (max-width: 900px) {
     .second {
-      margin-right: 5%;
+        margin-right: 5%;
     }
-  }
-  @media (max-width: 740px) {
+}
+@media (max-width: 740px) {
     .container {
-      flex-direction: column;
+        flex-direction: column;
     }
     .container-left {
-      width: 100%;
+        width: 100%;
     }
     .container-right {
-      margin-left: 0%;
+        margin-left: 0%;
     }
-  }
-  
+}

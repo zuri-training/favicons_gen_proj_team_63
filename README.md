@@ -1,6 +1,7 @@
 # Project FaviGen
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 The Favicon Generator project is a website that allows users to upload an image or icon and it generates Favicons of different dimensions which the user can download.
@@ -19,8 +20,19 @@ The list of all the major technologies used in the project.
 - [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - [CSS](https://web.dev/learn/css/)
 - [Postgres](https://www.postgresql.org/)
+- [Heroku](https://www.heroku.com/)
+
+## Project File Structure and Configuration
+
+This file structure of this project is the traditional Django file structure. It makes use of the Django templating architecture, there is no REST framework implementation. We are making use of a single Django app in this project. For the templates, we have employed the traditional Django system of having a `templates` folder inside the app folder. We also descided to store user uploaded files (images) in the project. Here is a brief description of some of the most important folders and files.
+
+- `config`: This is the main Django project folder that contains the 'settings.py' file.
+- `favigen`: This is the app folder. We are making use of a single Django app in this project.
+- `static`: This is the folder where user uploaded files are stored. There is another static folder inside the app folder which contains the CSS, JS and image files used in the templates.
+- `Procfile`: The configuration file that enables the project to be run with gunicorn commands.
 
 <!-- CONTRIBUTING -->
+
 ## Contribution Guide
 
 Please ensure your codes and changes are properly tested.
@@ -97,17 +109,17 @@ Setup virtual environment:
 6. Install the project dependencies with `pip install -r requirements.txt`. This will install Django and any other package for this project
 7. Now your VS Code color-coding should adjust since you have installed all the packages
 
-Setup Postgres:
+Setup Postgres locally (on Windows OS):
 
 1. Go to [Postgres website](https://www.postgresql.org/download/) and download the latest Postgres version for your OS
 2. Run the installer make sure all options are ticked including pgAdmin 4
 3. In the Password section, enter a password you will be using for your Postgres and take note of this password as you will be using it very often
 4. In the Port section, leave the default port as 5432, don't change it
 5. Click next until it starts installing
-6. At the end of the install, uncheck __Stack Builder__ and click finish
+6. At the end of the install, uncheck **Stack Builder** and click finish
 7. Open pgAdmin 4, when it loads, you will be asked to create master password. You can use the same password you used in Step 3, then click OK
-8. Then on the left side panel, click on __Servers__ and you will be asked for you password from Step 3. Enter it and also tick __Save Password__  and click OK.
-9. Then, still on the left side panel, right-click on __Databases__  and create a new database
+8. Then on the left side panel, click on **Servers** and you will be asked for you password from Step 3. Enter it and also tick **Save Password** and click OK.
+9. Then, still on the left side panel, right-click on **Databases** and create a new database
 10. The database name should be `ZuriconDB`, enter it then click OK
 11. Now go to the project folder in your code editor (i.e. VS Code)
 12. Create a `.env` file at the project root.
@@ -127,7 +139,23 @@ Setup Postgres:
 15. Then after that run `python manage.py migrate`
 16. You should not get any errors when you run `python manage.py runserver`. If you do, pls ask any of the other devs
 
-NB:
+## Running/Deploying The Project
+
+For this project, during development, we are using the built in sqlite3 database integration but for deployment we are using gunicorn.
+Before this project can be run, the following steps need to have been taken;
+
+1. Cloning the project
+2. Creating a virtual environment in the root directory
+3. Activating the virtual environment
+4. Installing all dependencies from the requirements.txt
+5. Making migrations and the migrating
+
+After the above steps, the project can be run using either gunicorn or runserver:
+
+- Gunicorn: `gunicorn config.wsgi`
+- Runserver: `python manage.py runserver`
+
+## NB
 
 - It is highly advisable to use Git Bash as your terminal app as it easily shows the current branch you're working in
 - Team members should please ask questions if anything is not clear!

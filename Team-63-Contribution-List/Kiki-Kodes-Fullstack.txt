@@ -1,0 +1,22 @@
+### Section 1: Personal Information
+
+FULL NAME: Sulaimon Rokiat Ajoke
+TRACK: Full-Stack
+STUDENT ID: I4G000270BLH
+
+
+
+### Section 2: Contribution
+
+GITHUB LINK (contributions): https://github.com/Kiki-Kodes/favicons_gen_proj_team_63_1/tree/kiki
+Team GitHub link:  https://github.com/zuri-training/favicons_gen_proj_team_63 
+
+ISSUE RESOLVED: https://github.com/zuri-training/favicons_gen_proj_team_63/issues/6
+ISSUE RESOLVED: https://github.com/zuri-training/favicons_gen_proj_team_63/issues/77
+
+SOLUTION: https://github.com/zuri-training/favicons_gen_proj_team_63/pull/91
+Deployed Pages: https://kiki-kodes.github.io/Team_63_proj_favicon_gen-Saved-Icons-and-Generated-Icons-Pages/ 
+                Updated version in the project folder. 
+
+
+I created the saved icons and generated icons pages using HTML, CSS and JacaScript, which was afterwards converted to the HTML Django template. I am currently working on implementing changes.
