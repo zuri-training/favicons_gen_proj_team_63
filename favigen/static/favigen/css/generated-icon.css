@@ -12,7 +12,7 @@
  .container2{
   background-image: url("../../../static/favigen/img/bg_header2.png");
   background-position: bottom;
-  /*position: relative;*/
+  position: relative;
   height: 55vh;
   background-size: cover;
   background-repeat: no-repeat; 
