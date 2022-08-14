@@ -31,7 +31,11 @@
                                 <a class="a" href="#">Contact Us</a>
                                 <a class="a" href="#">Saved Icons</a>
                                 <a class="a" href="#">Generate</a>
-                                <a class="a" href="#">Sign Out</a>
+                                {% if user.is_authenticated %}
+                                    <a class="a" href="{% url 'fav:logout' %}">Log Out</a>
+                                {% else %}
+                                    <a class="a" href="{% url 'fav:login' %}">Sign In</a>
+                                {% endif %}
                             </nav>
                         </div>
                         <div class="hamburger">

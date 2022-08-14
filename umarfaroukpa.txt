@@ -1,0 +1,5 @@
+i work as BACKEND on this project so issues was created on my name to "CREATE A MODEL THAT WILL ALLOWS A USER TO UPLOAD A FILE" which delivered successfully.
+https://github.com/umarfaroukpa/favicons_gen_project/commit/bad4c9dfebe44960a6bb6698825db158c4d7aa3c
+https://github.com/zuri-training/favicons_gen_proj_team_63/commit/50d715434c3f2a534e444b075857d8ac9adc3d76
+https://github.com/zuri-training/favicons_gen_proj_team_63/commit/e538457fc7da10e6f034453616864721e650950f
+https://github.com/umarfaroukpa/favicons_gen_project/commit/f671b14a8534dc1298aaa20514294f185b83339c
