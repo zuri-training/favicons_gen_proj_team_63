@@ -18,8 +18,8 @@
             <div class="container1">
                 <div class="container2">
                     <div class="header">
-                        {% comment %} <div class="logo">
-                            <img src="{% static '/favigen/img/faviGen_Logo.png' %}" alt="logo" />
+                         <div class="logo">
+                            <img src="{% static '/favigen/img/smalllogo.svg' %}" alt="logo" />
                         </div>
                         <div class="nav-menu">
                             <nav class="nav">
@@ -38,11 +38,11 @@
                             <span class="bar"></span>
                             <span class="bar"></span>
                             <span class="bar"></span>
-                        </div> {% endcomment %}
+                        </div> 
                     </div>
                     <div class="generate">
                         <button class="btn_generate" type="button"> 
-                            <a class="b" href="{% url 'fav:generated' %}">Generate</a> </button>
+                            <a class="b" href="{% url 'fav:generated' %}">Generated</a> </button>
                         <button class="btn_saved" type="button">
                              <a class="b" href="{% url 'fav:saved' %}">Saved Icons</a></button> 
                     </div>
