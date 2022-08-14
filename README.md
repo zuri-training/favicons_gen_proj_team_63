@@ -141,7 +141,7 @@ Setup Postgres locally (on Windows OS):
 
 ## Running/Deploying The Project
 
-For this project, we have settled with using the built in sqlite3 database integration.
+For this project, during development, we are using the built in sqlite3 database integration but for deployment we are using gunicorn.
 Before this project can be run, the following steps need to have been taken;
 
 1. Cloning the project
