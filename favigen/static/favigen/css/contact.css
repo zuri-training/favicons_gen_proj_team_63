@@ -15,15 +15,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  background-color: #fff;
-  color: #2d1d90;
+  padding: 30px;
  }
  /* NAVBAR MENU */
 .menu {
   display: flex;
+  flex-direction: row;
   gap: 1em;
   font-size: 18px;
+  margin-right: 40px;
  }
  .menu li:hover {
   background-color: #4A90E2;
@@ -31,7 +31,7 @@
   transition: 0.3s ease;
  }
  .menu li {
-  padding: 5px 5px;
+  padding: 3px 5px;
  }
  /*RESPONSIVE NAVBAR MENU STARTS*/
 /* CHECKBOX HACK */
@@ -51,22 +51,28 @@ input[type=checkbox]{
   position: absolute;
   background-color:#2d1d90;
   right: 0;
-  left: 0;
   text-align: center;
-  padding: 16px 0;
+  padding: 0px 10px;
  }
- .menu li:hover {
-  display: inline-block;
+ .menu a {
+  color: #fff;
+ }
+  .menu li:hover {
+  display: block;
   transition: 0.3s ease;
  }
  .menu li + li {
   margin-top: 12px;
+  display: block;
  }
  input[type=checkbox]:checked ~ .menu{
   display: block;
  }
  .hamburger {
   display: block;
+ }
+ .navbar {
+  justify-content: right;
  }
  }
   li,
@@ -77,7 +83,6 @@ input[type=checkbox]{
     display: flex;
     justify-content: space-between;
     padding: 10px 10%;
-    
   }
   
   .nav-logo {
@@ -87,7 +92,7 @@ input[type=checkbox]{
     list-style: none;
   }
   .nav-links li {
-    display: inline-block;
+    display: block;
     padding: 20px 20px;
     margin-top: 5px;
   }
