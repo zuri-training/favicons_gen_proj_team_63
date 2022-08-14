@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="{% static 'favigen/img/logo.svg' %}" />
+        <title>contact page</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="{% static 'favigen/css/message_sent.css' %}" />
+    </head>
+
+    <body>
+        <header>
+            <!-- LOGO -->
+            <img class="nav-logo" src="{% static 'favigen/img/smalllogo.svg' %}" alt="" />
+            <nav class="navbar">
+                <!-- NAVIGATION MENU -->
+                <ul class="nav-links">
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger"
+                        ><i class="material-icons" style="font-size: 36px; color: #2d1d90">apps</i></label
+                    >
+                    <!-- NAVIGATION MENUS -->
+                    <div class="menu">
+                        <li><a href="{% url 'fav:home' %}">Home</a></li>
+                        <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'fav:signup' %}">Log Out</a></li>
+                        {% else %}
+                            <li><a href="{% url 'fav:login' %}">Sign In</a></li>
+                        {% endif %}
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="container-left">
+                <div>
+                    <h2>Contact Us</h2>
+                    <p>
+                        Any questions or remarks? just send us a message fill up the form and our team will
+                        get back to you within 24 hours
+                    </p>
+                </div>
+                <div class="second">
+                    <h3>OR</h3>
+                    <p>Contact us via our socials</p>
+                </div>
+                <div class="icons">
+                    <span>
+                        <img
+                            class="socials"
+                            src="{% static 'favigen/img/twittercontact.svg' %}"
+                            alt="twitter"
+                        />
+                    </span>
+                    <span>
+                        <img class="socials" src="{% static 'favigen/img/phonecontact.svg' %}" alt="phone" />
+                    </span>
+                    <span>
+                        <img
+                            class="socials"
+                            src="{% static 'favigen/img/facebookcontact.svg' %}"
+                            alt="facebook"
+                        />
+                    </span>
+                    <span>
+                        <img
+                            class="socials"
+                            src="{% static 'favigen/img/instagramcontact.svg' %}"
+                            alt="instagram"
+                        />
+                    </span>
+                </div>
+                <img src="{% static 'favigen/img/biglogo.png' %}" alt="" class="logo" />
+            </div>
+            <div class="container-right">
+                <p> Thank you {{user.first_name}} for reaching out to us. You will receive a response via email as soon is the issue is resolved. 
+                    Click <a href="{% url 'fav:home' %}"> here </a> to return to the home page.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
