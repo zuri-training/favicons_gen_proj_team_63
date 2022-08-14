@@ -1,3 +1,4 @@
+from ast import Try
 from tabnanny import verbose
 from django.db import models
 from django.conf import settings
@@ -6,13 +7,14 @@ from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 
 from .managers import CustomUserManager
+from .utils.utility import user_directory_path
 
 User = settings.AUTH_USER_MODEL
 
 
 class CustomUser(AbstractUser):
     username = None
-    email = models.EmailField(_('email address'), unique=True)
+    email = models.EmailField(verbose_name=_('email address'), unique=True)
     first_name = models.CharField(max_length=50, blank=True, null=True)
     last_name = models.CharField(max_length=50, blank=True, null=True)
 
@@ -20,7 +22,7 @@ class CustomUser(AbstractUser):
     # slug = models.SlugField(blank=True, unique=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['first_name']
 
     objects = CustomUserManager()
 
@@ -36,12 +38,6 @@ class CustomUser(AbstractUser):
 
     def get_short_name(self) -> str:
         return super().get_short_name()
-
-
-
-def user_directory_path(instance, filename):
-    # file will be uploaded to MEDIA_ROOT / user_<id>/<filename>
-    return f"user_{instance.uploaded_by.id}/{filename}"
 
 
 class Image(models.Model):
@@ -66,3 +62,21 @@ class Favicon(models.Model):
 
     def __str__(self):
         return self.new_filename
+
+
+class Message(models.Model):
+    PRIORITY_LEVELS = (
+        ("critical", "Critical"),
+        ("major", "Major"),
+        ("medium", "Medium"),
+        ("minor", "Minor")
+    )
+    title = models.CharField(max_length=256, null=True)
+    user = models.ForeignKey(to=User, on_delete=models.SET_NULL, null=True)
+    email = models.EmailField(verbose_name=_('email address'))
+    message = models.TextField()
+    priority = models.CharField(max_length=10, choices=PRIORITY_LEVELS, default="minor")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

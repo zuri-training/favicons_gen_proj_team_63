@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import CustomUser, Favicon, Image
+from .models import *
 
 
 class CustomUserAdmin(UserAdmin):
@@ -31,5 +31,6 @@ class FavAdmin(admin.ModelAdmin):
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
-admin.site.register(Image,)
 admin.site.register(Favicon, FavAdmin,)
+admin.site.register(Image,)
+admin.site.register(Message,)

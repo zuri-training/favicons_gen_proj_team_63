@@ -26,14 +26,16 @@
 </form>
 
 {% if url_img %}
-    <p>Uploaded file: 
+    <p>Uploaded file:
         <a href="{{ url_img }}">{{ url_img }}</a>
     </p>
 {% endif %}
 
 {% if url_zip %}
     <p>Uploaded file: 
-        <a href="{{ url_zip }}" download>{{ url_zip }}</a>
+        {% for url in url_zip %}
+            <a href="{{ url.zipped_favs.url }}" download>{{ url.zipped_favs.url }}</a>
+        {% endfor %}
     </p>
 {% endif %}
 
