@@ -15,7 +15,6 @@ from .utils import zippify
 from .utils import utility
 from .utils.favigenerator import generate_favicon
 
-
 import os
 import re
 
@@ -138,10 +137,10 @@ def image_upload(request):
             saved_fav.zipped_favs = File(f, name=path.name)
             saved_fav.save()
 
-        # Rename the saved favicon
-        former_name_path = os.path.join(user_dir, image_file.name)
-        new_name_path = os.path.join(user_dir, new_name)
-        os.rename(former_name_path, new_name_path)
+        # # Rename the saved favicon
+        # former_name_path = os.path.join(user_dir, image_file.name)
+        # new_name_path = os.path.join(user_dir, new_name)
+        # os.rename(former_name_path, new_name_path)
 
         # Delete generated favicons after zipping them
         utility.delete(favs_dir)
@@ -182,20 +181,23 @@ def message_sent(request):
 
 @login_required(login_url='fav:login')
 def saved_icons(request):
-    # user = request.user
-    # current_user_email = user.email
-    # # favicons = Favicon.objects.get()
+    user = request.user
+    current_user_email = user.email
+    favicons = Favicon.objects.get()
 
-    # visitor = CustomUser.objects.get(email=current_user_email)
-    # favicons = visitor.order_set.all()
+    visitor = CustomUser.objects.get(email=current_user_email)
 
-    # context = {'favicons': favicons}
+    context = {'favicons': favicons}
     return render(request, "favigen/saved-icons.html")
 
 
 @login_required(login_url='fav:login')
-def generated_icon(request):
-    return render(request, "favigen/generated-icon.html")
+def generated_icon(request, pk):
+    user=request.user
+    favicon = Favicon.objects.get(id=pk)
+
+    context = {'favicon': favicon}
+    return render(request, "favigen/generated-icon.html", context)
 
 
 @login_required(login_url='fav:login')
