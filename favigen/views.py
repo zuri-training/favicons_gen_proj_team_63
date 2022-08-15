@@ -182,6 +182,14 @@ def message_sent(request):
 
 @login_required(login_url='fav:login')
 def saved_icons(request):
+    # user = request.user
+    # current_user_email = user.email
+    # # favicons = Favicon.objects.get()
+
+    # visitor = CustomUser.objects.get(email=current_user_email)
+    # favicons = visitor.order_set.all()
+
+    # context = {'favicons': favicons}
     return render(request, "favigen/saved-icons.html")
 
 
@@ -192,4 +200,4 @@ def generated_icon(request):
 
 @login_required(login_url='fav:login')
 def generate_icon(request):
-    return render(request, "favigen/index.html")
+    return render(request, "favigen/generate.html")
