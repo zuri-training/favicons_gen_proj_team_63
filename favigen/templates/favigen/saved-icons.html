@@ -114,7 +114,14 @@
             </div>
             <div class="savedi2">
               <h2 class="p1">Recent:</h2>
-              <img
+              
+              {% for fav in favicons %}
+                <img class="img1" src="{{ fav.image.uploaded_image.url }}" alt="{{ favicon.image.title }}" width="150" height="150"/>
+              {% endfor %}
+              
+
+
+              {% comment %} <img
                 class="img1"
                 src="{% static '/favigen/img/icon19.png' %}"
                 alt=""
@@ -138,7 +145,10 @@
                 class="img1"
                 src="{% static '/favigen/img/icon23.png' %}"
                 alt=""
-              />
+              /> {% endcomment %}
+
+
+
             </div>
           </div>
         </div>
