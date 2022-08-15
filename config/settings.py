@@ -29,7 +29,8 @@ SECRET_KEY = os.getenv(key='SECRET_KEY', default="django-insecure-_#rb-u4cjj-0kt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['favicon-gen-proj.herokuapp.com', '127.0.0.1', 'localhost']
+# ALLOWED_HOSTS = ['favicon-gen-proj.herokuapp.com', '127.0.0.1', 'localhost', 'http://favigen.zurifordummies.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -101,10 +102,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     #     'NAME': os.getenv('DB_NAME'),
@@ -113,14 +114,14 @@ DATABASES = {
     #     'HOST': os.getenv('HOST'),
     #     'PORT': os.getenv('PORT'),
     # }
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'df0rgj8b0d5aji',
-        'USER': 'dxczbhzwpyecad',
-        'PASSWORD': 'aad997ca33c9ae0db636b4573ffcf0c47cb3036efeef10e4b3f7624fbd82117b',
-        'HOST': 'ec2-3-223-242-224.compute-1.amazonaws.com',
-        'PORT': 5432,
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'df0rgj8b0d5aji',
+    #     'USER': 'dxczbhzwpyecad',
+    #     'PASSWORD': 'aad997ca33c9ae0db636b4573ffcf0c47cb3036efeef10e4b3f7624fbd82117b',
+    #     'HOST': 'ec2-3-223-242-224.compute-1.amazonaws.com',
+    #     'PORT': 5432,
+    # }
 }
 
 

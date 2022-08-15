@@ -1,5 +1,7 @@
 import os
+import re
 import shutil
+from datetime import datetime
 from django.conf import settings
 from django.http import HttpResponse, Http404
 
@@ -30,5 +32,13 @@ def download(request, path):
 
 
 def user_directory_path(instance, filename):
-    # file will be uploaded to MEDIA_ROOT / user_<id>/<filename>
+
+    # To generate a new file name, we get the current date and time 
+    # and add a prefix to it then join the extension at the end
+    a = f"FAV{str(datetime.now())}"
+    # Remove special chacracters and spaces from the date string
+    filename = ''.join(re.split(r'-|\.|:|\ ', a))
+    # Combine the date string with file extension to form new file name
+
+
     return f"user_{instance.uploaded_by.id}/{filename}"
