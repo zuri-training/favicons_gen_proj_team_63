@@ -1,20 +1,21 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-body{
-    font-family: "Manrope", sans-serif;
-    background-color: white;
-  }
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: white;
+}
 
-.container2{
+.container2 {
   background-image: url("../../../static/favigen/img/bg_header2.png");
   background-size: 100%;
   position: relative;
-  height: 65vh;
-  background-repeat: no-repeat; 
+  /* height: 65vh; */
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .nav-link {
@@ -23,132 +24,132 @@ body{
 .active {
   color: #0aecfb !important;
 }
-.user-dropdown{
+.user-dropdown {
   top: 30px;
   right: 50px;
   width: 15em;
   border-radius: 5px;
   border: 1px solid #2d1d90;
 }
-.user-dropdown > ul{
+.user-dropdown > ul {
   list-style: none;
 }
-.user-dropdown > ul > li > a{
+.user-dropdown > ul > li > a {
   text-decoration: none;
   color: #000;
 }
-.user-dropdown > ul > li > a:hover{
+.user-dropdown > ul > li > a:hover {
   color: #2d1d90;
 }
 
-.generate{
-    width: 100%;
-    margin-top: 60px;
-    margin-left: 45%;
-    align-items: center;
-    position: relative;
+.generate {
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 40%;
+  align-items: center;
+  position: relative;
 }
 
-.btn_generate{
+.btn_generate {
   margin-right: 12%;
   padding: 12px 40px;
-  border: 2px solid rgb(177,171,214);
+  border: 2px solid rgb(177, 171, 214);
   font-size: 16px;
-  color: rgb(177,171,214);
+  color: rgb(177, 171, 214);
   font-weight: 400;
   border-width: 1px;
   background-color: transparent;
 }
 
-.btn_generate a{
+.btn_generate a {
   text-decoration: none;
   color: black;
 }
 
-.btn_generate a:hover{
-  color: rgb(177,171,214);
+.btn_generate a:hover {
+  color: rgb(177, 171, 214);
   cursor: pointer;
 }
 
-.btn_saved{
+.btn_saved {
   background-color: white;
-  border-radius:  50px 0 0 50px;
+  border-radius: 50px 0 0 50px;
   padding: 14px 50px;
   color: black;
   font-size: 16px;
   font-weight: 400;
   position: absolute;
-  left: 120px;
+  left: 130px;
   border: none;
 }
 
-.btn_saved a{
+.btn_saved a {
   text-decoration: none;
   color: black;
 }
 
-.btn_saved a:hover{
-  color: rgb(177,171,214);
+.btn_saved a:hover {
+  color: rgb(177, 171, 214);
   cursor: pointer;
 }
 
-.savedi{
-    margin-top: 60px;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.savedi {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  padding-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.savedi1{
+.savedi1 {
   flex: 50%;
-  
 }
-.savedi1 form{
-    width: 80%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    margin-left: 100px;
-    padding-left: 5px;
-    padding-right: 40px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 1px solid white;
+.savedi1 form {
+  width: 80%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-left: 100px;
+  padding-left: 5px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid white;
 }
-form > button img{
+form > button img {
   align-items: center;
   width: 25%;
 }
 
-form > button{
+form > button {
   border: 0;
   background-color: transparent;
 }
 
-form input{
+form input {
   background-color: transparent;
   border: none;
   outline: none;
 }
 
-.savedi2{
+.savedi2 {
   flex: 50%;
   display: flex;
   margin-right: 50px;
   padding-left: 50px;
 }
 
-::placeholder{
+::placeholder {
   color: black;
   font-size: 16px;
   font-weight: 400;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.p1{
-  color: rgb(209,205,231);
+.p1 {
+  color: rgb(209, 205, 231);
   justify-content: center;
   text-align: center;
   margin-top: auto;
@@ -157,44 +158,43 @@ form input{
   font-weight: 600;
 }
 
-.img1{
+.img1 {
   padding: 12px;
 }
 
-.h1{
+.h1 {
   margin-left: 100px;
   margin-bottom: 30px;
   font-size: 28px;
   font-weight: 600;
 }
 
-.icons{
+.icons {
   display: flex;
   margin-left: 100px;
   margin-bottom: 50px;
 }
 
-.icons1{
-  flex: 50%;
-  
-}
-
-.icons2{
+.icons1 {
   flex: 50%;
 }
 
-.h2{
+.icons2 {
+  flex: 50%;
+}
+
+.h2 {
   margin-bottom: 10px;
   font-size: 22px;
   font-weight: 600;
 }
 
-b{
+b {
   font-size: 20px;
   font-weight: 600;
 }
 
-.parent1{
+.parent1 {
   display: block;
   margin-top: 5px;
   margin-right: 100px;
@@ -203,10 +203,10 @@ b{
   background-image: url("../../../static/favigen/img/footer_bg.svg");
   background-size: 100%;
   position: relative;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
-.parent2{
+.parent2 {
   display: block;
   margin-top: 5px;
   margin-right: 100px;
@@ -215,203 +215,213 @@ b{
   background-image: url("../../../static/favigen/img/footer_bg.svg");
   background-size: 100%;
   position: relative;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
-.h22{
+.h22 {
   padding-left: 500px;
 }
 
-.fav_icon{
+.fav_icon {
   margin-left: 100px;
 }
 
-
-.img2{
+.img2 {
   margin: auto;
   padding: 2px;
 }
 
-
 /* Media Queries */
-@media screen and (max-width: 768px){
-  
-  .container2{
+@media screen and (max-width: 768px) {
+  .container2 {
     background-size: cover;
   }
 
-  
+  .generate {
+    margin-top: 50px;
+    margin-left: 180px;
+    width: 100%;
+  }
 
-.generate{
-  margin-top: 50px;
-  margin-left: 180px;
-  width: 100%; 
- } 
+  .savedi {
+    display: block;
+  }
 
-.savedi{
-  display: block;
+  .savedi1 form {
+    margin: auto;
+    padding-right: 50px;
+    margin-bottom: 10px;
+  }
+
+  .savedi2 {
+    margin: auto;
+    padding-left: 150px;
+  }
+
+  #h1 {
+    padding-top: 45px;
+  }
+
+  .icons {
+    display: block;
+  }
+
+  .icons2 {
+    margin-top: 30px;
+  }
+
+  .h22 {
+    font-size: 50px;
+    font-weight: 500;
+    padding-left: 493px;
+  }
 }
 
-.savedi1 form{
-  margin: auto;
-  padding-right: 50px;
-  margin-bottom: 10px;
-}
-
-.savedi2{
-  margin: auto;
-  padding-left: 150px;
-}
-
-#h1{
-  padding-top: 45px;
-}
-
-.icons{
-  display: block;
-}
-
-.icons2{
-  margin-top: 30px;
-}
-
-.h22{
-  font-size: 50px;
-  font-weight: 500;
-  padding-left: 493px;
-}
-
-}
-
-
-@media screen and (max-width: 647px){
-  .savedi1 form{
+@media screen and (max-width: 647px) {
+  .savedi1 form {
     margin: auto;
     padding-right: 40px;
     margin-bottom: 10px;
   }
 
-  .savedi2{
+  .savedi2 {
     margin: auto;
     padding-left: 120px;
   }
 }
 
-@media screen and (max-width: 570px){
-  .generate{
+@media screen and (max-width: 570px) {
+  .generate {
     margin-top: 50px;
     margin-left: 120px;
     width: 100%;
   }
 
-  .savedi1 form{
+  .savedi1 form {
     margin: auto;
     padding-right: 30px;
     margin-bottom: 10px;
   }
 
-  .savedi2{
+  .savedi2 {
     margin: auto;
     padding-left: 90px;
   }
 }
 
-@media screen and (max-width: 525px){
-  .generate{
+@media screen and (max-width: 525px) {
+  .generate {
     margin-top: 50px;
     margin-left: 120px;
     width: 100%;
   }
 
-  .savedi1 form{
+  .savedi1 form {
     margin: auto;
     padding-right: 30px;
     margin-bottom: 10px;
   }
 
-  .savedi2{
+  .savedi2 {
     margin: auto;
     padding-left: 70px;
   }
 }
 
-@media screen and (max-width: 506px){
-  .generate{
+@media screen and (max-width: 506px) {
+  .generate {
     margin-top: 50px;
     margin-left: 102px;
     width: 100%;
   }
 
-  .savedi1 form{
+  .savedi1 form {
     margin: auto;
     padding-right: 50px;
   }
-  
-  .savedi2{
+
+  .savedi2 {
     margin: auto;
     padding-left: 60px;
   }
 
-  .h22{
+  .h22 {
     padding-left: 205px;
   }
 }
 
-@media screen and (max-width: 470px){
-  .savedi2{
+@media screen and (max-width: 470px) {
+  .savedi2 {
     margin: auto;
     padding-left: 60px;
   }
 
-  .generate{
+  .generate {
     margin-top: 50px;
     margin-left: 75px;
     width: 100%;
   }
 
-  .logo {
-    padding-left: 30px;
-    padding-top: 10px;
- }
-
- .h22{
-  padding-left: 205px;
+  .h22 {
+    padding-left: 205px;
+  }
 }
 
-}
-
-@media screen and (max-width: 460px){
-  .savedi2{
+@media screen and (max-width: 460px) {
+  .savedi2 {
     margin: auto;
     padding-left: 30px;
   }
-
 }
 
-@media screen and (max-width: 400px){
-  .savedi2{
+@media screen and (max-width: 400px) {
+  .savedi2 {
     margin: auto;
     padding-left: 10px;
   }
 
-  .generate{
+  .generate {
     margin-top: 50px;
     margin-left: 55px;
     width: 100%;
   }
-
 }
 
-@media screen and (max-width: 360px){
-  .savedi2{
+@media screen and (max-width: 360px) {
+  .savedi2 {
     margin: auto;
     padding-left: 10px;
     flex-wrap: wrap;
   }
 
-  .generate{
+  .generate {
     margin-top: 50px;
     margin-left: 20px;
     width: 100%;
+  }
+}
+
+@media (min-width: 840px) and (max-width: 1024px) {
+  .container2 {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 840px) {
+  .container2 {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container2 {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .container2 {
+    background-size: cover;
   }
 }
