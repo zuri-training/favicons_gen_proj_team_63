@@ -11,67 +11,34 @@ body{
 
 .container2{
   background-image: url("../../../static/favigen/img/bg_header2.png");
-  background-position: bottom;
-  height: 55vh;
-  background-size: cover;
+  background-size: 100%;
+  position: relative;
+  height: 65vh;
   background-repeat: no-repeat; 
 }
 
-
-.header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
+.nav-link {
+  color: #fff;
 }
-.logo{
-    margin-left: 40px;
-    padding-top: 5px;
+.active {
+  color: #0aecfb !important;
 }
-
-.logo img{
-    align-items: center;
-    width: 35%;
-    justify-content: space-around;
-    padding-top: 5px;
-    
-    
+.user-dropdown{
+  top: 30px;
+  right: 50px;
+  width: 15em;
+  border-radius: 5px;
+  border: 1px solid #2d1d90;
 }
-
-.nav{
-    display: flex;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 3px 30px;
+.user-dropdown > ul{
+  list-style: none;
 }
-
-.nav a{
-  justify-content: space-between;
+.user-dropdown > ul > li > a{
   text-decoration: none;
-  color: rgb(220,217,236); 
-  transition: 0.75s ease;
-  padding: 0 20px;
+  color: #000;
 }
-
-.nav a:hover{
-  color: rgb(31,159,211);
-  cursor: pointer;
-}
-
-.hamburger{
-  display: none;
-  cursor: pointer;
-}
-
-.bar{
-  display: block;
-  width: 35px;
-  height: 7px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s in-out;
-  transition: all 0.3s in-out;
-  background-color: rgb(45,29,144);
+.user-dropdown > ul > li > a:hover{
+  color: #2d1d90;
 }
 
 .generate{
@@ -148,7 +115,7 @@ body{
     padding-right: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 1px solid rgb(109,98,178);
+    border: 1px solid white;
 }
 form > button img{
   align-items: center;
@@ -167,13 +134,14 @@ form input{
 }
 
 .savedi2{
+  flex: 50%;
   display: flex;
-  margin-right: 60px;
+  margin-right: 50px;
   padding-left: 50px;
 }
 
 ::placeholder{
-  color: rgb(79,66,162);
+  color: black;
   font-size: 16px;
   font-weight: 400;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -267,66 +235,18 @@ b{
 
 /* Media Queries */
 @media screen and (max-width: 768px){
+  
   .container2{
-    background-image: url("../../../static/favigen/img/bg_header2.png");
     background-size: cover;
-    background-position: bottom;
-    position: relative;
-    height: 80vh;
-    background-repeat: no-repeat; 
   }
 
-  .hamburger{
-    display: block;
-    padding-top: 5px;
-    margin-right: 45px;
-  }
-
-  .logo {
-    padding-left: 45px;
-    padding-top: 10px;
- }
-
-.logo img{
-  width: 50%;
-}
-
-.hamburger.active .bar:nth-child(2){
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(1){
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(3){
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-.nav-menu{
-  width: 100%;
-  position: fixed;
-  background-color: blue;
-  left: -100%;
-  top:70;
-  gap: 0;
-  text-align: center;
-  flex-direction: column;
-}
-
-.nav{
-  margin: 16px 0;
-}
-
-.nav-menu.active{
-  left: 0;
-}
+  
 
 .generate{
   margin-top: 50px;
   margin-left: 180px;
-  width: 100%;
-}
+  width: 100%; 
+ } 
 
 .savedi{
   display: block;
