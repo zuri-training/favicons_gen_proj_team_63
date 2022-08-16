@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    line-height: -1;
+}
+
+.div2 {
+    position: relative;
+    top: 80px;
+    width: 100%;
+}
+.div2a {
+    margin-left: auto;
+    width: 60%;
+    position: relative;
+}
+.button_generate {
+    background-color: #4A90E2;
+    padding: 9px 70px 8px 30px;
+    border-radius: 0 50px 50px 0;
+    border: none;
+    color: white;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    text-decoration: none;
+}
+.generate a, .button_saved {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+.generate :hover {
+    color: black;
+}
+.button_generate :hover{
+    color: black;
+}
+.button_saved {
+    padding: 9px 35px 6px 50px;
+    border: 1px solid #666666;;
+    border-width: 1px;
+    background-color: transparent;
+    margin-left: 140px;
+}
+.div2b {
+    width: 80%;
+    font-size: 18px;
+    margin-left: auto;
+}
+.labelproject {
+    margin-right: 10px;
+    color: #FFFFFF;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+}
+.inputgit {
+    padding: 2px 10px;
+    background-color: transparent;
+    border: 1px solid grey;
+}
+input::placeholder {
+    padding-left: 20px;
+    color: #FFFFFF;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+}
+input:focus::placeholder {
+    color: transparent;
+}
+.file img {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    top: 100px;
+}
+.file {
+    /* border-radius: 10px;
+    border: 3px dotted black; */
+    font-size: 20px;
+    width: 60%;
+    /* height: 308px; */
+    left: 20%;
+    top: 110px;
+    position: relative;
+    /* display: flex; */
+    /* text-align: center;
+    align-items: center;
+    justify-content: center; */
+    padding: 50px;
+    /* color: FFFFFF; */
+    /* background-color: rgba(101, 123, 156, 0.932); */
+
+    /* Secondary/800 */
+    background: #5C85A3;
+    /* Warning/1000 */
+
+    border: 3px dashed #504007;
+    border-radius: 14px;
+}
+.file button, .file button > input {
+    border: none;
+    background: transparent;
+    display: inline-block;
+}
+.file p {
+    margin-bottom: 0;
+}
+.file :active {
+    border: 3px solid black;
+}
+.file span {
+    margin-left: -40px;
+}
+.drag, .file button {
+    text-align: center;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+.drop{
+    text-align: center;
+}
+.div3 {
+    width: 42.5%;
+    margin-top: 200px;
+    margin-left: 20%;
+}
+input.place {
+    border: 3px dashed #666666;
+    border-radius: 14px;
+    width: 140%;
+    height: 116px;
+}
+.codegen {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 40px;
+    margin-right: 0px;
+
+    /* Primary Balck */
+    color: #222222;
+}
+.check {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #504007;
+}
+.text1 {
+    font-size: 22px;
+}
+.place {
+    border-radius: 7px;
+    border: 2px dotted grey;
+    margin-bottom: 30px;
+    width: 100%;
+    outline: none;
+    height: 50px;
+}
+.div4 {
+    width: 44%;
+    margin-left: 35%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.div5 {
+    width: 44%;
+    margin-left: 35%;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.button1 {
+    padding: 4px 6px;
+    border-radius: 7px;
+    border: none;
+    background-color: #4A90E2;
+}
+.button1 a {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 5px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-decoration: none;
+}
+.button1 :hover {
+    color: white;
+}
+/*  Additional CSS */
+body {
+margin: 0;
+box-sizing: border-box;
+}
+
+/* helper classes */
+.purple {
+color: #2d1d90;
+}
+.nav-link {
+color: #fff;
+}
+.user-dropdown{
+top: 30px;
+right: 50px;
+width: 15em;
+border-radius: 5px;
+border: 1px solid #2d1d90;
+}
+.user-dropdown > ul{
+list-style: none;
+}
+.user-dropdown > ul > li > a{
+text-decoration: none;
+color: #fff;
+}
+.user-dropdown > ul > li > a:hover{
+color: #2d1d90;
+}
+.hero {
+background-image: url("../../../static/favigen/img/Rectangle190.png");
+background-size: 100%;
+background-repeat: no-repeat;
+height: auto;
+margin: auto;
+width: 90%;
+min-width: 1000px;
+max-width: 1200px;
+}
+.all {
+width: 100%;
+min-width:1000px;
+margin: 0 auto;
+height: auto;
+}
+#navbarText a {
+color: #FFFFFF;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 33px;
+}
+a:active {
+color: #0aecfb;
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+.hero {
+    height: 40vh;
+}
+}
+
+@media (min-width: 1440px) {
+
+.hero {
+    height: 55vh;
+}
+}
+
+@media (max-width: 768px) {
+.hero {
+    background-size: cover;
+}
+
+}
