@@ -93,14 +93,14 @@
 
                     <div class="title">
                         <label for="title" class="title-label">Project Name</label>
-                        <input type="text" name="title" />
+                        <input type="text" name="title" required/>
                     </div>
 
                     <div class="upload-file">
                         <img src="{% static 'favigen/img/vector.png' %}" alt="" />
                         <p class="drag">Drag and drop your file here or click here to upload</p>
                         <p class="drag">jpg / png/gif - Max size 5mb</p>
-                        <input type="file" name="document" class="upload-btn"/>
+                        <input type="file" name="document" class="upload-btn" required/>
                     </div>
 
                     <div class="text-label-container">
