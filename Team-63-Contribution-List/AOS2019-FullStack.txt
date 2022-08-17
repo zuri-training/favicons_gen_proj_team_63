@@ -13,7 +13,9 @@ Team GitHub ink: https://github.com/AOS2019/favicons_gen_proj_team_63/tree/dev
 
 Resolved Pull requests: https://github.com/zuri-training/favicons_gen_proj_team_63/pulls?q=is%3Apr+author%3AAOS2019
 Resolved Issues: https://github.com/zuri-training/favicons_gen_proj_team_63/issues?q=is%3Aissue+assignee%3AAOS2019+
-Deployed link: https://favicon-gen-proj.herokuapp.com/signup/
+Deployed link1: https://favicon-gen-proj.herokuapp.com/signup/
+Deployed link2: https://favicon-gen-proj.herokuapp.com/login/ [partlly]
+Deployed link3: https://favicon-gen-proj.herokuapp.com/upload/ [partlly]
 Commits on Main Branch: https://github.com/zuri-training/favicons_gen_proj_team_63/commits/main?author=AOS2019
 Commits on dev Branch: https://github.com/zuri-training/favicons_gen_proj_team_63/commits/dev?author=AOS2019
 Commits on deploy Branch: https://github.com/zuri-training/favicons_gen_proj_team_63/commits/deploy?author=AOS2019

@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static 'favigen/img/logo.svg' %}" />
+    <title>Generate icons page</title>
+    <link rel="stylesheet" href="{% static 'favigen/css/upload.css' %}" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="all">
+      <div class="hero position-relative">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid px-3">
+            <a class="navbar-brand" href="#">
+              <img src="{% static 'favigen/img/logo.svg' %}" width="30" style="margin-left: 200px;" class="d-inline-block align-top" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{% url 'fav:home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'fav:contact' %}">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  {% if user.is_authenticated %}
+                  <a class="nav-link" href="{% url 'fav:saved' %}">Saved Icons</a>
+                  {% endif %}
+                </li>
+                <li class="nav-item">
+                  {% if user.is_authenticated %}
+                  <a class="nav-link" href="{% url 'fav:generate' %}">Generate</a>
+                  {% endif %}
+                </li>
+                <li class="nav-item">
+                  {% if user.is_authenticated %}
+                  <a class="nav-link" href="{% url 'fav:logout' %}">Log Out</a>
+                  {% else %}
+                  <a class="nav-link" href="{% url 'fav:login' %}">Sign In</a>
+                  {% endif %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--<div class="navdiv"></div>-->
+        <div class="div2">
+          <div class="div2a">
+            <button class="generate">
+              <a class="button_generate" href="index.html">Generate</a>
+            </button>
+            <button class="button_saved">Saved icons</button><br />
+          </div>
+          <br /><br />
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+          <div class="div2b title">
+            <label class="labelproject" for="Project name">Project name</label>
+            <input size="50" placeholder="e.g git lab" type="text" class="inputgit" name="title"/>
+          </div>
+        </div>
+        
+        <section>
+          <div class="upload file">
+            <img src="{% static 'favigen/img/Vector.png' %}" alt="" />
+            <p class="drag">Drag and drop your file here or click here to upload<p class="drag"> jpg / png/gif - Max size 5mb</p></p>
+            <input type="file" name="document">
+            <script src="{% static '/favigen/js/index.js' %}"></script>
+          </div>
+          <!--</div>-->
+
+          <div class="div3">
+            <div class="div3a">
+              <p class="text1"><b>Or Add text here</b></p>
+            </div>
+            <br />
+            <div class="div3b">
+              <input class="place" type="textarea" size="50" />
+            </div>
+          </div>
+          <br />
+
+          <div class="div4 details">
+            <input class="check" type="checkbox" id="favourite" name="favourite" value="Favourite"/>
+            <label class = "codegen embedded" for="Code">Generate Embedded Html code</label>
+          </div>
+          <br /><br />
+
+          <div class="div5">
+            <!--<button type="submit" class="button1"><a href="aftgen.html">Generate</a></button>-->
+            <button type="submit" class="button1">Generate</button>
+          </div>
+        </section>
+      </form>
+      {% if url_img %}
+      <p>Uploaded file:
+          <a href="{{ url_img }}">{{ url_img }}</a>
+      </p>
+      {% endif %}
+      
+      {% if url_zip %}
+          <p>Uploaded file: 
+              {% for url in url_zip %}
+                  <a href="{{ url.zipped_favs.url }}" download>{{ url.zipped_favs.url }}</a>
+              {% endfor %}
+          </p>
+      {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

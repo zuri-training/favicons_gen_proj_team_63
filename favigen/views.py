@@ -80,79 +80,6 @@ def logout_view(request):
     return redirect("favigen:login")
 
 
-@login_required(login_url='fav:login')
-def image_upload(request):
-    user = request.user
-    context = {}
-
-    if request.method == "POST":
-        image_file = request.FILES["document"]
-        title = request.POST.get("title")
-        favourite = bool(request.POST.get("favourite"))
-
-        fs = FileSystemStorage()
-        name = fs.save(name=image_file.name, content=image_file)
-        url_img = fs.url(name)
-
-        file_path = f"static/media/{image_file.name}"
-        favs_dir = "static/media/favs/"
-        f_type = image_file.name.split(".")[-1]
-        f_size = os.path.getsize(file_path)
-
-        # To generate a new file name, we get the current date and time 
-        # and add a prefix to it then join the extension at the end
-        a = f"FAV{str(datetime.now())}"
-        # Remove special chacracters and spaces from the date string
-        b = ''.join(re.split(r'-|\.|:|\ ', a))
-        # Combine the date string with file extension to form new file name
-        new_name = f"{b}.{f_type}"
-
-        # Generate favicons and zip them
-        embed_link = generate_favicon(file_path, favs_dir)
-
-        img = Image.objects.create(
-            title=title,
-            uploaded_image=image_file,
-            favourite=favourite,
-            uploaded_by=user)
-        img.save()
-
-        # Create the zipped file
-        user_dir = f"static/media/user_{user.id}"
-        zippify.zippify(favs_dir, user_dir, b)
-
-
-        fav = Favicon.objects.create(
-            image=img,
-            original_filename=name, 
-            new_filename=new_name,
-            file_type=f_type,
-            file_byte_size=f_size,
-            embed_link=embed_link)
-        fav.save()
-
-        saved_fav = Favicon.objects.get(new_filename=new_name)
-        path = Path(os.path.join(user_dir, f"{b}.zip"))
-        with path.open(mode='rb') as f:
-            saved_fav.zipped_favs = File(f, name=path.name)
-            saved_fav.save()
-
-        # # Rename the saved favicon
-        # former_name_path = os.path.join(user_dir, image_file.name)
-        # new_name_path = os.path.join(user_dir, new_name)
-        # os.rename(former_name_path, new_name_path)
-
-        # Delete generated favicons after zipping them
-        utility.delete(favs_dir)
-
-        # Get the object of the current favicon from the database
-        saved_zip = Favicon.objects.filter(new_filename=new_name)
-
-        context["url_img"] = url_img
-        context["url_zip"] = saved_zip
-    return render(request, "favigen/upload.html", context)
-
-
 def contact_page(request):
     user = request.user
     context = {}
@@ -200,4 +127,68 @@ def generated_icon(request, pk):
 
 @login_required(login_url='fav:login')
 def generate_icon(request):
-    return render(request, "favigen/generate.html")
+    user = request.user
+    context = {}
+
+    if request.method == "POST":
+        image_file = request.FILES["document"]
+        title = request.POST.get("title")
+        favourite = bool(request.POST.get("favourite"))
+
+        fs = FileSystemStorage()
+        name = fs.save(name=image_file.name, content=image_file)
+        url_img = fs.url(name)
+
+        file_path = f"static/media/{image_file.name}"
+        favs_dir = "static/media/favs/"
+        f_type = image_file.name.split(".")[-1]
+        f_size = os.path.getsize(file_path)
+
+        # Get current date and add the string prefix "FAV" to it
+        a = f"FAV{str(datetime.now())}"
+        # Remove special chacracters and spaces from the date string
+        b = ''.join(re.split(r'-|\.|:|\ ', a))
+        # Combine the date string with file extension to form new file name
+        new_name = f"{b}.{f_type}"
+
+        # Generate favicons and zip them
+        embed_link = generate_favicon(file_path, favs_dir)
+
+        img = Image.objects.create(
+            title=title,
+            uploaded_image=image_file,
+            favourite=favourite,
+            uploaded_by=user)
+        img.save()
+
+        # Create the zipped file
+        user_dir = f"static/media/user_{user.id}"
+        zippify.zippify(favs_dir, user_dir, b)
+
+
+        fav = Favicon.objects.create(
+            image=img,
+            original_filename=name, 
+            new_filename=new_name,
+            file_type=f_type,
+            file_byte_size=f_size,
+            embed_link=embed_link)
+        fav.save()
+
+        saved_fav = Favicon.objects.get(new_filename=new_name)
+        path = Path(os.path.join(user_dir, f"{b}.zip"))
+        with path.open(mode='rb') as f:
+            saved_fav.zipped_favs = File(f, name=path.name)
+            saved_fav.save()
+
+        # Delete generated favicons after zipping them
+        utility.delete(favs_dir)
+
+        # Get the object of the current favicon from the database
+        saved_zip = Favicon.objects.filter(new_filename=new_name)
+
+        context["url_img"] = url_img
+        context["url_zip"] = saved_zip
+
+        return redirect("favigen:generated", pk=saved_fav.id)
+    return render(request, "favigen/generate-icon.html")
