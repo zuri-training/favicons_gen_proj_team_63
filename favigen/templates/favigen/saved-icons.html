@@ -1,311 +1,252 @@
- {% load static %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="{% static 'favigen/img/logo.svg' %}" />
-    <title>Saved Icons</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="{% static '/favigen/css/saved-icons.css' %}" rel="stylesheet" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="{% static 'favigen/img/logo.svg' %}" />
+        <title>Saved Icons</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="{% static '/favigen/css/saved-icons.css' %}" rel="stylesheet" />
+    </head>
 
-  <body>
-    <main>
-      <div class="container1">
-        <div class="container2 position-relative">
-          <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid px-3">
-              <a class="navbar-brand" href="#">
-                <img
-                  src="{% static 'favigen/img/logo.svg' %}"
-                  width="30"
-                  class="d-inline-block align-top"
-                  alt="logo"
-                />
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarText"
-                aria-controls="navbarText"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'fav:home' %}">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'fav:contact' %}"
-                      >Contact Us</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    {% if user.is_authenticated %}
-                    <a
-                      class="nav-link active"
-                      aria-current="page"
-                      href="{% url 'fav:saved' %}"
-                      >Saved Icons</a
-                    >
-                    {% endif %}
-                  </li>
-                  <li class="nav-item">
-                    {% if user.is_authenticated %}
-                    <a class="nav-link" href="{% url 'fav:generate' %}"
-                      >Generate</a
-                    >
-                    {% endif %}
-                  </li>
-                  <li class="nav-item">
-                    {% if user.is_authenticated %}
-                    <a class="nav-link" href="{% url 'fav:logout' %}"
-                      >Log Out</a
-                    >
-                    {% else %}
-                    <a class="nav-link" href="{% url 'fav:login' %}">Sign In</a>
-                    {% endif %}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+    <body>
+        <main>
+            <div class="container1">
+                <div class="container2 position-relative">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid px-3">
+                            <a class="navbar-brand" href="{% url 'fav:home' %}">
+                                <img
+                                    src="{% static 'favigen/img/logo.svg' %}"
+                                    width="30"
+                                    class="d-inline-block align-top"
+                                    alt="logo"
+                                />
+                            </a>
+                            <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarText"
+                                aria-controls="navbarText"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarText">
+                                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'fav:home' %}">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'fav:contact' %}">Contact Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        {% if user.is_authenticated %}
+                                        <a
+                                            class="nav-link active"
+                                            aria-current="page"
+                                            href="{% url 'fav:saved' %}"
+                                            >Saved Icons</a
+                                        >
+                                        {% endif %}
+                                    </li>
+                                    <li class="nav-item">
+                                        {% if user.is_authenticated %}
+                                        <a class="nav-link" href="{% url 'fav:generate' %}">Generate</a>
+                                        {% endif %}
+                                    </li>
+                                    <li class="nav-item">
+                                        {% if user.is_authenticated %}
+                                        <a class="nav-link" href="{% url 'fav:logout' %}">Log Out</a>
+                                        {% else %}
+                                        <a class="nav-link" href="{% url 'fav:login' %}">Sign In</a>
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
 
-          <div class="generate">
-            <button class="btn_generate" type="button">
-              <a class="b" href="{% url 'fav:generate' %}">Generate</a>
-            </button>
-            <button class="btn_saved" type="button">
-              <a class="b" href="{% url 'fav:saved' %}">Saved Icons</a>
-            </button>
-          </div>
+                    <div class="generate">
+                      <a class="b" href="{% url 'fav:generate' %}">
+                        <button class="btn_generate" type="button">
+                            Generate
+                        </button>
+                      </a>
+                      <a class="b" href="{% url 'fav:saved' %}">
+                        <button class="btn_saved" type="button">
+                            Saved Icons
+                        </button>
+                      </a>
+                    </div>
 
-          <div class="savedi">
-            <div class="savedi1">
-              <form action="#" method="get">
-                <button type="submit">
-                  <img
-                    src="{% static '/favigen/img/search.png' %}"
-                    alt="search"
-                  />
-                </button>
-                <input
-                  type="text"
-                  placeholder="Search your saved icons"
-                  name="q"
-                />
-              </form>
-            </div>
-            <div class="savedi2">
-              <h2 class="p1">Recent:</h2>
-              
-              {% for fav in favicons %}
-                <img class="img1" src="{{ fav.image.uploaded_image.url }}" alt="{{ favicon.image.title }}" width="150" height="150"/>
-              {% endfor %}
-              
-
-
-              {% comment %} <img
-                class="img1"
-                src="{% static '/favigen/img/icon19.png' %}"
-                alt=""
-              />
-              <img
-                class="img1"
-                src="{% static '/favigen/img/icon20.png' %}"
-                alt=""
-              />
-              <img
-                class="img1"
-                src="{% static '/favigen/img/icon21.png' %}"
-                alt=""
-              />
-              <img
-                class="img1"
-                src="{% static '/favigen/img/icon22.png' %}"
-                alt=""
-              />
-              <img
-                class="img1"
-                src="{% static '/favigen/img/icon23.png' %}"
-                alt=""
-              /> {% endcomment %}
-
-
-
-            </div>
-          </div>
-        </div>
-
-        <div class="container3">
-          <div>
-            <h1 class="h1" id="h1">Collections</h1>
-          </div>
-
-          <div class="icons">
-            <div class="icons1">
-              <h2 class="h2">Favourite Icons</h2>
-              <div class="parent1">
-                <div>
-                  <img
-                    class="img2"
-                    src="{% static '/favigen/img/icon1.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon5.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon10.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon13.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon18.png' %}"
-                    alt=""
-                  />
+                    <div class="savedi">
+                        <div class="savedi1">
+                            <form action="#" method="get">
+                                <button type="submit">
+                                    <img src="{% static '/favigen/img/search.svg' %}" alt="search" />
+                                </button>
+                                <input type="text" placeholder="Search your saved icons" name="q" />
+                            </form>
+                        </div>
+                        <div class="savedi2">
+                            <h2 class="p1">Recent:</h2>
+                          {% if favicons %}
+                            {% for fav in favicons %}
+                            <a href="{% url 'fav:generated' fav.id %}">
+                            <img
+                                class="img1"
+                                src="{{ fav.image.uploaded_image.url }}"
+                                alt="{{ favicon.image.title }}"
+                                width="100"
+                                height="100"
+                            />
+                            {% endfor %}
+                            </a>
+                          {% endif%}
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <img
-                    class="img2"
-                    src="{% static '/favigen/img/icon5.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon6.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon9.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon11.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon14.png' %}"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <b class="b">50 saved</b>
-            </div>
 
-            <div class="icons2">
-              <h2 class="h2">Brand Icons</h2>
-              <div class="parent2">
-                <div>
-                  <img
-                    class="img2"
-                    src="{% static '/favigen/img/icon16.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon7.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon3.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon12.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon1.png' %}"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    class="img2"
-                    src="{% static '/favigen/img/icon12.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon13.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon18.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon10.png' %}"
-                    alt=""
-                  /><img
-                    class="img2"
-                    src="{% static '/favigen/img/icon5.png' %}"
-                    alt=""
-                  />
-                </div>
-              </div>
-              {% comment %}
-              <h2 class="h22">...</h2>
-              {% endcomment %}
-            </div>
-          </div>
+                <div class="container3">
+                    <div>
+                        <h1 class="h1" id="h1">Collections</h1>
+                    </div>
 
-          <div class="fav_icon">
-            <h2 class="h2">Favourite Icons</h2>
-            <div>
-              <img
-                class="img2"
-                src="{% static '/favigen/img/icon8.png' %}"
-                alt=""
-              /><img
-                class="img2"
-                src="{% static '/favigen/img/icon4.png' %}"
-                alt=""
-              /><img
-                class="img2"
-                src="{% static '/favigen/img/icon8.png' %}"
-                alt=""
-              /><img
-                class="img2"
-                src="{% static '/favigen/img/icon17.png' %}"
-                alt=""
-              /><img
-                class="img2"
-                src="{% static '/favigen/img/icon4.png' %}"
-                alt=""
-              /><img
-                class="img2"
-                src="{% static '/favigen/img/icon8.png' %}"
-                alt=""
-              />
+                    <div class="icons">
+                        <div class="icons1">
+                            <h2 class="h2">Favourite Icons</h2>
+                            <div class="parent1">
+                                <div>
+                                    <img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon1.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon5.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon10.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon13.png' %}"
+                                        alt=""
+                                    /><img class="img2" src="{% static '/favigen/img/icon18.png' %}" alt="" />
+                                </div>
+                                <div>
+                                    <img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon5.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon6.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon9.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon11.png' %}"
+                                        alt=""
+                                    /><img class="img2" src="{% static '/favigen/img/icon14.png' %}" alt="" />
+                                </div>
+                            </div>
+                            <b class="b">50 saved</b>
+                        </div>
+
+                        <div class="icons2">
+                            <h2 class="h2">Brand Icons</h2>
+                            <div class="parent2">
+                                <div>
+                                    <img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon16.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon7.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon3.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon12.png' %}"
+                                        alt=""
+                                    /><img class="img2" src="{% static '/favigen/img/icon1.png' %}" alt="" />
+                                </div>
+                                <div>
+                                    <img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon12.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon13.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon18.png' %}"
+                                        alt=""
+                                    /><img
+                                        class="img2"
+                                        src="{% static '/favigen/img/icon10.png' %}"
+                                        alt=""
+                                    /><img class="img2" src="{% static '/favigen/img/icon5.png' %}" alt="" />
+                                </div>
+                            </div>
+                            {% comment %}
+                            <h2 class="h22">...</h2>
+                            {% endcomment %}
+                        </div>
+                    </div>
+
+                    <div class="fav_icon">
+                        <h2 class="h2">Favourite Icons</h2>
+                        <div>
+                            <img class="img2" src="{% static '/favigen/img/icon8.png' %}" alt="" /><img
+                                class="img2"
+                                src="{% static '/favigen/img/icon4.png' %}"
+                                alt=""
+                            /><img class="img2" src="{% static '/favigen/img/icon8.png' %}" alt="" /><img
+                                class="img2"
+                                src="{% static '/favigen/img/icon17.png' %}"
+                                alt=""
+                            /><img class="img2" src="{% static '/favigen/img/icon4.png' %}" alt="" /><img
+                                class="img2"
+                                src="{% static '/favigen/img/icon8.png' %}"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"
-      integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-  </body>
+        </main>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"
+            integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+    </body>
 </html>
