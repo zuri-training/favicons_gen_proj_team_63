@@ -156,7 +156,7 @@ input:focus::placeholder {
 }
 .signup_path {
     position: absolute;
-    top: 2%;
+    top: 3%;
     right: 20px;
     font-family: Inter;
     font-weight: Light;
@@ -238,6 +238,100 @@ span {
     font-weight: 500;
     color: hsl(0, 100%, 74%);
 }
+header{
+    display:none;
+}
+/* main {
+    width: 100%;
+    min-width: 360px;
+    margin: 0 auto;
+    height: auto;
+    } */
+/* .container1 {
+    height: auto;
+    margin: auto;
+    width: 90%;
+    min-width: 3600px;
+    max-width: 900px;
+} */
+    
+ /* APPLYING MEDIA QUERIES */
+ @media (min-width: 300px) and (max-width: 900px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10%;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+      }
+    .menu { 
+    display:none;
+    position: absolute;
+    background-color:#2d1d90;
+    right: 0;
+    gap: 0.5em;
+    width: 200px;
+    text-align: center;
+    padding: 0px 10px;
+    font-size: 18px;
+    }
+    .menu li {
+        padding: 3px 5px;
+       }
+    .menu a {
+    color: #fff;
+    }
+    .menu li:hover {
+    display: block;
+    transition: 0.3s ease;
+    background-color: #4A90E2;
+    border-radius: 3px;
+    }
+    .menu li + li {
+    margin-top: 12px;
+    display: block;
+    }
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+    input[type=checkbox]:checked ~ .menu{
+    display: block;
+    }
+    .hamburger {
+    display: block;
+    font-size: 24px;
+    user-select: none;
+    }
+    input[type=checkbox] {
+        display: none;
+    }
+    li {
+        list-style: none;
+    }
+    /* NAVBAR STYLING STARTS */
+    .navbar {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: right;
+    }
+    }
+li,
+a {
+text-decoration: none;
+}
+
+.nav-logo {
+cursor: pointer;
+}
+.nav-links {
+list-style: none;
+}
+.nav-links li {
+display: block;
+padding: 20px 20px;
+margin-top: 5px;
+}
+
 
 @media screen and (min-width: 1700px){
     .container1 {
@@ -290,6 +384,10 @@ span {
     .FaviGenContent {
         margin: 0px 150px;
     }
+     /* Mobile view*/
+     div.left1 {
+        display: none !important;
+    }
     .container1 {
         flex-direction: column;
     }
@@ -307,8 +405,9 @@ span {
         right: 0.25%;
         font-size: 16px;
     }
-    .signup_head {
-        top: 90px;
+    .signup_path {
+        top: 655px;
+        text-align: center;
     }
     .details {
         top: 100px;
@@ -388,40 +487,41 @@ span {
         margin-top: -28px;
     }
     .signup_path {
-        top: 1500px;
+        top: 700px;
         text-align: center;
     }
     
 }
 @media screen and (max-width: 400px) {
     .login_path {
-        margin-top: -70px;
-        margin-left: auto;
-        margin-right: auto;
+        top: 800px;
+        max-width: fit-content;
+        right:  75px;
+        left: 75px;
     }
     .signup_path {
-        top: 570px;
+        top: 655px;
         text-align: center;
+    }
+    .signup_head {
+        top: 70px
+    }
+    form {
+        margin-top: -100px;
+    }
+    .login_right form {
+        margin-top: -120px;
     }
     hr {
         width: 200px;
     }
-    .signup_head {
-        top: 40px;
-    }
-    /* Mobile view*/
-    div.left1 {
-        display: none !important;
+    .forget {
+        margin-top: -20px;
     }
     .cremeber {
         margin-right: -10%;
     }
-    .login_path {
-        top: 105%;
-        max-width: fit-content;
-        right:  12%;
-        left: 12%;
-    }
+
     .alt_signup {
         color: #261878;
         padding-top: 50px;
@@ -462,6 +562,10 @@ span {
     .login_path {
         top: 95%;
         font-size: 14px;
+    }
+    .signup_path {
+        top: 480px;
+        text-align: center;
     }
     
 }
