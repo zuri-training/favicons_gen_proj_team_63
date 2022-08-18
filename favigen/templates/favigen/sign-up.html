@@ -4,6 +4,33 @@
 
 {% block content %}
 
+<!-- header start-->
+<header>
+    <!-- LOGO -->
+    <img class="nav-logo" src="{% static 'favigen/img/smalllogo.svg' %}" alt="" />
+    <nav class="navbar">
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger"
+                ><i class="material-icons" style="font-size: 36px; color: #2d1d90">apps</i></label
+            >
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="{% url 'fav:home' %}">Home</a></li>
+                <li><a href="{% url 'fav:contact' %}">Contact Us</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'fav:signup' %}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{% url 'fav:login' %}">Sign In</a></li>
+                {% endif %}
+            </div>
+        </ul>
+    </nav>
+</header>
+<!-- header End-->
+
 <!-- main body start-->
 <main>
     <!-- container-->
