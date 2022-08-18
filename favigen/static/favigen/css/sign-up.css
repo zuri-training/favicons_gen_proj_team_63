@@ -503,8 +503,20 @@ margin-top: 5px;
         top: 655px;
         text-align: center;
     }
+    .signup_head {
+        top: 70px
+    }
+    form {
+        margin-top: -100px;
+    }
+    .login_right form {
+        margin-top: -120px;
+    }
     hr {
         width: 200px;
+    }
+    .forget {
+        margin-top: -20px;
     }
     .cremeber {
         margin-right: -10%;
